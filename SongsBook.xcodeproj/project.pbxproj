@@ -9,21 +9,41 @@
 /* Begin PBXBuildFile section */
 		A5EE998E25362736009F0374 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EE998D25362736009F0374 /* AppDelegate.swift */; };
 		A5EE999025362736009F0374 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EE998F25362736009F0374 /* SceneDelegate.swift */; };
-		A5EE999225362736009F0374 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EE999125362736009F0374 /* ViewController.swift */; };
-		A5EE999525362736009F0374 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5EE999325362736009F0374 /* Main.storyboard */; };
 		A5EE99972536273B009F0374 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5EE99962536273B009F0374 /* Assets.xcassets */; };
-		A5EE999A2536273B009F0374 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5EE99982536273B009F0374 /* LaunchScreen.storyboard */; };
+		A5EE99A2253628FD009F0374 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EE99A1253628FD009F0374 /* Song.swift */; };
+		A5EE99A42536292B009F0374 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EE99A32536292B009F0374 /* Model.swift */; };
+		A5EE99A625362979009F0374 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5EE99A525362979009F0374 /* LaunchScreen.storyboard */; };
+		A5EE99AA253629F6009F0374 /* SongsListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EE99A8253629F6009F0374 /* SongsListVC.swift */; };
+		A5EE99AB253629F6009F0374 /* SongCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EE99A9253629F6009F0374 /* SongCell.swift */; };
+		A5EE99AD25362A08009F0374 /* MenuListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EE99AC25362A08009F0374 /* MenuListVC.swift */; };
+		A5EE99B025362A15009F0374 /* SongDisplayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EE99AE25362A15009F0374 /* SongDisplayVC.swift */; };
+		A5EE99B125362A15009F0374 /* AddSongVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EE99AF25362A15009F0374 /* AddSongVC.swift */; };
+		A5EE99B325362A3E009F0374 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5EE99B225362A3E009F0374 /* Main.storyboard */; };
+		A5EE99BA25362AA9009F0374 /* HomeVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5EE99B525362AA9009F0374 /* HomeVC.storyboard */; };
+		A5EE99BB25362AA9009F0374 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EE99B625362AA9009F0374 /* HomeVC.swift */; };
+		A5EE99BC25362AA9009F0374 /* PlaylistVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5EE99B825362AA9009F0374 /* PlaylistVC.storyboard */; };
+		A5EE99BD25362AA9009F0374 /* PlaylistVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EE99B925362AA9009F0374 /* PlaylistVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A5EE998A25362736009F0374 /* SongsBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SongsBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5EE998D25362736009F0374 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A5EE998F25362736009F0374 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A5EE999125362736009F0374 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A5EE999425362736009F0374 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A5EE99962536273B009F0374 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		A5EE99992536273B009F0374 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A5EE999B2536273B009F0374 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5EE99A1253628FD009F0374 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		A5EE99A32536292B009F0374 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		A5EE99A525362979009F0374 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A5EE99A8253629F6009F0374 /* SongsListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongsListVC.swift; sourceTree = "<group>"; };
+		A5EE99A9253629F6009F0374 /* SongCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongCell.swift; sourceTree = "<group>"; };
+		A5EE99AC25362A08009F0374 /* MenuListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuListVC.swift; sourceTree = "<group>"; };
+		A5EE99AE25362A15009F0374 /* SongDisplayVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongDisplayVC.swift; sourceTree = "<group>"; };
+		A5EE99AF25362A15009F0374 /* AddSongVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddSongVC.swift; sourceTree = "<group>"; };
+		A5EE99B225362A3E009F0374 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		A5EE99B525362AA9009F0374 /* HomeVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HomeVC.storyboard; sourceTree = "<group>"; };
+		A5EE99B625362AA9009F0374 /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		A5EE99B825362AA9009F0374 /* PlaylistVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PlaylistVC.storyboard; sourceTree = "<group>"; };
+		A5EE99B925362AA9009F0374 /* PlaylistVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaylistVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +78,47 @@
 			children = (
 				A5EE998D25362736009F0374 /* AppDelegate.swift */,
 				A5EE998F25362736009F0374 /* SceneDelegate.swift */,
-				A5EE999125362736009F0374 /* ViewController.swift */,
-				A5EE999325362736009F0374 /* Main.storyboard */,
+				A5EE99A1253628FD009F0374 /* Song.swift */,
+				A5EE99AC25362A08009F0374 /* MenuListVC.swift */,
+				A5EE99A7253629F6009F0374 /* SongListVC */,
+				A5EE99A32536292B009F0374 /* Model.swift */,
+				A5EE99B225362A3E009F0374 /* Main.storyboard */,
 				A5EE99962536273B009F0374 /* Assets.xcassets */,
-				A5EE99982536273B009F0374 /* LaunchScreen.storyboard */,
+				A5EE99A525362979009F0374 /* LaunchScreen.storyboard */,
 				A5EE999B2536273B009F0374 /* Info.plist */,
 			);
 			path = SongsBook;
+			sourceTree = "<group>";
+		};
+		A5EE99A7253629F6009F0374 /* SongListVC */ = {
+			isa = PBXGroup;
+			children = (
+				A5EE99B425362AA9009F0374 /* HomeVC */,
+				A5EE99B725362AA9009F0374 /* PlaylistVC */,
+				A5EE99AF25362A15009F0374 /* AddSongVC.swift */,
+				A5EE99AE25362A15009F0374 /* SongDisplayVC.swift */,
+				A5EE99A8253629F6009F0374 /* SongsListVC.swift */,
+				A5EE99A9253629F6009F0374 /* SongCell.swift */,
+			);
+			path = SongListVC;
+			sourceTree = "<group>";
+		};
+		A5EE99B425362AA9009F0374 /* HomeVC */ = {
+			isa = PBXGroup;
+			children = (
+				A5EE99B525362AA9009F0374 /* HomeVC.storyboard */,
+				A5EE99B625362AA9009F0374 /* HomeVC.swift */,
+			);
+			path = HomeVC;
+			sourceTree = "<group>";
+		};
+		A5EE99B725362AA9009F0374 /* PlaylistVC */ = {
+			isa = PBXGroup;
+			children = (
+				A5EE99B825362AA9009F0374 /* PlaylistVC.storyboard */,
+				A5EE99B925362AA9009F0374 /* PlaylistVC.swift */,
+			);
+			path = PlaylistVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,9 +179,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5EE999A2536273B009F0374 /* LaunchScreen.storyboard in Resources */,
+				A5EE99BC25362AA9009F0374 /* PlaylistVC.storyboard in Resources */,
+				A5EE99A625362979009F0374 /* LaunchScreen.storyboard in Resources */,
 				A5EE99972536273B009F0374 /* Assets.xcassets in Resources */,
-				A5EE999525362736009F0374 /* Main.storyboard in Resources */,
+				A5EE99BA25362AA9009F0374 /* HomeVC.storyboard in Resources */,
+				A5EE99B325362A3E009F0374 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,32 +194,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5EE999225362736009F0374 /* ViewController.swift in Sources */,
+				A5EE99A42536292B009F0374 /* Model.swift in Sources */,
+				A5EE99BB25362AA9009F0374 /* HomeVC.swift in Sources */,
+				A5EE99AA253629F6009F0374 /* SongsListVC.swift in Sources */,
+				A5EE99A2253628FD009F0374 /* Song.swift in Sources */,
+				A5EE99AB253629F6009F0374 /* SongCell.swift in Sources */,
+				A5EE99B025362A15009F0374 /* SongDisplayVC.swift in Sources */,
+				A5EE99AD25362A08009F0374 /* MenuListVC.swift in Sources */,
 				A5EE998E25362736009F0374 /* AppDelegate.swift in Sources */,
 				A5EE999025362736009F0374 /* SceneDelegate.swift in Sources */,
+				A5EE99B125362A15009F0374 /* AddSongVC.swift in Sources */,
+				A5EE99BD25362AA9009F0374 /* PlaylistVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		A5EE999325362736009F0374 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A5EE999425362736009F0374 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		A5EE99982536273B009F0374 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A5EE99992536273B009F0374 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		A5EE999C2536273B009F0374 /* Debug */ = {
