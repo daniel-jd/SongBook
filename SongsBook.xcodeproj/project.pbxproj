@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		63A2253AA97F127A507E1D3E /* Pods_SongsBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE1FDB664966DC5A59CB024D /* Pods_SongsBook.framework */; };
+		A53EC0BA2536DC05004C3ECB /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53EC0B92536DC05004C3ECB /* SignInVC.swift */; };
+		A53EC0BD2536E45C004C3ECB /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53EC0BC2536E45C004C3ECB /* Utilities.swift */; };
+		A53EC0BF2536F4AF004C3ECB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A53EC0BE2536F4AF004C3ECB /* GoogleService-Info.plist */; };
 		A5EE998E25362736009F0374 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EE998D25362736009F0374 /* AppDelegate.swift */; };
 		A5EE999025362736009F0374 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EE998F25362736009F0374 /* SceneDelegate.swift */; };
 		A5EE99972536273B009F0374 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5EE99962536273B009F0374 /* Assets.xcassets */; };
@@ -18,14 +22,21 @@
 		A5EE99AD25362A08009F0374 /* MenuListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EE99AC25362A08009F0374 /* MenuListVC.swift */; };
 		A5EE99B025362A15009F0374 /* SongDisplayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EE99AE25362A15009F0374 /* SongDisplayVC.swift */; };
 		A5EE99B125362A15009F0374 /* AddSongVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EE99AF25362A15009F0374 /* AddSongVC.swift */; };
-		A5EE99B325362A3E009F0374 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5EE99B225362A3E009F0374 /* Main.storyboard */; };
+		A5EE99B325362A3E009F0374 /* SongBook.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5EE99B225362A3E009F0374 /* SongBook.storyboard */; };
 		A5EE99BA25362AA9009F0374 /* HomeVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5EE99B525362AA9009F0374 /* HomeVC.storyboard */; };
 		A5EE99BB25362AA9009F0374 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EE99B625362AA9009F0374 /* HomeVC.swift */; };
 		A5EE99BC25362AA9009F0374 /* PlaylistVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5EE99B825362AA9009F0374 /* PlaylistVC.storyboard */; };
 		A5EE99BD25362AA9009F0374 /* PlaylistVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EE99B925362AA9009F0374 /* PlaylistVC.swift */; };
+		A5EE99C02536305C009F0374 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5EE99BF2536305C009F0374 /* Main.storyboard */; };
+		A5EE99C2253630BD009F0374 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EE99C1253630BD009F0374 /* SignUpVC.swift */; };
+		A5EE99C4253630CE009F0374 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EE99C3253630CE009F0374 /* LoginVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		62C50E887C1D933FBC686990 /* Pods-SongsBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SongsBook.release.xcconfig"; path = "Target Support Files/Pods-SongsBook/Pods-SongsBook.release.xcconfig"; sourceTree = "<group>"; };
+		A53EC0B92536DC05004C3ECB /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
+		A53EC0BC2536E45C004C3ECB /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		A53EC0BE2536F4AF004C3ECB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A5EE998A25362736009F0374 /* SongsBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SongsBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5EE998D25362736009F0374 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A5EE998F25362736009F0374 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,11 +50,16 @@
 		A5EE99AC25362A08009F0374 /* MenuListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuListVC.swift; sourceTree = "<group>"; };
 		A5EE99AE25362A15009F0374 /* SongDisplayVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongDisplayVC.swift; sourceTree = "<group>"; };
 		A5EE99AF25362A15009F0374 /* AddSongVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddSongVC.swift; sourceTree = "<group>"; };
-		A5EE99B225362A3E009F0374 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		A5EE99B225362A3E009F0374 /* SongBook.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SongBook.storyboard; sourceTree = "<group>"; };
 		A5EE99B525362AA9009F0374 /* HomeVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HomeVC.storyboard; sourceTree = "<group>"; };
 		A5EE99B625362AA9009F0374 /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		A5EE99B825362AA9009F0374 /* PlaylistVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PlaylistVC.storyboard; sourceTree = "<group>"; };
 		A5EE99B925362AA9009F0374 /* PlaylistVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaylistVC.swift; sourceTree = "<group>"; };
+		A5EE99BF2536305C009F0374 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		A5EE99C1253630BD009F0374 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		A5EE99C3253630CE009F0374 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		D23D905EACD83665656D5CE6 /* Pods-SongsBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SongsBook.debug.xcconfig"; path = "Target Support Files/Pods-SongsBook/Pods-SongsBook.debug.xcconfig"; sourceTree = "<group>"; };
+		DE1FDB664966DC5A59CB024D /* Pods_SongsBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SongsBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,17 +67,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63A2253AA97F127A507E1D3E /* Pods_SongsBook.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A53EC0BB2536E448004C3ECB /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A53EC0BC2536E45C004C3ECB /* Utilities.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		A5EE998125362736009F0374 = {
 			isa = PBXGroup;
 			children = (
 				A5EE998C25362736009F0374 /* SongsBook */,
 				A5EE998B25362736009F0374 /* Products */,
+				BF2B096FD54883306D623DC6 /* Pods */,
+				C7949C4BB7AB37AD14326031 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,13 +106,16 @@
 				A5EE998D25362736009F0374 /* AppDelegate.swift */,
 				A5EE998F25362736009F0374 /* SceneDelegate.swift */,
 				A5EE99A1253628FD009F0374 /* Song.swift */,
+				A53EC0BB2536E448004C3ECB /* Helpers */,
 				A5EE99AC25362A08009F0374 /* MenuListVC.swift */,
 				A5EE99A7253629F6009F0374 /* SongListVC */,
 				A5EE99A32536292B009F0374 /* Model.swift */,
-				A5EE99B225362A3E009F0374 /* Main.storyboard */,
+				A5EE99B225362A3E009F0374 /* SongBook.storyboard */,
+				A5EE99BE25363017009F0374 /* Login */,
 				A5EE99962536273B009F0374 /* Assets.xcassets */,
 				A5EE99A525362979009F0374 /* LaunchScreen.storyboard */,
 				A5EE999B2536273B009F0374 /* Info.plist */,
+				A53EC0BE2536F4AF004C3ECB /* GoogleService-Info.plist */,
 			);
 			path = SongsBook;
 			sourceTree = "<group>";
@@ -121,6 +151,35 @@
 			path = PlaylistVC;
 			sourceTree = "<group>";
 		};
+		A5EE99BE25363017009F0374 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				A53EC0B92536DC05004C3ECB /* SignInVC.swift */,
+				A5EE99C1253630BD009F0374 /* SignUpVC.swift */,
+				A5EE99C3253630CE009F0374 /* LoginVC.swift */,
+				A5EE99BF2536305C009F0374 /* Main.storyboard */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		BF2B096FD54883306D623DC6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D23D905EACD83665656D5CE6 /* Pods-SongsBook.debug.xcconfig */,
+				62C50E887C1D933FBC686990 /* Pods-SongsBook.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C7949C4BB7AB37AD14326031 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DE1FDB664966DC5A59CB024D /* Pods_SongsBook.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -128,9 +187,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A5EE999E2536273B009F0374 /* Build configuration list for PBXNativeTarget "SongsBook" */;
 			buildPhases = (
+				3F5D88F9D01361818CC4BC51 /* [CP] Check Pods Manifest.lock */,
 				A5EE998625362736009F0374 /* Sources */,
 				A5EE998725362736009F0374 /* Frameworks */,
 				A5EE998825362736009F0374 /* Resources */,
+				53491E12D85BD2E5F5124FBA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -181,13 +242,57 @@
 			files = (
 				A5EE99BC25362AA9009F0374 /* PlaylistVC.storyboard in Resources */,
 				A5EE99A625362979009F0374 /* LaunchScreen.storyboard in Resources */,
+				A5EE99C02536305C009F0374 /* Main.storyboard in Resources */,
 				A5EE99972536273B009F0374 /* Assets.xcassets in Resources */,
 				A5EE99BA25362AA9009F0374 /* HomeVC.storyboard in Resources */,
-				A5EE99B325362A3E009F0374 /* Main.storyboard in Resources */,
+				A5EE99B325362A3E009F0374 /* SongBook.storyboard in Resources */,
+				A53EC0BF2536F4AF004C3ECB /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3F5D88F9D01361818CC4BC51 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SongsBook-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		53491E12D85BD2E5F5124FBA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SongsBook/Pods-SongsBook-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SongsBook/Pods-SongsBook-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SongsBook/Pods-SongsBook-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A5EE998625362736009F0374 /* Sources */ = {
@@ -197,11 +302,15 @@
 				A5EE99A42536292B009F0374 /* Model.swift in Sources */,
 				A5EE99BB25362AA9009F0374 /* HomeVC.swift in Sources */,
 				A5EE99AA253629F6009F0374 /* SongsListVC.swift in Sources */,
+				A53EC0BD2536E45C004C3ECB /* Utilities.swift in Sources */,
 				A5EE99A2253628FD009F0374 /* Song.swift in Sources */,
+				A53EC0BA2536DC05004C3ECB /* SignInVC.swift in Sources */,
+				A5EE99C2253630BD009F0374 /* SignUpVC.swift in Sources */,
 				A5EE99AB253629F6009F0374 /* SongCell.swift in Sources */,
 				A5EE99B025362A15009F0374 /* SongDisplayVC.swift in Sources */,
 				A5EE99AD25362A08009F0374 /* MenuListVC.swift in Sources */,
 				A5EE998E25362736009F0374 /* AppDelegate.swift in Sources */,
+				A5EE99C4253630CE009F0374 /* LoginVC.swift in Sources */,
 				A5EE999025362736009F0374 /* SceneDelegate.swift in Sources */,
 				A5EE99B125362A15009F0374 /* AddSongVC.swift in Sources */,
 				A5EE99BD25362AA9009F0374 /* PlaylistVC.swift in Sources */,
@@ -327,6 +436,7 @@
 		};
 		A5EE999F2536273B009F0374 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D23D905EACD83665656D5CE6 /* Pods-SongsBook.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -345,6 +455,7 @@
 		};
 		A5EE99A02536273B009F0374 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 62C50E887C1D933FBC686990 /* Pods-SongsBook.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

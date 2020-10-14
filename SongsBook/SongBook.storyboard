@@ -10,13 +10,13 @@
         <!--Songs ListVC-->
         <scene sceneID="epR-9g-bku">
             <objects>
-                <tableViewController storyboardIdentifier="SongsListVC" id="tX7-HH-GPO" customClass="SongsListVC" customModule="TableViewTest" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="SongsListVC" id="tX7-HH-GPO" customClass="SongsListVC" customModule="SongsBook" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="VfL-RL-Uyb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="72" id="WAJ-h6-VcV" customClass="SongCell" customModule="TableViewTest" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="72" id="WAJ-h6-VcV" customClass="SongCell" customModule="SongsBook" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="72"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WAJ-h6-VcV" id="fvf-GY-7td">
@@ -115,7 +115,7 @@
         <!--Add song-->
         <scene sceneID="Is6-Eq-SYj">
             <objects>
-                <viewController storyboardIdentifier="AddSongVC" title="Add song" id="zos-DZ-eS4" customClass="AddSongVC" customModule="TableViewTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddSongVC" title="Add song" id="zos-DZ-eS4" customClass="AddSongVC" customModule="SongsBook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JwF-z4-YgG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -238,7 +238,7 @@
         <!--Song DisplayVC-->
         <scene sceneID="xD9-WQ-xjd">
             <objects>
-                <viewController storyboardIdentifier="SongDisplayVC" id="YZr-S5-Ugy" customClass="SongDisplayVC" customModule="TableViewTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SongDisplayVC" id="YZr-S5-Ugy" customClass="SongDisplayVC" customModule="SongsBook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ouq-kd-ay6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -335,7 +335,7 @@
         <!--Menu ListVC-->
         <scene sceneID="Uzf-tu-Tf9">
             <objects>
-                <tableViewController storyboardIdentifier="MenuListVC" id="VI4-Mw-ilc" customClass="MenuListVC" customModule="TableViewTest" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="MenuListVC" id="VI4-Mw-ilc" customClass="MenuListVC" customModule="SongsBook" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="WLa-N3-e9D">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

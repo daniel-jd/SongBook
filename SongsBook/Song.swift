@@ -31,7 +31,7 @@ struct Song: Codable {
 
 }
 
-// Dumy data
+// Dummy data
 extension Song {
     func fetchData() -> [Song] {
         

@@ -21,7 +21,7 @@ class MenuListVC: UITableViewController {
     var screenTitle = "Menu"
     
 // TODO: Replace with ENUM in the future
-    let menuItems = [MenuItem.home, MenuItem.songs, MenuItem.playlist, MenuItem.settings]
+    let menuItems = [MenuItem.home, MenuItem.songs, MenuItem.playlist]
     
     override func viewDidLoad() {
         super.viewDidLoad()
