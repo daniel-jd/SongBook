@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Rgu-nZ-7MT">
-                                <rect key="frame" x="40" y="702" width="334" height="120"/>
+                                <rect key="frame" x="40" y="632" width="334" height="190"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1hE-bn-qLy">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="50"/>
@@ -43,9 +43,20 @@
                                             <segue destination="YTN-Ga-xUg" kind="show" id="jcL-Tz-sVt"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QGM-QH-H9J">
+                                        <rect key="frame" x="0.0" y="140" width="334" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                        <state key="normal" title="Don't Sign In">
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="dontSignInTapped:" destination="6UW-Wc-ggG" eventType="touchUpInside" id="7MU-5e-uh1"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="9SQ-KZ-aaz" firstAttribute="height" secondItem="1hE-bn-qLy" secondAttribute="height" id="NNR-qO-c1d"/>
+                                    <constraint firstItem="QGM-QH-H9J" firstAttribute="height" secondItem="1hE-bn-qLy" secondAttribute="height" id="w1P-Vf-2Jh"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -59,6 +70,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Vit-Zf-RrC"/>
                     <connections>
+                        <outlet property="dontSignInButton" destination="QGM-QH-H9J" id="hNf-cm-16s"/>
                         <outlet property="loginButton" destination="9SQ-KZ-aaz" id="CB5-Ci-lBw"/>
                         <outlet property="signUpButton" destination="1hE-bn-qLy" id="kS4-SD-vZB"/>
                     </connections>
@@ -112,7 +124,7 @@
                                             <action selector="signUpTapped:" destination="LhP-af-hpk" eventType="touchUpInside" id="RP1-4K-sab"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q98-5q-0xB">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q98-5q-0xB">
                                         <rect key="frame" x="0.0" y="350" width="334" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -184,7 +196,7 @@
                                             <action selector="loginTapped:" destination="YTN-Ga-xUg" eventType="touchUpInside" id="db0-FE-4aP"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="297-Rv-hnw">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="297-Rv-hnw">
                                         <rect key="frame" x="0.0" y="210" width="334" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

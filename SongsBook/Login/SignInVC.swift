@@ -12,6 +12,7 @@ class SignInVC: UIViewController {
 
     @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var dontSignInButton: UIButton!
     
     
     override func viewDidLoad() {
@@ -20,4 +21,10 @@ class SignInVC: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func dontSignInTapped(_ sender: Any) {
+        // Switch to SongBook Storyboard
+        let storyboard = UIStoryboard(name: Constants.Storyboard.SongBook, bundle: nil)
+        let navMenuVC = storyboard.instantiateInitialViewController()
+        self.view.window?.rootViewController = navMenuVC
+    }
 }

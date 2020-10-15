@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -30,6 +30,7 @@
 		A5EE99C02536305C009F0374 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5EE99BF2536305C009F0374 /* Main.storyboard */; };
 		A5EE99C2253630BD009F0374 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EE99C1253630BD009F0374 /* SignUpVC.swift */; };
 		A5EE99C4253630CE009F0374 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EE99C3253630CE009F0374 /* LoginVC.swift */; };
+		A5F378312538B9330078CA84 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F378302538B9330078CA84 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		A5EE99BF2536305C009F0374 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		A5EE99C1253630BD009F0374 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		A5EE99C3253630CE009F0374 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		A5F378302538B9330078CA84 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D23D905EACD83665656D5CE6 /* Pods-SongsBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SongsBook.debug.xcconfig"; path = "Target Support Files/Pods-SongsBook/Pods-SongsBook.debug.xcconfig"; sourceTree = "<group>"; };
 		DE1FDB664966DC5A59CB024D /* Pods_SongsBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SongsBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -78,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				A53EC0BC2536E45C004C3ECB /* Utilities.swift */,
+				A5F378302538B9330078CA84 /* Constants.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -168,7 +171,6 @@
 				D23D905EACD83665656D5CE6 /* Pods-SongsBook.debug.xcconfig */,
 				62C50E887C1D933FBC686990 /* Pods-SongsBook.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -306,6 +308,7 @@
 				A5EE99A2253628FD009F0374 /* Song.swift in Sources */,
 				A53EC0BA2536DC05004C3ECB /* SignInVC.swift in Sources */,
 				A5EE99C2253630BD009F0374 /* SignUpVC.swift in Sources */,
+				A5F378312538B9330078CA84 /* Constants.swift in Sources */,
 				A5EE99AB253629F6009F0374 /* SongCell.swift in Sources */,
 				A5EE99B025362A15009F0374 /* SongDisplayVC.swift in Sources */,
 				A5EE99AD25362A08009F0374 /* MenuListVC.swift in Sources */,

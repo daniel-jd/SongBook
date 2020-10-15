@@ -13,6 +13,8 @@ enum MenuItem: String, CaseIterable {
     case songs = "Songs"
     case playlist = "Playlist"
     case settings = "Settings"
+    case login = "Login"
+    case logout = "Logout"
 }
 
 class MenuListVC: UITableViewController {
@@ -21,7 +23,7 @@ class MenuListVC: UITableViewController {
     var screenTitle = "Menu"
     
 // TODO: Replace with ENUM in the future
-    let menuItems = [MenuItem.home, MenuItem.songs, MenuItem.playlist]
+    let menuItems = [MenuItem.home, MenuItem.songs, MenuItem.playlist, MenuItem.logout]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,6 +62,10 @@ class MenuListVC: UITableViewController {
             let storyboard = UIStoryboard(name: String(describing: PlaylistVC.self), bundle: nil)
             let vc = storyboard.instantiateInitialViewController()!
             navigationController?.pushViewController(vc, animated: true)
+        case 3:
+            let storyboard = UIStoryboard(name: Constants.Storyboard.Main, bundle: nil)
+            let vc = storyboard.instantiateInitialViewController()
+            view.window?.rootViewController = vc
         default:
             return
         }

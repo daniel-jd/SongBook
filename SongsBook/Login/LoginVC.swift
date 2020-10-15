@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class LoginVC: UIViewController {
 
@@ -14,7 +15,6 @@ class LoginVC: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var errorLabel: UILabel!
-    
     
     
     override func viewDidLoad() {
@@ -30,8 +30,29 @@ class LoginVC: UIViewController {
     }
     
     @IBAction func loginTapped(_ sender: Any) {
+        
+        // TODO: Validate the fields
+            
+            // Create cleaned version of the data
+            let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            
+            // Login the user
+            Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
+                
+                // Check for errors
+                if error != nil {
+                    // There was an error
+                    self.errorLabel.text = error?.localizedDescription
+                    self.errorLabel.alpha = 1
+                }
+                else {
+                    // Switch to another Storyboard
+                    let storyboard = UIStoryboard(name: Constants.Storyboard.SongBook, bundle: nil)
+                    let navMenuVC = storyboard.instantiateInitialViewController()
+                    self.view.window?.rootViewController = navMenuVC
+                }
+            }
     }
     
-    
-
-}
+} // Class
