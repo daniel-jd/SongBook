@@ -22,7 +22,7 @@ class SongCell: UITableViewCell {
     func set(song: Song) {
         songTitle.text = song.title
         byAuthor.text = "by " + song.artist
-        keyValue.text = song.key?.rawValue
+        keyValue.text = song.key
         tempoValue.text = song.tempo
     }
 }

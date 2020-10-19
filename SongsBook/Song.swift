@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Firebase
 
 enum Key: String, Codable {
     case A = "A"; case A_flat = "Ab"; case A_sharp = "A#"
@@ -24,167 +25,49 @@ struct Song: Codable {
 // Properties
     var title: String = "Untitled"
     var artist: String = "Unknown"
-    var key: Key?
+    var key: String = ""
     var tempo: String = ""
-    var lyrics: String = "No lyrics for this song were found"
+    var lyrics: String = ""
     // TODO: Change tempo type to Int
 
 }
 
 // Dummy data
 extension Song {
-    func fetchData() -> [Song] {
+    
+    func fetchSongs() -> [Song] {
         
-        let song1 = Song(title: "Oceans",
-        artist: "Hillsong",
-        key: Key.D,
-        tempo: "72",
-        lyrics: """
-          You call me out upon the waters
-          The great unknown where feet may fail
-          And there I find You in the mystery
-          In oceans deep
-          My faith will stand
-          
-          And I will call upon Your name
-          And keep my eyes above the waves
-          When oceans rise
-          My soul will rest in Your embrace
-          For I am Yours and You are mine
-
-          Your grace abounds in deepest waters
-          Your sovereign hand
-          Will be my guide
-          Where feet may fail and fear surrounds me
-          You've never failed and You won't start now
-
-          So I will call upon Your name
-          And keep my eyes above the waves
-          When oceans rise
-          My soul will rest in Your embrace
-          For I am Yours and You are mine
-          """)
+        var songs = [Song]()
         
-        let song2 = Song(title: "Blessed be the name",
-        artist: "Matt Redman",
-        key: Key.B,
-        tempo: "115",
-        lyrics: """
-          You call me out upon the waters
-          The great unknown where feet may fail
-          And there I find You in the mystery
-          In oceans deep
-          My faith will stand
-          
-          And I will call upon Your name
-          And keep my eyes above the waves
-          When oceans rise
-          My soul will rest in Your embrace
-          For I am Yours and You are mine
-
-          Your grace abounds in deepest waters
-          Your sovereign hand
-          Will be my guide
-          Where feet may fail and fear surrounds me
-          You've never failed and You won't start now
-
-          So I will call upon Your name
-          And keep my eyes above the waves
-          When oceans rise
-          My soul will rest in Your embrace
-          For I am Yours and You are mine
-          """)
+        let songsCollection = Firestore.firestore().collection("songs")
         
-        let song3 = Song(title: "This is Amazing Grace",
-        artist: "Phil Wickam",
-        key: Key.E,
-        tempo: "98",
-        lyrics: """
-          You call me out upon the waters
-          The great unknown where feet may fail
-          And there I find You in the mystery
-          In oceans deep
-          My faith will stand
-          
-          And I will call upon Your name
-          And keep my eyes above the waves
-          When oceans rise
-          My soul will rest in Your embrace
-          For I am Yours and You are mine
-
-          Your grace abounds in deepest waters
-          Your sovereign hand
-          Will be my guide
-          Where feet may fail and fear surrounds me
-          You've never failed and You won't start now
-
-          So I will call upon Your name
-          And keep my eyes above the waves
-          When oceans rise
-          My soul will rest in Your embrace
-          For I am Yours and You are mine
-          """)
-        
-        let song4 = Song(title: "No Longer Slaves",
-        artist: "Bethel Music",
-        key: Key.F,
-        tempo: "87",
-        lyrics: """
-          You call me out upon the waters
-          The great unknown where feet may fail
-          And there I find You in the mystery
-          In oceans deep
-          My faith will stand
-          
-          And I will call upon Your name
-          And keep my eyes above the waves
-          When oceans rise
-          My soul will rest in Your embrace
-          For I am Yours and You are mine
-
-          Your grace abounds in deepest waters
-          Your sovereign hand
-          Will be my guide
-          Where feet may fail and fear surrounds me
-          You've never failed and You won't start now
-
-          So I will call upon Your name
-          And keep my eyes above the waves
-          When oceans rise
-          My soul will rest in Your embrace
-          For I am Yours and You are mine
-          """)
-        
-        let song5 = Song(title: "Reckless Love",
-        artist: "Cory Asbury",
-        key: Key.D,
-        tempo: "82",
-        lyrics: """
-          You call me out upon the waters
-          The great unknown where feet may fail
-          And there I find You in the mystery
-          In oceans deep
-          My faith will stand
-          
-          And I will call upon Your name
-          And keep my eyes above the waves
-          When oceans rise
-          My soul will rest in Your embrace
-          For I am Yours and You are mine
-
-          Your grace abounds in deepest waters
-          Your sovereign hand
-          Will be my guide
-          Where feet may fail and fear surrounds me
-          You've never failed and You won't start now
-
-          So I will call upon Your name
-          And keep my eyes above the waves
-          When oceans rise
-          My soul will rest in Your embrace
-          For I am Yours and You are mine
-          """)
-        
-        return [song1, song2, song3, song4, song5]
+        songsCollection.getDocuments { (querySnapshot, error) in
+            
+            if let error = error {
+                // There was an error
+                print("Error while getDocuments: \(error)")
+            }
+            else {
+                // Successful getting documents
+                guard let snapshot = querySnapshot else { return }
+                // Parsing document to a struct
+                var i = 0
+                for document in snapshot.documents {
+                    let data = document.data()
+                    let title = data["title"] as? String ?? "Untitled"
+                    let artist = data["artist"] as? String ?? "Unknown"
+                    let key = data["key"] as? String ?? ""
+                    let tempo = data["tempo"] as? String ?? ""
+                    let lyrics = data["lyrics"] as? String ?? ""
+                    let newSong = Song(title: title, artist: artist, key: key, tempo: tempo, lyrics: lyrics)
+                    songs.append(newSong)
+                    print("Song \(i) created \(songs[i].title)")
+                    i += 1
+                }
+            }
+            
+        }
+        return songs
     }
+    
 }

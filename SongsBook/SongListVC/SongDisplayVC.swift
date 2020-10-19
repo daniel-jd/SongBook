@@ -31,7 +31,7 @@ class SongDisplayVC: UIViewController {
         title = song.title
         songTitleLabel.text = song.title
         artistLabel.text = "by " + song.artist
-        keyDisplayLabel.text = song.key?.rawValue
+        keyDisplayLabel.text = song.key
         tempoValueLabel.text = song.tempo
         lyricsTextView.text = song.lyrics
     }

@@ -7,10 +7,11 @@
 //
 
 import UIKit
+import Firebase
 
 class SongsListVC: UITableViewController, AddSongDelegate {
         
-    public var songsList = [Song]()
+    var songsList = [Song]()
     var numberOfSongs: Int?
     
     @IBAction func addSongButton(_ sender: UIBarButtonItem) {
@@ -21,19 +22,25 @@ class SongsListVC: UITableViewController, AddSongDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("viewDidLoad called")
+        
         setTableView()
-        checkForSavedSongsList()
-        //songsList = Song().fetchData()
+//      checkForSavedSongsList()
+   
+        print("viewDidLoad. songsList count: \(songsList.count)")
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        print("viewWillAppear called")
+        //super.viewWillAppear(animated)
+        loadSongsFromDatabase()
+        
+        tableView.reloadData()
+    }
+    
+    func loadSongsFromDatabase() {
+        songsList.append(contentsOf: Song().fetchSongs())
     }
     
     func addNewSong(song: Song) {
-        print("addNewSong called")
         songsList.append(song)
         let newIndexPath = IndexPath(row: songsList.count - 1, section: 0)
         tableView.beginUpdates()
@@ -42,7 +49,6 @@ class SongsListVC: UITableViewController, AddSongDelegate {
     }
     
     private func setTableView() {
-        print("setTableView called")
         tableView.rowHeight = 72
         title = "Songs"
     }
@@ -58,7 +64,7 @@ class SongsListVC: UITableViewController, AddSongDelegate {
         if let savedSongsList = defaults.object(forKey: Keys.savedSong) as? Data {
             let decoder = JSONDecoder()
             if let loadedSongsList = try? decoder.decode([Song].self, from: savedSongsList) {
-                songsList = loadedSongsList
+                songsList.append(contentsOf: loadedSongsList)
             }
         }
     }
@@ -66,12 +72,10 @@ class SongsListVC: UITableViewController, AddSongDelegate {
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("Number of rows called: \(songsList.count)")
         return songsList.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        print("Cell for row called")
         // Say that we'll use our own custom cell from SongCell class
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! SongCell
         let song = songsList[indexPath.row]

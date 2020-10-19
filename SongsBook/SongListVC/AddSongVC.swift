@@ -32,7 +32,7 @@ class AddSongVC: UIViewController {
         print("makeNewSong called")
         let title = songTitleTextField.text ?? ""
         let artist = authorTitleTextField.text ?? ""
-        let key = Key.A
+        let key = "A"
         let tempo = tempoTextField.text ?? ""
         let lyrics = lyricsTextField.text ?? ""
         newSong = Song(title: title, artist: artist, key: key, tempo: tempo, lyrics: lyrics)
