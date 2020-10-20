@@ -32,17 +32,16 @@ struct Song: Codable {
 
 }
 
+typealias songsCallback = ([Song]) -> ()
+
 // Dummy data
 extension Song {
     
-    func fetchSongs() -> [Song] {
-        
-        var songs = [Song]()
+    func fetchSongs(_ callback: @escaping songsCallback) {
         
         let songsCollection = Firestore.firestore().collection("songs")
         
         songsCollection.getDocuments { (querySnapshot, error) in
-            
             if let error = error {
                 // There was an error
                 print("Error while getDocuments: \(error)")
@@ -50,6 +49,9 @@ extension Song {
             else {
                 // Successful getting documents
                 guard let snapshot = querySnapshot else { return }
+                
+                var songs = [Song]()
+                
                 // Parsing document to a struct
                 var i = 0
                 for document in snapshot.documents {
@@ -64,10 +66,10 @@ extension Song {
                     print("Song \(i) created \(songs[i].title)")
                     i += 1
                 }
+                
+                callback(songs)
             }
-            
+                
         }
-        return songs
     }
-    
 }

@@ -23,7 +23,6 @@ class SongsListVC: UITableViewController, AddSongDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        songsList = Song().fetchSongs()
         setTableView()
 //      checkForSavedSongsList()
    
@@ -32,14 +31,17 @@ class SongsListVC: UITableViewController, AddSongDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        //loadSongsFromDatabase()
+        
+        loadSongsFromDatabase()
         
         //tableView.reloadData()
     }
-    
-    func loadSongsFromDatabase() {
-        songsList = Song().fetchSongs()
-        //print("Load songs from database: \(songsList.count)")
+
+    private func loadSongsFromDatabase() {
+        Song().fetchSongs({ [weak self] songs in
+            self?.songsList = songs
+            self?.tableView.reloadData()
+        })
     }
     
     func addNewSong(song: Song) {
