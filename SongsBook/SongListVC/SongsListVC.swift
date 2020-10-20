@@ -11,8 +11,8 @@ import Firebase
 
 class SongsListVC: UITableViewController, AddSongDelegate {
         
-    var songsList = [Song]()
-    var numberOfSongs: Int?
+    public var songsList = [Song]()
+    //var numberOfSongs: Int?
     
     @IBAction func addSongButton(_ sender: UIBarButtonItem) {
         let vc = storyboard?.instantiateViewController(withIdentifier: "AddSongVC") as! AddSongVC
@@ -22,7 +22,8 @@ class SongsListVC: UITableViewController, AddSongDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
+        songsList = Song().fetchSongs()
         setTableView()
 //      checkForSavedSongsList()
    
@@ -30,14 +31,15 @@ class SongsListVC: UITableViewController, AddSongDelegate {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        //super.viewWillAppear(animated)
-        loadSongsFromDatabase()
+        super.viewWillAppear(animated)
+        //loadSongsFromDatabase()
         
-        tableView.reloadData()
+        //tableView.reloadData()
     }
     
     func loadSongsFromDatabase() {
-        songsList.append(contentsOf: Song().fetchSongs())
+        songsList = Song().fetchSongs()
+        //print("Load songs from database: \(songsList.count)")
     }
     
     func addNewSong(song: Song) {
