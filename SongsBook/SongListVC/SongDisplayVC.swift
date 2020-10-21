@@ -28,12 +28,16 @@ class SongDisplayVC: UIViewController {
     }
     
     func showSong(song: Song) {
+        let fs = ChordPro.parse(song.lyrics!)
+        print("formated: \(fs)")
         title = song.title
         songTitleLabel.text = song.title
-        artistLabel.text = "by " + song.artist
+        artistLabel.text = "by " + (song.artist ?? "Unknown")
         keyDisplayLabel.text = song.key
         tempoValueLabel.text = song.tempo
         lyricsTextView.text = song.lyrics
     }
+    
+    
     
 }

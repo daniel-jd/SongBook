@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		63A2253AA97F127A507E1D3E /* Pods_SongsBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE1FDB664966DC5A59CB024D /* Pods_SongsBook.framework */; };
+		A50E18A92540ACEC00FE6CE6 /* Measure.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50E18A32540ACEC00FE6CE6 /* Measure.swift */; };
+		A50E18AA2540ACEC00FE6CE6 /* Part.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50E18A42540ACEC00FE6CE6 /* Part.swift */; };
+		A50E18AB2540ACEC00FE6CE6 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50E18A52540ACEC00FE6CE6 /* Section.swift */; };
+		A50E18AC2540ACEC00FE6CE6 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50E18A62540ACEC00FE6CE6 /* Line.swift */; };
+		A50E18AD2540ACEC00FE6CE6 /* ChordPro.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50E18A72540ACEC00FE6CE6 /* ChordPro.swift */; };
 		A53EC0BA2536DC05004C3ECB /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53EC0B92536DC05004C3ECB /* SignInVC.swift */; };
 		A53EC0BD2536E45C004C3ECB /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53EC0BC2536E45C004C3ECB /* Utilities.swift */; };
 		A53EC0BF2536F4AF004C3ECB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A53EC0BE2536F4AF004C3ECB /* GoogleService-Info.plist */; };
@@ -35,6 +40,11 @@
 
 /* Begin PBXFileReference section */
 		62C50E887C1D933FBC686990 /* Pods-SongsBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SongsBook.release.xcconfig"; path = "Target Support Files/Pods-SongsBook/Pods-SongsBook.release.xcconfig"; sourceTree = "<group>"; };
+		A50E18A32540ACEC00FE6CE6 /* Measure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Measure.swift; sourceTree = "<group>"; };
+		A50E18A42540ACEC00FE6CE6 /* Part.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Part.swift; sourceTree = "<group>"; };
+		A50E18A52540ACEC00FE6CE6 /* Section.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
+		A50E18A62540ACEC00FE6CE6 /* Line.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
+		A50E18A72540ACEC00FE6CE6 /* ChordPro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChordPro.swift; sourceTree = "<group>"; };
 		A53EC0B92536DC05004C3ECB /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		A53EC0BC2536E45C004C3ECB /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		A53EC0BE2536F4AF004C3ECB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -76,6 +86,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A50E18A12540ACEC00FE6CE6 /* ChordPro */ = {
+			isa = PBXGroup;
+			children = (
+				A5EE99A1253628FD009F0374 /* Song.swift */,
+				A50E18A32540ACEC00FE6CE6 /* Measure.swift */,
+				A50E18A42540ACEC00FE6CE6 /* Part.swift */,
+				A50E18A52540ACEC00FE6CE6 /* Section.swift */,
+				A50E18A62540ACEC00FE6CE6 /* Line.swift */,
+				A50E18A72540ACEC00FE6CE6 /* ChordPro.swift */,
+			);
+			path = ChordPro;
+			sourceTree = "<group>";
+		};
 		A53EC0BB2536E448004C3ECB /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -108,13 +131,15 @@
 			children = (
 				A5EE998D25362736009F0374 /* AppDelegate.swift */,
 				A5EE998F25362736009F0374 /* SceneDelegate.swift */,
-				A5EE99A1253628FD009F0374 /* Song.swift */,
+				A50E18A12540ACEC00FE6CE6 /* ChordPro */,
 				A53EC0BB2536E448004C3ECB /* Helpers */,
-				A5EE99AC25362A08009F0374 /* MenuListVC.swift */,
+				A5EE99B425362AA9009F0374 /* HomeVC */,
+				A5EE99B725362AA9009F0374 /* PlaylistVC */,
 				A5EE99A7253629F6009F0374 /* SongListVC */,
+				A5EE99BE25363017009F0374 /* Login */,
+				A5EE99AC25362A08009F0374 /* MenuListVC.swift */,
 				A5EE99A32536292B009F0374 /* Model.swift */,
 				A5EE99B225362A3E009F0374 /* SongBook.storyboard */,
-				A5EE99BE25363017009F0374 /* Login */,
 				A5EE99962536273B009F0374 /* Assets.xcassets */,
 				A5EE99A525362979009F0374 /* LaunchScreen.storyboard */,
 				A5EE999B2536273B009F0374 /* Info.plist */,
@@ -126,8 +151,6 @@
 		A5EE99A7253629F6009F0374 /* SongListVC */ = {
 			isa = PBXGroup;
 			children = (
-				A5EE99B425362AA9009F0374 /* HomeVC */,
-				A5EE99B725362AA9009F0374 /* PlaylistVC */,
 				A5EE99AF25362A15009F0374 /* AddSongVC.swift */,
 				A5EE99AE25362A15009F0374 /* SongDisplayVC.swift */,
 				A5EE99A8253629F6009F0374 /* SongsListVC.swift */,
@@ -303,17 +326,22 @@
 			files = (
 				A5EE99A42536292B009F0374 /* Model.swift in Sources */,
 				A5EE99BB25362AA9009F0374 /* HomeVC.swift in Sources */,
+				A50E18A92540ACEC00FE6CE6 /* Measure.swift in Sources */,
 				A5EE99AA253629F6009F0374 /* SongsListVC.swift in Sources */,
 				A53EC0BD2536E45C004C3ECB /* Utilities.swift in Sources */,
+				A50E18AB2540ACEC00FE6CE6 /* Section.swift in Sources */,
+				A50E18AD2540ACEC00FE6CE6 /* ChordPro.swift in Sources */,
 				A5EE99A2253628FD009F0374 /* Song.swift in Sources */,
 				A53EC0BA2536DC05004C3ECB /* SignInVC.swift in Sources */,
 				A5EE99C2253630BD009F0374 /* SignUpVC.swift in Sources */,
 				A5F378312538B9330078CA84 /* Constants.swift in Sources */,
 				A5EE99AB253629F6009F0374 /* SongCell.swift in Sources */,
 				A5EE99B025362A15009F0374 /* SongDisplayVC.swift in Sources */,
+				A50E18AC2540ACEC00FE6CE6 /* Line.swift in Sources */,
 				A5EE99AD25362A08009F0374 /* MenuListVC.swift in Sources */,
 				A5EE998E25362736009F0374 /* AppDelegate.swift in Sources */,
 				A5EE99C4253630CE009F0374 /* LoginVC.swift in Sources */,
+				A50E18AA2540ACEC00FE6CE6 /* Part.swift in Sources */,
 				A5EE999025362736009F0374 /* SceneDelegate.swift in Sources */,
 				A5EE99B125362A15009F0374 /* AddSongVC.swift in Sources */,
 				A5EE99BD25362AA9009F0374 /* PlaylistVC.swift in Sources */,

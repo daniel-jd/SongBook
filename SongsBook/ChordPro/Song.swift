@@ -9,7 +9,7 @@
 import Foundation
 import Firebase
 
-enum Key: String, Codable {
+enum Key: String {
     case A = "A"; case A_flat = "Ab"; case A_sharp = "A#"
     case B = "B"; case B_flat = "Bb";
     case C = "C"; case C_flat = "Cb"; case C_sharp = "C#"
@@ -19,22 +19,47 @@ enum Key: String, Codable {
     case G = "G"; case G_flat = "Gb"; case G_sharp = "G#"
  }
 
-// NOTE: need to deside whether use struct or class for Song!
 
-struct Song: Codable {
+public class Song {
 // Properties
-    var title: String = "Untitled"
-    var artist: String = "Unknown"
-    var key: String = ""
-    var tempo: String = ""
-    var lyrics: String = ""
-    // TODO: Change tempo type to Int
+    public var title: String?
+    public var artist: String?
+    public var capo: String?
+    public var key: String?
+    public var tempo: String?
+//    public var year: String?
+//    public var album: String?
+//    public var tuning: String?
+    public var custom = [String: String]()
+    public var sections = [Section]()
+    public var lyrics: String?
+    public var formatedLyrics: String?
+    
+// Initializers
+    
+    init() {
+        self.title = "Untitled"
+        self.artist = "Unknown"
+        self.key = ""
+        self.tempo = ""
+        self.lyrics = ""
+    }
+    
+    init(title: String?, artist: String?, key: String?, tempo: String?, lyrics: String?) {
+        self.title = title
+        self.artist = artist
+        self.key = key
+        self.tempo = tempo
+        self.lyrics = lyrics
+    }
 
-}
+} // Song
 
 typealias songsCallback = ([Song]) -> ()
 
-// Dummy data
+
+// MARK: - Extensions
+
 extension Song {
     
     func fetchSongs(_ callback: @escaping songsCallback) {
@@ -63,7 +88,7 @@ extension Song {
                     let lyrics = data["lyrics"] as? String ?? ""
                     let newSong = Song(title: title, artist: artist, key: key, tempo: tempo, lyrics: lyrics)
                     songs.append(newSong)
-                    print("Song \(i) created \(songs[i].title)")
+                    print("Song \(i) created \(songs[i].title ?? "Noname")")
                     i += 1
                 }
                 

@@ -10,6 +10,10 @@ import UIKit
 import Firebase
 
 class SongsListVC: UITableViewController, AddSongDelegate {
+    func saveSongsListToUserDefaults() {
+        print("saveSongsListToUserDefaults() called")
+    }
+    
         
     public var songsList = [Song]()
     //var numberOfSongs: Int?
@@ -57,21 +61,21 @@ class SongsListVC: UITableViewController, AddSongDelegate {
         title = "Songs"
     }
     
-    func saveSongsListToUserDefaults() {
-        let encoder = JSONEncoder()
-        if let encodedSong = try? encoder.encode(songsList) {
-            defaults.set(encodedSong, forKey: Keys.savedSong)
-        }
-    }
-    
-    func checkForSavedSongsList() {
-        if let savedSongsList = defaults.object(forKey: Keys.savedSong) as? Data {
-            let decoder = JSONDecoder()
-            if let loadedSongsList = try? decoder.decode([Song].self, from: savedSongsList) {
-                songsList.append(contentsOf: loadedSongsList)
-            }
-        }
-    }
+//    func saveSongsListToUserDefaults() {
+//        let encoder = JSONEncoder()
+//        if let encodedSong = try? encoder.encode(songsList) {
+//            defaults.set(encodedSong, forKey: Keys.savedSong)
+//        }
+//    }
+//    
+//    func checkForSavedSongsList() {
+//        if let savedSongsList = defaults.object(forKey: Keys.savedSong) as? Data {
+//            let decoder = JSONDecoder()
+//            if let loadedSongsList = try? decoder.decode([Song].self, from: savedSongsList) {
+//                songsList.append(contentsOf: loadedSongsList)
+//            }
+//        }
+//    }
 
     // MARK: - Table view data source
 
@@ -110,7 +114,7 @@ class SongsListVC: UITableViewController, AddSongDelegate {
             tableView.beginUpdates()
             tableView.deleteRows(at: [indexPath], with: .automatic)
             tableView.endUpdates()
-            saveSongsListToUserDefaults()
+            //saveSongsListToUserDefaults()
         }
     }
         

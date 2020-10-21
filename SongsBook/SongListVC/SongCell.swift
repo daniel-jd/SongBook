@@ -21,7 +21,7 @@ class SongCell: UITableViewCell {
     
     func set(song: Song) {
         songTitle.text = song.title
-        byAuthor.text = "by " + song.artist
+        byAuthor.text = "by " + (song.artist ?? "Unknown")
         keyValue.text = song.key
         tempoValue.text = song.tempo
     }
