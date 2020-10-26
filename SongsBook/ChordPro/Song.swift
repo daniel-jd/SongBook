@@ -8,6 +8,7 @@
 
 import Foundation
 import Firebase
+import FirebaseFirestoreSwift
 
 enum Key: String {
     case A = "A"; case A_flat = "Ab"; case A_sharp = "A#"
@@ -20,20 +21,19 @@ enum Key: String {
  }
 
 
-public class Song {
+struct Song: Identifiable, Codable {
+
 // Properties
-    public var title: String?
-    public var artist: String?
-    public var capo: String?
-    public var key: String?
-    public var tempo: String?
-//    public var year: String?
-//    public var album: String?
-//    public var tuning: String?
-    public var custom = [String: String]()
-    public var sections = [Section]()
-    public var lyrics: String?
-    public var formatedLyrics: String?
+    @DocumentID var id: String? = UUID().uuidString
+    var title: String?
+    var artist: String?
+//    var capo: String?
+    var key: String?
+    var tempo: String?
+//    var custom = [String: String]()
+//    var sections = [Section]()
+    var songBody: String?
+//    var formatedLyrics: String?
     
 // Initializers
     
@@ -42,7 +42,7 @@ public class Song {
         self.artist = "Unknown"
         self.key = ""
         self.tempo = ""
-        self.lyrics = ""
+        self.songBody = ""
     }
     
     init(title: String?, artist: String?, key: String?, tempo: String?, lyrics: String?) {
@@ -50,7 +50,7 @@ public class Song {
         self.artist = artist
         self.key = key
         self.tempo = tempo
-        self.lyrics = lyrics
+        self.songBody = lyrics
     }
 
 } // Song
@@ -85,7 +85,7 @@ extension Song {
                     let artist = data["artist"] as? String ?? "Unknown"
                     let key = data["key"] as? String ?? ""
                     let tempo = data["tempo"] as? String ?? ""
-                    let lyrics = data["lyrics"] as? String ?? ""
+                    let lyrics = data["songBody"] as? String ?? ""
                     let newSong = Song(title: title, artist: artist, key: key, tempo: tempo, lyrics: lyrics)
                     songs.append(newSong)
                     print("Song \(i) created \(songs[i].title ?? "Noname")")

@@ -100,7 +100,7 @@ class SongsListVC: UITableViewController, AddSongDelegate {
         vc.songToDisplay.artist = songsList[indexPath.row].artist
         vc.songToDisplay.key = songsList[indexPath.row].key
         vc.songToDisplay.tempo = songsList[indexPath.row].tempo
-        vc.songToDisplay.lyrics = songsList[indexPath.row].lyrics
+        vc.songToDisplay.songBody = songsList[indexPath.row].songBody
         navigationController?.pushViewController(vc, animated: true)
     }
     

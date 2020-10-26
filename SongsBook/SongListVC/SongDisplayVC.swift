@@ -24,18 +24,18 @@ class SongDisplayVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("Song Display called")
-        showSong(song: songToDisplay)
+        displaySong(song: songToDisplay)
     }
     
-    func showSong(song: Song) {
-        let fs = ChordPro.parse(song.lyrics!)
+    func displaySong(song: Song) {
+        let fs = ChordPro.parse(song.songBody!)
         print("formated: \(fs)")
         title = song.title
         songTitleLabel.text = song.title
         artistLabel.text = "by " + (song.artist ?? "Unknown")
         keyDisplayLabel.text = song.key
         tempoValueLabel.text = song.tempo
-        lyricsTextView.text = song.lyrics
+        lyricsTextView.text = song.songBody
     }
     
     
