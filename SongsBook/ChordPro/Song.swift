@@ -8,6 +8,7 @@
 
 import Foundation
 import Firebase
+import FirebaseStorage
 import FirebaseFirestoreSwift
 
 enum Key: String {

@@ -8,12 +8,16 @@
 
 import Foundation
 import FirebaseFirestore
+import FirebaseStorage
 import FirebaseFirestoreSwift
 
 class SongViewModel: ObservableObject {
+    
     @Published var songs = [Song]()
     
-    private var db = Firestore.firestore()
+    private let storage = Storage.storage().reference()
+    private let db = Firestore.firestore()
+    let url = "gs://songbook-3a927.appspot.com/songBody/Indescribable – Chris Tomlin.txt"
     
     func fetchSongs() {
         db.collection("songs").addSnapshotListener { (querySnapshot, error) in
