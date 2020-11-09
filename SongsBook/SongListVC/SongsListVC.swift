@@ -42,10 +42,13 @@ class SongsListVC: UITableViewController, AddSongDelegate {
     }
 
     private func loadSongsFromDatabase() {
-        Song().fetchSongs({ [weak self] songs in
-            self?.songsList = songs
-            self?.tableView.reloadData()
-        })
+//        Song().fetchSongs({ [weak self] songs in
+//            self?.songsList = songs
+//            self?.tableView.reloadData()
+//        })
+        
+        SongViewModel().fetchSongs()
+        self.tableView.reloadData()
     }
     
     func addNewSong(song: Song) {
