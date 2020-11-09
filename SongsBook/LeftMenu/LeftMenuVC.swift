@@ -9,7 +9,6 @@
 import UIKit
 
 enum MenuItem: String, CaseIterable {
-    case home = "Home"
     case songs = "Songs"
     case playlist = "Playlist"
     case settings = "Settings"
@@ -17,13 +16,13 @@ enum MenuItem: String, CaseIterable {
     case logout = "Logout"
 }
 
-class MenuListVC: UITableViewController {
+class LeftMenuVC: UITableViewController {
 
     private let songsListVC = SongsListVC()
-    var screenTitle = "Menu"
+    let screenTitle = "Menu"
     
 // TODO: Replace with ENUM in the future
-    let menuItems = [MenuItem.home, MenuItem.songs, MenuItem.playlist, MenuItem.logout]
+    let menuItems = [MenuItem.songs, MenuItem.playlist, MenuItem.logout]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,18 +51,15 @@ class MenuListVC: UITableViewController {
         // Select what screen to display according to the menu item selected
         switch indexPath.row {
         case 0:
-            let storyboard = UIStoryboard(name: String(describing: HomeVC.self), bundle: nil)
-            let vc = storyboard.instantiateInitialViewController()!
+            let storyboard = UIStoryboard(name: "SongsList", bundle: nil)
+            let vc = storyboard.instantiateViewController(identifier: "SongsListVC") as! SongsListVC
             navigationController?.pushViewController(vc, animated: true)
         case 1:
-            let vc = storyboard?.instantiateViewController(identifier: "SongsListVC") as! SongsListVC
-            navigationController?.pushViewController(vc, animated: true)
-        case 2:
-            let storyboard = UIStoryboard(name: String(describing: PlaylistVC.self), bundle: nil)
+            let storyboard = UIStoryboard(name: "Playlist", bundle: nil)
             let vc = storyboard.instantiateInitialViewController()!
             navigationController?.pushViewController(vc, animated: true)
-        case 3:
-            let storyboard = UIStoryboard(name: Constants.Storyboard.Main, bundle: nil)
+        case 2:
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let vc = storyboard.instantiateInitialViewController()
             view.window?.rootViewController = vc
         default:

@@ -26,10 +26,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             let window = UIWindow(windowScene: windowScene)
             let root = FAPanelController()
             
-            let mainStoryboard: UIStoryboard = UIStoryboard(name: "SongBook", bundle: nil)
-            let leftMenuStoryboard: UIStoryboard = UIStoryboard(name: "SongBook", bundle: nil)
+            let mainStoryboard: UIStoryboard = UIStoryboard(name: "SongDisplay", bundle: nil)
+            let leftMenuStoryboard: UIStoryboard = UIStoryboard(name: "LeftMenu", bundle: nil)
             
-            let leftMenuVC: MenuListVC = leftMenuStoryboard.instantiateViewController(withIdentifier: "MenuListVC") as! MenuListVC
+            let leftMenuVC: LeftMenuVC = leftMenuStoryboard.instantiateViewController(withIdentifier: "LeftMenuVC") as! LeftMenuVC
             let centerVC: SongDisplayVC = mainStoryboard.instantiateViewController(withIdentifier: "SongDisplayVC") as! SongDisplayVC
             let centerNavVC = UINavigationController(rootViewController: centerVC)
             

@@ -12,12 +12,10 @@ struct Constants {
     
     struct Storyboard {
         static let Main = "Main"
-        static let SongBook = "SongBook"
-        static let MenuListVC = "MenuListVC"
-        static let SongsListVC = "SongsListVC"
-        static let AddSongVC = "AddSongVC"
-        static let SongDisplayVC = "SongDisplayVC"
-        static let PlaylistVC = "PlaylistVC"
-        
+        static let LeftMenu = "MenuList"
+        static let SongsList = "SongsList"
+        static let AddSong = "AddSong"
+        static let SongDisplay = "SongDisplay"
+        static let Playlist = "Playlist"
     }
 }

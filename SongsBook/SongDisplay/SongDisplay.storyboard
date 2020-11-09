@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="U9w-0Y-zqA">
+    <device id="ipad9_7" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Song DisplayVC-->
+        <scene sceneID="rpm-bY-wzl">
+            <objects>
+                <viewController storyboardIdentifier="SongDisplayVC" id="U9w-0Y-zqA" customClass="SongDisplayVC" customModule="SongsBook" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gAk-Zl-TQo">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="979-0w-XKI">
+                                <rect key="frame" x="20" y="96" width="728" height="908"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="908" id="GOl-Sc-rxc"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tWb-N2-ssl">
+                                <rect key="frame" x="20" y="20" width="101" height="27"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="by Artist" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xlU-2L-0AQ">
+                                <rect key="frame" x="20" y="53.5" width="112" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="112" id="hm6-to-khT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Key:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BFx-Cm-Amy">
+                                <rect key="frame" x="671" y="20" width="41" height="27.5"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="22"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Em" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aO0-BR-all">
+                                <rect key="frame" x="716" y="20" width="32" height="27.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                <color key="textColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="120" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yok-fb-jXl">
+                                <rect key="frame" x="717.5" y="54.5" width="30.5" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="bpm" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NKr-vY-Mha">
+                                <rect key="frame" x="677" y="54.5" width="35" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tempo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ise-zc-Zgb">
+                                <rect key="frame" x="617" y="53" width="52" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="52" id="WyT-bT-rgv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="xlU-2L-0AQ" firstAttribute="baseline" secondItem="yok-fb-jXl" secondAttribute="baseline" constant="1" id="5te-wx-gbp"/>
+                            <constraint firstItem="ise-zc-Zgb" firstAttribute="top" secondItem="kJB-qY-Ks5" secondAttribute="top" constant="53" id="65k-gR-aZV"/>
+                            <constraint firstItem="yok-fb-jXl" firstAttribute="top" secondItem="BFx-Cm-Amy" secondAttribute="bottom" constant="7" id="7xU-nR-2V4"/>
+                            <constraint firstItem="979-0w-XKI" firstAttribute="leading" secondItem="kJB-qY-Ks5" secondAttribute="leading" constant="20" id="BpU-VF-S47"/>
+                            <constraint firstItem="NKr-vY-Mha" firstAttribute="leading" secondItem="ise-zc-Zgb" secondAttribute="trailing" constant="8" id="Btg-2a-eaJ"/>
+                            <constraint firstItem="BFx-Cm-Amy" firstAttribute="top" secondItem="kJB-qY-Ks5" secondAttribute="top" constant="20" id="FOD-7a-O0V"/>
+                            <constraint firstItem="kJB-qY-Ks5" firstAttribute="bottom" secondItem="979-0w-XKI" secondAttribute="bottom" constant="20" id="KJw-zs-vYY"/>
+                            <constraint firstItem="kJB-qY-Ks5" firstAttribute="trailing" secondItem="yok-fb-jXl" secondAttribute="trailing" constant="20" id="LGN-TN-uv2"/>
+                            <constraint firstItem="aO0-BR-all" firstAttribute="top" secondItem="kJB-qY-Ks5" secondAttribute="top" constant="20" id="NwJ-DX-qNX"/>
+                            <constraint firstItem="ise-zc-Zgb" firstAttribute="centerY" secondItem="xlU-2L-0AQ" secondAttribute="centerY" id="OIn-VN-qLA"/>
+                            <constraint firstItem="kJB-qY-Ks5" firstAttribute="trailing" secondItem="979-0w-XKI" secondAttribute="trailing" constant="20" id="Tgj-2a-x5L"/>
+                            <constraint firstItem="xlU-2L-0AQ" firstAttribute="leading" secondItem="tWb-N2-ssl" secondAttribute="leading" id="cGN-B1-qAM"/>
+                            <constraint firstItem="NKr-vY-Mha" firstAttribute="top" secondItem="aO0-BR-all" secondAttribute="bottom" constant="7" id="e26-AA-5yz"/>
+                            <constraint firstItem="tWb-N2-ssl" firstAttribute="leading" secondItem="kJB-qY-Ks5" secondAttribute="leading" constant="20" id="igP-Ad-KhB"/>
+                            <constraint firstItem="ise-zc-Zgb" firstAttribute="centerY" secondItem="NKr-vY-Mha" secondAttribute="centerY" id="iz6-PF-tJW"/>
+                            <constraint firstItem="tWb-N2-ssl" firstAttribute="top" secondItem="kJB-qY-Ks5" secondAttribute="top" constant="20" id="lsA-4b-XNG"/>
+                            <constraint firstItem="kJB-qY-Ks5" firstAttribute="trailing" secondItem="NKr-vY-Mha" secondAttribute="trailing" constant="56" id="qfY-8U-Rsg"/>
+                            <constraint firstItem="kJB-qY-Ks5" firstAttribute="trailing" secondItem="aO0-BR-all" secondAttribute="trailing" constant="20" id="vGF-9Z-J7A"/>
+                            <constraint firstItem="979-0w-XKI" firstAttribute="top" secondItem="ise-zc-Zgb" secondAttribute="bottom" constant="19" id="vN8-5n-R0m"/>
+                            <constraint firstItem="ise-zc-Zgb" firstAttribute="centerY" secondItem="yok-fb-jXl" secondAttribute="centerY" id="vfX-3n-cSy"/>
+                            <constraint firstItem="aO0-BR-all" firstAttribute="leading" secondItem="BFx-Cm-Amy" secondAttribute="trailing" constant="4" id="z94-va-20e"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kJB-qY-Ks5"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="QFW-Go-Uhp"/>
+                    <connections>
+                        <outlet property="artistLabel" destination="xlU-2L-0AQ" id="Ni6-HP-XuJ"/>
+                        <outlet property="bpmLabel" destination="NKr-vY-Mha" id="bTE-7q-pGg"/>
+                        <outlet property="keyDisplayLabel" destination="aO0-BR-all" id="nrB-vy-6kB"/>
+                        <outlet property="keyLabel" destination="BFx-Cm-Amy" id="eDV-1G-ckz"/>
+                        <outlet property="lyricsTextView" destination="979-0w-XKI" id="OTN-lA-AmS"/>
+                        <outlet property="songTitleLabel" destination="tWb-N2-ssl" id="9t3-eP-5EV"/>
+                        <outlet property="tempoLabel" destination="ise-zc-Zgb" id="UR6-Ag-0iF"/>
+                        <outlet property="tempoValueLabel" destination="yok-fb-jXl" id="nzY-Cz-acS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CzE-jy-nXN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2066.40625" y="-48.6328125"/>
+        </scene>
+    </scenes>
+</document>

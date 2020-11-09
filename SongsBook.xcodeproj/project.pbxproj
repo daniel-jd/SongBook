@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		63A2253AA97F127A507E1D3E /* Pods_SongsBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE1FDB664966DC5A59CB024D /* Pods_SongsBook.framework */; };
+		A501397C2559E7E1006D54DB /* SongDisplay.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A501397B2559E7E1006D54DB /* SongDisplay.storyboard */; };
+		A501397F2559F1BA006D54DB /* LeftMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A501397E2559F1BA006D54DB /* LeftMenu.storyboard */; };
+		A50139822559F300006D54DB /* AddSong.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A50139812559F300006D54DB /* AddSong.storyboard */; };
 		A50E18A92540ACEC00FE6CE6 /* Measure.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50E18A32540ACEC00FE6CE6 /* Measure.swift */; };
 		A50E18AA2540ACEC00FE6CE6 /* Part.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50E18A42540ACEC00FE6CE6 /* Part.swift */; };
 		A50E18AB2540ACEC00FE6CE6 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50E18A52540ACEC00FE6CE6 /* Section.swift */; };
@@ -25,13 +28,11 @@
 		A5EE99A625362979009F0374 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5EE99A525362979009F0374 /* LaunchScreen.storyboard */; };
 		A5EE99AA253629F6009F0374 /* SongsListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EE99A8253629F6009F0374 /* SongsListVC.swift */; };
 		A5EE99AB253629F6009F0374 /* SongCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EE99A9253629F6009F0374 /* SongCell.swift */; };
-		A5EE99AD25362A08009F0374 /* MenuListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EE99AC25362A08009F0374 /* MenuListVC.swift */; };
+		A5EE99AD25362A08009F0374 /* LeftMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EE99AC25362A08009F0374 /* LeftMenuVC.swift */; };
 		A5EE99B025362A15009F0374 /* SongDisplayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EE99AE25362A15009F0374 /* SongDisplayVC.swift */; };
 		A5EE99B125362A15009F0374 /* AddSongVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EE99AF25362A15009F0374 /* AddSongVC.swift */; };
-		A5EE99B325362A3E009F0374 /* SongBook.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5EE99B225362A3E009F0374 /* SongBook.storyboard */; };
-		A5EE99BA25362AA9009F0374 /* HomeVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5EE99B525362AA9009F0374 /* HomeVC.storyboard */; };
-		A5EE99BB25362AA9009F0374 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EE99B625362AA9009F0374 /* HomeVC.swift */; };
-		A5EE99BC25362AA9009F0374 /* PlaylistVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5EE99B825362AA9009F0374 /* PlaylistVC.storyboard */; };
+		A5EE99B325362A3E009F0374 /* SongsList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5EE99B225362A3E009F0374 /* SongsList.storyboard */; };
+		A5EE99BC25362AA9009F0374 /* Playlist.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5EE99B825362AA9009F0374 /* Playlist.storyboard */; };
 		A5EE99BD25362AA9009F0374 /* PlaylistVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EE99B925362AA9009F0374 /* PlaylistVC.swift */; };
 		A5EE99C02536305C009F0374 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5EE99BF2536305C009F0374 /* Main.storyboard */; };
 		A5EE99C2253630BD009F0374 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EE99C1253630BD009F0374 /* SignUpVC.swift */; };
@@ -41,6 +42,9 @@
 
 /* Begin PBXFileReference section */
 		62C50E887C1D933FBC686990 /* Pods-SongsBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SongsBook.release.xcconfig"; path = "Target Support Files/Pods-SongsBook/Pods-SongsBook.release.xcconfig"; sourceTree = "<group>"; };
+		A501397B2559E7E1006D54DB /* SongDisplay.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SongDisplay.storyboard; sourceTree = "<group>"; };
+		A501397E2559F1BA006D54DB /* LeftMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LeftMenu.storyboard; sourceTree = "<group>"; };
+		A50139812559F300006D54DB /* AddSong.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddSong.storyboard; sourceTree = "<group>"; };
 		A50E18A32540ACEC00FE6CE6 /* Measure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Measure.swift; sourceTree = "<group>"; };
 		A50E18A42540ACEC00FE6CE6 /* Part.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Part.swift; sourceTree = "<group>"; };
 		A50E18A52540ACEC00FE6CE6 /* Section.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
@@ -60,13 +64,11 @@
 		A5EE99A525362979009F0374 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A5EE99A8253629F6009F0374 /* SongsListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongsListVC.swift; sourceTree = "<group>"; };
 		A5EE99A9253629F6009F0374 /* SongCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongCell.swift; sourceTree = "<group>"; };
-		A5EE99AC25362A08009F0374 /* MenuListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuListVC.swift; sourceTree = "<group>"; };
+		A5EE99AC25362A08009F0374 /* LeftMenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftMenuVC.swift; sourceTree = "<group>"; };
 		A5EE99AE25362A15009F0374 /* SongDisplayVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongDisplayVC.swift; sourceTree = "<group>"; };
 		A5EE99AF25362A15009F0374 /* AddSongVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddSongVC.swift; sourceTree = "<group>"; };
-		A5EE99B225362A3E009F0374 /* SongBook.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SongBook.storyboard; sourceTree = "<group>"; };
-		A5EE99B525362AA9009F0374 /* HomeVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HomeVC.storyboard; sourceTree = "<group>"; };
-		A5EE99B625362AA9009F0374 /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
-		A5EE99B825362AA9009F0374 /* PlaylistVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PlaylistVC.storyboard; sourceTree = "<group>"; };
+		A5EE99B225362A3E009F0374 /* SongsList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SongsList.storyboard; sourceTree = "<group>"; };
+		A5EE99B825362AA9009F0374 /* Playlist.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Playlist.storyboard; sourceTree = "<group>"; };
 		A5EE99B925362AA9009F0374 /* PlaylistVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaylistVC.swift; sourceTree = "<group>"; };
 		A5EE99BF2536305C009F0374 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		A5EE99C1253630BD009F0374 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
@@ -88,6 +90,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A501397D2559E7F1006D54DB /* SongDisplay */ = {
+			isa = PBXGroup;
+			children = (
+				A5EE99AE25362A15009F0374 /* SongDisplayVC.swift */,
+				A501397B2559E7E1006D54DB /* SongDisplay.storyboard */,
+			);
+			path = SongDisplay;
+			sourceTree = "<group>";
+		};
+		A50139802559F1E0006D54DB /* LeftMenu */ = {
+			isa = PBXGroup;
+			children = (
+				A5EE99AC25362A08009F0374 /* LeftMenuVC.swift */,
+				A501397E2559F1BA006D54DB /* LeftMenu.storyboard */,
+			);
+			path = LeftMenu;
+			sourceTree = "<group>";
+		};
+		A50139832559F306006D54DB /* AddSong */ = {
+			isa = PBXGroup;
+			children = (
+				A5EE99AF25362A15009F0374 /* AddSongVC.swift */,
+				A50139812559F300006D54DB /* AddSong.storyboard */,
+			);
+			path = AddSong;
+			sourceTree = "<group>";
+		};
 		A50E18A12540ACEC00FE6CE6 /* ChordPro */ = {
 			isa = PBXGroup;
 			children = (
@@ -141,16 +170,16 @@
 			children = (
 				A5EE998D25362736009F0374 /* AppDelegate.swift */,
 				A5EE998F25362736009F0374 /* SceneDelegate.swift */,
+				A5EE99A32536292B009F0374 /* Model.swift */,
 				A5499D99254753CA002D0595 /* ViewModels */,
 				A50E18A12540ACEC00FE6CE6 /* ChordPro */,
 				A53EC0BB2536E448004C3ECB /* Helpers */,
-				A5EE99B425362AA9009F0374 /* HomeVC */,
-				A5EE99B725362AA9009F0374 /* PlaylistVC */,
-				A5EE99A7253629F6009F0374 /* SongListVC */,
+				A50139802559F1E0006D54DB /* LeftMenu */,
+				A5EE99B725362AA9009F0374 /* Playlist */,
+				A501397D2559E7F1006D54DB /* SongDisplay */,
+				A50139832559F306006D54DB /* AddSong */,
+				A5EE99A7253629F6009F0374 /* SongList */,
 				A5EE99BE25363017009F0374 /* Login */,
-				A5EE99AC25362A08009F0374 /* MenuListVC.swift */,
-				A5EE99A32536292B009F0374 /* Model.swift */,
-				A5EE99B225362A3E009F0374 /* SongBook.storyboard */,
 				A5EE99962536273B009F0374 /* Assets.xcassets */,
 				A5EE99A525362979009F0374 /* LaunchScreen.storyboard */,
 				A5EE999B2536273B009F0374 /* Info.plist */,
@@ -159,33 +188,23 @@
 			path = SongsBook;
 			sourceTree = "<group>";
 		};
-		A5EE99A7253629F6009F0374 /* SongListVC */ = {
+		A5EE99A7253629F6009F0374 /* SongList */ = {
 			isa = PBXGroup;
 			children = (
-				A5EE99AF25362A15009F0374 /* AddSongVC.swift */,
-				A5EE99AE25362A15009F0374 /* SongDisplayVC.swift */,
 				A5EE99A8253629F6009F0374 /* SongsListVC.swift */,
+				A5EE99B225362A3E009F0374 /* SongsList.storyboard */,
 				A5EE99A9253629F6009F0374 /* SongCell.swift */,
 			);
-			path = SongListVC;
+			path = SongList;
 			sourceTree = "<group>";
 		};
-		A5EE99B425362AA9009F0374 /* HomeVC */ = {
+		A5EE99B725362AA9009F0374 /* Playlist */ = {
 			isa = PBXGroup;
 			children = (
-				A5EE99B525362AA9009F0374 /* HomeVC.storyboard */,
-				A5EE99B625362AA9009F0374 /* HomeVC.swift */,
-			);
-			path = HomeVC;
-			sourceTree = "<group>";
-		};
-		A5EE99B725362AA9009F0374 /* PlaylistVC */ = {
-			isa = PBXGroup;
-			children = (
-				A5EE99B825362AA9009F0374 /* PlaylistVC.storyboard */,
+				A5EE99B825362AA9009F0374 /* Playlist.storyboard */,
 				A5EE99B925362AA9009F0374 /* PlaylistVC.swift */,
 			);
-			path = PlaylistVC;
+			path = Playlist;
 			sourceTree = "<group>";
 		};
 		A5EE99BE25363017009F0374 /* Login */ = {
@@ -276,12 +295,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5EE99BC25362AA9009F0374 /* PlaylistVC.storyboard in Resources */,
+				A5EE99BC25362AA9009F0374 /* Playlist.storyboard in Resources */,
 				A5EE99A625362979009F0374 /* LaunchScreen.storyboard in Resources */,
+				A501397F2559F1BA006D54DB /* LeftMenu.storyboard in Resources */,
 				A5EE99C02536305C009F0374 /* Main.storyboard in Resources */,
 				A5EE99972536273B009F0374 /* Assets.xcassets in Resources */,
-				A5EE99BA25362AA9009F0374 /* HomeVC.storyboard in Resources */,
-				A5EE99B325362A3E009F0374 /* SongBook.storyboard in Resources */,
+				A50139822559F300006D54DB /* AddSong.storyboard in Resources */,
+				A501397C2559E7E1006D54DB /* SongDisplay.storyboard in Resources */,
+				A5EE99B325362A3E009F0374 /* SongsList.storyboard in Resources */,
 				A53EC0BF2536F4AF004C3ECB /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -336,7 +357,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5EE99A42536292B009F0374 /* Model.swift in Sources */,
-				A5EE99BB25362AA9009F0374 /* HomeVC.swift in Sources */,
 				A50E18A92540ACEC00FE6CE6 /* Measure.swift in Sources */,
 				A5EE99AA253629F6009F0374 /* SongsListVC.swift in Sources */,
 				A53EC0BD2536E45C004C3ECB /* Utilities.swift in Sources */,
@@ -350,7 +370,7 @@
 				A5EE99AB253629F6009F0374 /* SongCell.swift in Sources */,
 				A5EE99B025362A15009F0374 /* SongDisplayVC.swift in Sources */,
 				A50E18AC2540ACEC00FE6CE6 /* Line.swift in Sources */,
-				A5EE99AD25362A08009F0374 /* MenuListVC.swift in Sources */,
+				A5EE99AD25362A08009F0374 /* LeftMenuVC.swift in Sources */,
 				A5EE998E25362736009F0374 /* AppDelegate.swift in Sources */,
 				A5EE99C4253630CE009F0374 /* LoginVC.swift in Sources */,
 				A50E18AA2540ACEC00FE6CE6 /* Part.swift in Sources */,

@@ -110,7 +110,7 @@ class SignUpVC: UIViewController {
     func transitionToHome() {
         
         // Switch to another Storyboard
-        let storyboard = UIStoryboard(name: Constants.Storyboard.SongBook, bundle: nil)
+        let storyboard = UIStoryboard(name: Constants.Storyboard.SongDisplay, bundle: nil)
         let navMenuVC = storyboard.instantiateInitialViewController()
         view.window?.rootViewController = navMenuVC
     }
