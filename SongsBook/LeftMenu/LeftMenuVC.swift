@@ -8,29 +8,38 @@
 
 import UIKit
 
-enum MenuItem: String, CaseIterable {
+protocol MenuControllerDelegate {
+    func didSelectMenuItem(named: SideMenuItems)
+}
+
+enum SideMenuItems: String, CaseIterable {
+    case home = "Home"
     case songs = "Songs"
     case playlist = "Playlist"
-    case settings = "Settings"
-    case login = "Login"
-    case logout = "Logout"
 }
 
 class LeftMenuVC: UITableViewController {
 
     private let songsListVC = SongsListVC()
-    let screenTitle = "Menu"
     
-// TODO: Replace with ENUM in the future
-    let menuItems = [MenuItem.songs, MenuItem.playlist, MenuItem.logout]
+    public var delegate: MenuControllerDelegate?
+
+    private let menuItems: [SideMenuItems]
+    private let color = UIColor(red: 33/255.0, green: 33/255.0, blue: 33/255.0, alpha: 1)
+    
+    init(with menuItems: [SideMenuItems]) {
+        self.menuItems = menuItems
+        super.init(nibName: nil, bundle: nil)
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        title = screenTitle
-        
-        tableView.delegate = self
-        tableView.dataSource = self
+        view.backgroundColor = color
     }
 
     // MARK: - Table view data source
@@ -40,7 +49,9 @@ class LeftMenuVC: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "listCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        cell.backgroundColor = color
+        cell.textLabel?.textColor = .white
         cell.textLabel?.text = menuItems[indexPath.row].rawValue
         return cell
     }
@@ -49,22 +60,8 @@ class LeftMenuVC: UITableViewController {
         tableView.deselectRow(at: indexPath, animated: true)
         
         // Select what screen to display according to the menu item selected
-        switch indexPath.row {
-        case 0:
-            let storyboard = UIStoryboard(name: "SongsList", bundle: nil)
-            let vc = storyboard.instantiateViewController(identifier: "SongsListVC") as! SongsListVC
-            navigationController?.pushViewController(vc, animated: true)
-        case 1:
-            let storyboard = UIStoryboard(name: "Playlist", bundle: nil)
-            let vc = storyboard.instantiateInitialViewController()!
-            navigationController?.pushViewController(vc, animated: true)
-        case 2:
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let vc = storyboard.instantiateInitialViewController()
-            view.window?.rootViewController = vc
-        default:
-            return
-        }
+        let selectedItem = menuItems[indexPath.row].rawValue
+        delegate?.didSelectMenuItem(named: SideMenuItems(rawValue: selectedItem)!)
     }
 
 }

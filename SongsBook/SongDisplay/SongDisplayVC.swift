@@ -9,9 +9,13 @@
 import UIKit
 import SideMenu
 
-class SongDisplayVC: UIViewController {
+class SongDisplayVC: UIViewController, MenuControllerDelegate {
     
     var songToDisplay = Song()
+    
+    private var sideMenu: SideMenuNavigationController?
+    private let songsListVC = SongsListVC()
+    private let playlistVC  = PlaylistVC()
     
     @IBOutlet weak var songTitleLabel: UILabel!
     @IBOutlet weak var artistLabel: UILabel!
@@ -22,13 +26,47 @@ class SongDisplayVC: UIViewController {
     @IBOutlet weak var bpmLabel: UILabel!
     @IBOutlet weak var lyricsTextView: UITextView!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("Song Display called")
-        displaySong(song: songToDisplay)
+        
+        let menu = LeftMenuVC(with: SideMenuItems.allCases)
+        menu.delegate = self
+        
+        sideMenu = SideMenuNavigationController(rootViewController: menu)
+        sideMenu?.leftSide = true
+        sideMenu?.setNavigationBarHidden(true, animated: false)
+        
+        SideMenuManager.default.leftMenuNavigationController = sideMenu
+        SideMenuManager.default.addPanGestureToPresent(toView: view)
+        
+        addChildControllers()
+        
+//        print("Song Display called")
+//        displaySong(song: songToDisplay)
     }
     
+    
     @IBAction func didTapMenuButton(_ sender: UIBarButtonItem) {
+        present(sideMenu!, animated: true)
+    }
+    
+    
+    private func addChildControllers() {
+        addChild(songsListVC)
+        addChild(playlistVC)
+        
+        view.addSubview(songsListVC.view)
+        view.addSubview(playlistVC.view)
+        
+        songsListVC.view.frame = view.bounds
+        playlistVC.view.frame = view.bounds
+        
+        songsListVC.didMove(toParent: self)
+        playlistVC.didMove(toParent: self)
+        
+        songsListVC.view.isHidden = true
+        playlistVC.view.isHidden = true
     }
     
     
@@ -44,5 +82,22 @@ class SongDisplayVC: UIViewController {
     }
     
     
+    func didSelectMenuItem(named: SideMenuItems) {
+        sideMenu?.dismiss(animated: true, completion: nil)
+        
+        title = named.rawValue
+        
+        switch named {
+        case .home:
+            songsListVC.view.isHidden = true
+            playlistVC.view.isHidden = true
+        case .songs:
+            songsListVC.view.isHidden = false
+            playlistVC.view.isHidden = true
+        case .playlist:
+            songsListVC.view.isHidden = true
+            playlistVC.view.isHidden = false
+        }
+    }
     
 }
