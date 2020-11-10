@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SideMenu
 
 class SongDisplayVC: UIViewController {
     
@@ -26,6 +27,10 @@ class SongDisplayVC: UIViewController {
         print("Song Display called")
         displaySong(song: songToDisplay)
     }
+    
+    @IBAction func didTapMenuButton(_ sender: UIBarButtonItem) {
+    }
+    
     
     func displaySong(song: Song) {
         let fs = ChordPro.parse(song.songBody!)

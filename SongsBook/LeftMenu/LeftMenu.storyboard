@@ -30,10 +30,34 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="1pX-Pg-F4F"/>
+                    <connections>
+                        <segue destination="Ezx-hr-Rh4" kind="show" id="ukG-46-ZZp"/>
+                        <segue destination="41i-Ak-k02" kind="show" id="Xyv-un-vSa"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hld-mv-hG8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="708.69565217391312" y="-48.214285714285715"/>
+            <point key="canvasLocation" x="733" y="-48"/>
+        </scene>
+        <!--SongsList-->
+        <scene sceneID="tcb-WV-ndR">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SongsList" id="41i-Ak-k02" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="WJd-PF-lNq"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p5G-Jb-rOU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1249" y="-166"/>
+        </scene>
+        <!--Playlist-->
+        <scene sceneID="Y3x-x5-o3V">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Playlist" id="Ezx-hr-Rh4" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="pJK-5x-IQX"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m26-Ia-ZE9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1315" y="-33"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ja2-s2-0sh">

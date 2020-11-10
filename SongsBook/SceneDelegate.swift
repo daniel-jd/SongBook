@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import FAPanels
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -19,25 +18,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         
-        // MARK: - Set FAPanels here
-        
-        if let windowScene = scene as? UIWindowScene {
-            
-            let window = UIWindow(windowScene: windowScene)
-            let root = FAPanelController()
-            
-            let mainStoryboard: UIStoryboard = UIStoryboard(name: "SongDisplay", bundle: nil)
-            let leftMenuStoryboard: UIStoryboard = UIStoryboard(name: "LeftMenu", bundle: nil)
-            
-            let leftMenuVC: LeftMenuVC = leftMenuStoryboard.instantiateViewController(withIdentifier: "LeftMenuVC") as! LeftMenuVC
-            let centerVC: SongDisplayVC = mainStoryboard.instantiateViewController(withIdentifier: "SongDisplayVC") as! SongDisplayVC
-            let centerNavVC = UINavigationController(rootViewController: centerVC)
-            
-            root.center(centerNavVC).left(leftMenuVC)
-            window.rootViewController = root
-            self.window = window
-            window.makeKeyAndVisible()
-        }
+        guard let _ = (scene as? UIWindowScene) else { return }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

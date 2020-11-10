@@ -8,7 +8,7 @@ target 'SongsBook' do
   # Pods for SongsBook
 
   # add the Firebase pod for Google Analytics
-  pod 'FAPanels'
+  pod 'SideMenu'
   pod 'Firebase/Analytics'
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
