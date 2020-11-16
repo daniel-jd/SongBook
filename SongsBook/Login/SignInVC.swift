@@ -23,7 +23,7 @@ class SignInVC: UIViewController {
     
     @IBAction func dontSignInTapped(_ sender: Any) {
         // Switch to SongBook Storyboard
-        let storyboard = UIStoryboard(name: Constants.Storyboard.SongDisplay, bundle: nil)
+        let storyboard = UIStoryboard(name: Constants.Storyboard.SongsList, bundle: nil)
         let navMenuVC = storyboard.instantiateInitialViewController()
         self.view.window?.rootViewController = navMenuVC
     }

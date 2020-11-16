@@ -7,13 +7,11 @@
 //
 
 import UIKit
-import SideMenu
 
-class SongDisplayVC: UIViewController, MenuControllerDelegate {
+class SongDisplayVC: UIViewController {
     
     var songToDisplay = Song()
     
-    private var sideMenu: SideMenuNavigationController?
     private let songsListVC = SongsListVC()
     private let playlistVC  = PlaylistVC()
     
@@ -30,25 +28,19 @@ class SongDisplayVC: UIViewController, MenuControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let menu = LeftMenuVC(with: SideMenuItems.allCases)
-        menu.delegate = self
-        
-        sideMenu = SideMenuNavigationController(rootViewController: menu)
-        sideMenu?.leftSide = true
-        sideMenu?.setNavigationBarHidden(true, animated: false)
-        
-        SideMenuManager.default.leftMenuNavigationController = sideMenu
-        SideMenuManager.default.addPanGestureToPresent(toView: view)
-        
+        LeftMenuConfig.shared.addGestureForMenu(view)
         addChildControllers()
         
 //        print("Song Display called")
 //        displaySong(song: songToDisplay)
     }
     
+    deinit { print("🏁 - \(classForCoder)") }
+    
     
     @IBAction func didTapMenuButton(_ sender: UIBarButtonItem) {
-        present(sideMenu!, animated: true)
+        guard let menu = LeftMenuConfig.shared.sideMenu else { return }
+        present(menu, animated: true)
     }
     
     
@@ -83,7 +75,8 @@ class SongDisplayVC: UIViewController, MenuControllerDelegate {
     
     
     func didSelectMenuItem(named: SideMenuItems) {
-        sideMenu?.dismiss(animated: true, completion: nil)
+        
+        LeftMenuConfig.shared.sideMenu?.dismiss(animated: true, completion: nil)
         
         title = named.rawValue
         

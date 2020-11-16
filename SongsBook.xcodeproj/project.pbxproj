@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		325A3B4D2563132F00000C3E /* LeftMenuTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325A3B4C2563132F00000C3E /* LeftMenuTableCell.swift */; };
+		325A3B5025631D7600000C3E /* LeftMenuConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325A3B4F25631D7600000C3E /* LeftMenuConfig.swift */; };
 		63A2253AA97F127A507E1D3E /* Pods_SongsBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE1FDB664966DC5A59CB024D /* Pods_SongsBook.framework */; };
 		A501397C2559E7E1006D54DB /* SongDisplay.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A501397B2559E7E1006D54DB /* SongDisplay.storyboard */; };
 		A501397F2559F1BA006D54DB /* LeftMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A501397E2559F1BA006D54DB /* LeftMenu.storyboard */; };
@@ -41,6 +43,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		325A3B4C2563132F00000C3E /* LeftMenuTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftMenuTableCell.swift; sourceTree = "<group>"; };
+		325A3B4F25631D7600000C3E /* LeftMenuConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftMenuConfig.swift; sourceTree = "<group>"; };
 		62C50E887C1D933FBC686990 /* Pods-SongsBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SongsBook.release.xcconfig"; path = "Target Support Files/Pods-SongsBook/Pods-SongsBook.release.xcconfig"; sourceTree = "<group>"; };
 		A501397B2559E7E1006D54DB /* SongDisplay.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SongDisplay.storyboard; sourceTree = "<group>"; };
 		A501397E2559F1BA006D54DB /* LeftMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LeftMenu.storyboard; sourceTree = "<group>"; };
@@ -104,6 +108,7 @@
 			children = (
 				A5EE99AC25362A08009F0374 /* LeftMenuVC.swift */,
 				A501397E2559F1BA006D54DB /* LeftMenu.storyboard */,
+				325A3B4C2563132F00000C3E /* LeftMenuTableCell.swift */,
 			);
 			path = LeftMenu;
 			sourceTree = "<group>";
@@ -143,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				A5499D97254753BF002D0595 /* SongViewModel.swift */,
+				325A3B4F25631D7600000C3E /* LeftMenuConfig.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -365,6 +371,7 @@
 				A50E18AD2540ACEC00FE6CE6 /* ChordPro.swift in Sources */,
 				A5EE99A2253628FD009F0374 /* Song.swift in Sources */,
 				A53EC0BA2536DC05004C3ECB /* SignInVC.swift in Sources */,
+				325A3B5025631D7600000C3E /* LeftMenuConfig.swift in Sources */,
 				A5EE99C2253630BD009F0374 /* SignUpVC.swift in Sources */,
 				A5F378312538B9330078CA84 /* Constants.swift in Sources */,
 				A5EE99AB253629F6009F0374 /* SongCell.swift in Sources */,
@@ -374,6 +381,7 @@
 				A5EE998E25362736009F0374 /* AppDelegate.swift in Sources */,
 				A5EE99C4253630CE009F0374 /* LoginVC.swift in Sources */,
 				A50E18AA2540ACEC00FE6CE6 /* Part.swift in Sources */,
+				325A3B4D2563132F00000C3E /* LeftMenuTableCell.swift in Sources */,
 				A5EE999025362736009F0374 /* SceneDelegate.swift in Sources */,
 				A5EE99B125362A15009F0374 /* AddSongVC.swift in Sources */,
 				A5EE99BD25362AA9009F0374 /* PlaylistVC.swift in Sources */,

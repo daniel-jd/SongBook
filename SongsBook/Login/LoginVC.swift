@@ -48,7 +48,7 @@ class LoginVC: UIViewController {
                 }
                 else {
                     // Switch to another Storyboard
-                    let storyboard = UIStoryboard(name: Constants.Storyboard.SongDisplay, bundle: nil)
+                    let storyboard = UIStoryboard(name: Constants.Storyboard.SongsList, bundle: nil)
                     let navMenuVC = storyboard.instantiateInitialViewController()
                     self.view.window?.rootViewController = navMenuVC
                 }

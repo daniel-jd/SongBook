@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kPC-d7-hjZ">
-    <device id="ipad9_7" orientation="portrait" layout="fullscreen" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kPC-d7-hjZ">
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -12,28 +14,28 @@
             <objects>
                 <viewController storyboardIdentifier="SongDisplayVC" id="U9w-0Y-zqA" customClass="SongDisplayVC" customModule="SongsBook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gAk-Zl-TQo">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="979-0w-XKI">
-                                <rect key="frame" x="20" y="96" width="728" height="908"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <rect key="frame" x="20" y="12" width="388" height="860"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="908" id="GOl-Sc-rxc"/>
                                     <constraint firstAttribute="height" constant="860" id="oit-X0-3KE"/>
                                 </constraints>
-                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tWb-N2-ssl">
-                                <rect key="frame" x="20" y="70" width="101" height="27"/>
+                                <rect key="frame" x="20" y="108" width="101" height="27"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="by Artist" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xlU-2L-0AQ">
-                                <rect key="frame" x="20" y="102.5" width="250" height="23"/>
+                                <rect key="frame" x="20" y="140.66666666666666" width="250" height="23"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="hm6-to-khT"/>
                                 </constraints>
@@ -42,31 +44,31 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Key:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BFx-Cm-Amy">
-                                <rect key="frame" x="671" y="70" width="41" height="26.5"/>
+                                <rect key="frame" x="331" y="108" width="41" height="26.666666666666657"/>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="22"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Em" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aO0-BR-all">
-                                <rect key="frame" x="716" y="70" width="32" height="26.5"/>
+                                <rect key="frame" x="376" y="108" width="32" height="26.666666666666657"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
-                                <color key="textColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" systemColor="systemIndigoColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="120" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yok-fb-jXl">
-                                <rect key="frame" x="717.5" y="103.5" width="30.5" height="21"/>
+                                <rect key="frame" x="378" y="141.66666666666666" width="30" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="bpm" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NKr-vY-Mha">
-                                <rect key="frame" x="677" y="103.5" width="35" height="21"/>
+                                <rect key="frame" x="337" y="141.66666666666666" width="35" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tempo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ise-zc-Zgb">
-                                <rect key="frame" x="617" y="103" width="52" height="22"/>
+                                <rect key="frame" x="277" y="141" width="52" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="52" id="WyT-bT-rgv"/>
                                 </constraints>
@@ -75,7 +77,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="kJB-qY-Ks5"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="xlU-2L-0AQ" firstAttribute="baseline" secondItem="yok-fb-jXl" secondAttribute="baseline" constant="1" id="5te-wx-gbp"/>
                             <constraint firstItem="ise-zc-Zgb" firstAttribute="top" secondItem="kJB-qY-Ks5" secondAttribute="top" constant="53" id="65k-gR-aZV"/>
@@ -98,7 +101,6 @@
                             <constraint firstItem="ise-zc-Zgb" firstAttribute="centerY" secondItem="yok-fb-jXl" secondAttribute="centerY" id="vfX-3n-cSy"/>
                             <constraint firstItem="aO0-BR-all" firstAttribute="leading" secondItem="BFx-Cm-Amy" secondAttribute="trailing" constant="4" id="z94-va-20e"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="kJB-qY-Ks5"/>
                     </view>
                     <navigationItem key="navigationItem" title="Song Title" id="gLh-Ll-OMn">
                         <barButtonItem key="leftBarButtonItem" image="line.horizontal.3" catalog="system" id="uqG-hV-zYs">
@@ -129,7 +131,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kPC-d7-hjZ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="sNY-eA-a0Y">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="50"/>
+                        <rect key="frame" x="0.0" y="44" width="428" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.57254901960000004" green="0.47843137250000001" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
@@ -145,5 +147,14 @@
     </scenes>
     <resources>
         <image name="line.horizontal.3" catalog="system" width="128" height="64"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>
