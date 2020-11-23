@@ -18,6 +18,18 @@ class SongViewModel: ObservableObject {
     private let db = Firestore.firestore()
     let url = "gs://songbook-3a927.appspot.com/songBody/Indescribable – Chris Tomlin.txt"
     
+    func readFile() {
+        let fileUrlProject = Bundle.main.path(forResource: "Oceans", ofType: "txt")
+        var readString = ""
+        do {
+            readString = try String(contentsOfFile: fileUrlProject!, encoding: String.Encoding.utf8)
+        } catch let error as NSError {
+            print("Failed to read from file project")
+            print(error)
+        }
+        print(readString)
+    }
+    
     func fetchSongs() {
         db.collection("songs").addSnapshotListener { (querySnapshot, error) in
             guard let documents = querySnapshot?.documents else {
@@ -25,7 +37,7 @@ class SongViewModel: ObservableObject {
                 return
             }
             
-            // MARK: - Trying to get url path to a sonBody
+            // MARK: - Trying to get url path to a songBody
             
             self.storage.child("songBody/Indescribable – Chris Tomlin.txt").downloadURL { (url, error) in
                 guard let url = url, error == nil else {

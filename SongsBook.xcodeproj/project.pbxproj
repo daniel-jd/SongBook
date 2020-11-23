@@ -22,6 +22,8 @@
 		A53EC0BD2536E45C004C3ECB /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53EC0BC2536E45C004C3ECB /* Utilities.swift */; };
 		A53EC0BF2536F4AF004C3ECB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A53EC0BE2536F4AF004C3ECB /* GoogleService-Info.plist */; };
 		A5499D98254753BF002D0595 /* SongViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5499D97254753BF002D0595 /* SongViewModel.swift */; };
+		A57E2858256C66360068E97E /* Oceans.txt in Resources */ = {isa = PBXBuildFile; fileRef = A57E2857256C66350068E97E /* Oceans.txt */; };
+		A57E285B256C665E0068E97E /* Indescribable.txt in Resources */ = {isa = PBXBuildFile; fileRef = A57E285A256C665E0068E97E /* Indescribable.txt */; };
 		A5EE998E25362736009F0374 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EE998D25362736009F0374 /* AppDelegate.swift */; };
 		A5EE999025362736009F0374 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EE998F25362736009F0374 /* SceneDelegate.swift */; };
 		A5EE99972536273B009F0374 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5EE99962536273B009F0374 /* Assets.xcassets */; };
@@ -58,6 +60,8 @@
 		A53EC0BC2536E45C004C3ECB /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		A53EC0BE2536F4AF004C3ECB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A5499D97254753BF002D0595 /* SongViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongViewModel.swift; sourceTree = "<group>"; };
+		A57E2857256C66350068E97E /* Oceans.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Oceans.txt; sourceTree = "<group>"; };
+		A57E285A256C665E0068E97E /* Indescribable.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Indescribable.txt; sourceTree = "<group>"; };
 		A5EE998A25362736009F0374 /* SongsBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SongsBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5EE998D25362736009F0374 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A5EE998F25362736009F0374 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -190,6 +194,8 @@
 				A5EE99A525362979009F0374 /* LaunchScreen.storyboard */,
 				A5EE999B2536273B009F0374 /* Info.plist */,
 				A53EC0BE2536F4AF004C3ECB /* GoogleService-Info.plist */,
+				A57E2857256C66350068E97E /* Oceans.txt */,
+				A57E285A256C665E0068E97E /* Indescribable.txt */,
 			);
 			path = SongsBook;
 			sourceTree = "<group>";
@@ -305,9 +311,11 @@
 				A5EE99A625362979009F0374 /* LaunchScreen.storyboard in Resources */,
 				A501397F2559F1BA006D54DB /* LeftMenu.storyboard in Resources */,
 				A5EE99C02536305C009F0374 /* Main.storyboard in Resources */,
+				A57E285B256C665E0068E97E /* Indescribable.txt in Resources */,
 				A5EE99972536273B009F0374 /* Assets.xcassets in Resources */,
 				A50139822559F300006D54DB /* AddSong.storyboard in Resources */,
 				A501397C2559E7E1006D54DB /* SongDisplay.storyboard in Resources */,
+				A57E2858256C66360068E97E /* Oceans.txt in Resources */,
 				A5EE99B325362A3E009F0374 /* SongsList.storyboard in Resources */,
 				A53EC0BF2536F4AF004C3ECB /* GoogleService-Info.plist in Resources */,
 			);

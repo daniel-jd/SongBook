@@ -82,12 +82,12 @@ class SignUpVC: UIViewController {
                 // Check for errors
                 if err != nil {
                     // There was an error
-                    self.showError("Erroe creating new user")
+                    self.showError("Error creating new user")
                 }
                 else {
                     // User created successfully
                     let db = Firestore.firestore()
-                    db.collection("users").addDocument(data: ["firstname":firstName, "lastname":lastName, "uid":authResult!.user.uid]) { (error) in
+                    db.collection("users").addDocument(data: ["firstname":firstName, "lastname":lastName, "email":email, "password":password, "uid":authResult!.user.uid]) { (error) in
                         if error != nil {
                             // There was an error. Show error message
                             self.showError("Error saving user data")

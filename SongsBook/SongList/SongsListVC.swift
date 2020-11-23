@@ -10,6 +10,8 @@ import UIKit
 import Firebase
 
 class SongsListVC: UITableViewController, AddSongDelegate {
+    
+    // WHAT ???
     func saveSongsListToUserDefaults() {
         print("saveSongsListToUserDefaults() called")
     }
@@ -19,7 +21,8 @@ class SongsListVC: UITableViewController, AddSongDelegate {
     //var numberOfSongs: Int?
     
     @IBAction func addSongButton(_ sender: UIBarButtonItem) {
-        let vc = storyboard?.instantiateViewController(withIdentifier: "AddSongVC") as! AddSongVC
+        let storyboard = UIStoryboard(name: Constants.Storyboard.AddSong, bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "AddSongVC") as! AddSongVC
         vc.addSongDelegate = self
         navigationController?.pushViewController(vc, animated: true)
     }
@@ -28,6 +31,7 @@ class SongsListVC: UITableViewController, AddSongDelegate {
         super.viewDidLoad()
 
         setTableView()
+        //tableView.register(UITableViewCell.self, forCellReuseIdentifier: "SongCell")
 //      checkForSavedSongsList()
    
         print("viewDidLoad. songsList count: \(songsList.count)")
@@ -37,7 +41,7 @@ class SongsListVC: UITableViewController, AddSongDelegate {
         super.viewWillAppear(animated)
         
         loadSongsFromDatabase()
-        
+        SongViewModel().readFile()
         //tableView.reloadData()
     }
 
@@ -46,9 +50,6 @@ class SongsListVC: UITableViewController, AddSongDelegate {
             self?.songsList = songs
             self?.tableView.reloadData()
         })
-        
-//        SongViewModel().fetchSongs()
-//        self.tableView.reloadData()
     }
     
     func addNewSong(song: Song) {
@@ -88,7 +89,7 @@ class SongsListVC: UITableViewController, AddSongDelegate {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // Say that we'll use our own custom cell from SongCell class
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! SongCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CustomSongCell", for: indexPath) as! SongCell
         let song = songsList[indexPath.row]
         cell.set(song: song)
         return cell
@@ -97,7 +98,8 @@ class SongsListVC: UITableViewController, AddSongDelegate {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         // Programmatic way of transition to another screen
-        let vc = storyboard?.instantiateViewController(identifier: "SongDisplayVC") as! SongDisplayVC
+        let storyboard = UIStoryboard(name: Constants.Storyboard.SongDisplay, bundle: nil)
+        let vc = storyboard.instantiateViewController(identifier: "SongDisplayVC") as! SongDisplayVC
         // TODO: Probably this could be substitute with a delegate or another function
         vc.songToDisplay.title = songsList[indexPath.row].title
         vc.songToDisplay.artist = songsList[indexPath.row].artist
