@@ -41,7 +41,7 @@ class SongsListVC: UITableViewController, AddSongDelegate {
         super.viewWillAppear(animated)
         
         loadSongsFromDatabase()
-        SongViewModel().readFile()
+        //SongViewModel().readFile()
         //tableView.reloadData()
     }
 
@@ -89,7 +89,7 @@ class SongsListVC: UITableViewController, AddSongDelegate {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // Say that we'll use our own custom cell from SongCell class
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CustomSongCell", for: indexPath) as! SongCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SongCell", for: indexPath) as! SongCell
         let song = songsList[indexPath.row]
         cell.set(song: song)
         return cell

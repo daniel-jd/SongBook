@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eya-KU-pxj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eya-KU-pxj">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -52,7 +54,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Key:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dlq-6D-6PT">
-                                <rect key="frame" x="40" y="278" width="44.5" height="27"/>
+                                <rect key="frame" x="40" y="278" width="43" height="27"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -75,7 +77,8 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="6gI-at-eQo"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6gI-at-eQo" firstAttribute="trailing" secondItem="T4h-T1-p1f" secondAttribute="trailing" constant="40" id="0Yh-wv-QgG"/>
                             <constraint firstItem="uLN-VW-m6z" firstAttribute="top" secondItem="6gI-at-eQo" secondAttribute="top" constant="40" id="1Dk-rx-Pr1"/>
@@ -100,15 +103,16 @@
                             <constraint firstItem="uxf-5H-cxs" firstAttribute="top" secondItem="dlq-6D-6PT" secondAttribute="bottom" constant="20" id="vLw-Sj-Mnv"/>
                             <constraint firstItem="Lzh-Ep-gyf" firstAttribute="top" secondItem="vtE-eH-Y6H" secondAttribute="bottom" constant="10" id="w23-lI-pVt"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6gI-at-eQo"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add Song" id="was-jR-N4E">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="0oM-be-kPg">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="cancel:" destination="eya-KU-pxj" id="0tn-zs-vFm"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="oMf-Rg-5L2">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="save:" destination="eya-KU-pxj" id="F8f-jA-irL"/>
                             </connections>
@@ -131,4 +135,9 @@
             <point key="canvasLocation" x="1321.7391304347827" y="-48.214285714285715"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
