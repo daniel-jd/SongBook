@@ -7,8 +7,8 @@
 //
 
 import UIKit
-import FirebaseAuth
-import FirebaseFirestore
+//import FirebaseAuth
+//import FirebaseFirestore
 
 class SignUpVC: UIViewController {
 
@@ -77,28 +77,28 @@ class SignUpVC: UIViewController {
             let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             
             // Create the user
-            Auth.auth().createUser(withEmail: email, password: password) { (authResult, err) in
-                
-                // Check for errors
-                if err != nil {
-                    // There was an error
-                    self.showError("Error creating new user")
-                }
-                else {
-                    // User created successfully
-                    let db = Firestore.firestore()
-                    db.collection("users").addDocument(data: ["firstname":firstName, "lastname":lastName, "email":email, "password":password, "uid":authResult!.user.uid]) { (error) in
-                        if error != nil {
-                            // There was an error. Show error message
-                            self.showError("Error saving user data")
-                        }
-                    }
-                    
-                    // Go to Home screen
-                    self.transitionToHome()
-                    
-                }
-            }
+//            Auth.auth().createUser(withEmail: email, password: password) { (authResult, err) in
+//                
+//                // Check for errors
+//                if err != nil {
+//                    // There was an error
+//                    self.showError("Error creating new user")
+//                }
+//                else {
+//                    // User created successfully
+//                    let db = Firestore.firestore()
+//                    db.collection("users").addDocument(data: ["firstname":firstName, "lastname":lastName, "email":email, "password":password, "uid":authResult!.user.uid]) { (error) in
+//                        if error != nil {
+//                            // There was an error. Show error message
+//                            self.showError("Error saving user data")
+//                        }
+//                    }
+//                    
+//                    // Go to Home screen
+//                    self.transitionToHome()
+//                    
+//                }
+//            }
         }
     }
     

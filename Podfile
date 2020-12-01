@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
- platform :ios, '13.3'
+ platform :ios
 
 target 'SongsBook' do
   # Comment the next line if you don't want to use dynamic frameworks
@@ -8,7 +8,7 @@ target 'SongsBook' do
   # Pods for SongsBook
 
   # add the Firebase pod for Google Analytics
-  pod 'SideMenu'
+  pod 'FAPanels'
   pod 'Firebase/Analytics'
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'

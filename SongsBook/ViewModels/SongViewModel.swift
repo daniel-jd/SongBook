@@ -6,10 +6,12 @@
 //  Copyright © 2020 DanielYarmak. All rights reserved.
 //
 
-import FirebaseFirestore
-import FirebaseStorage
-import FirebaseFirestoreSwift
-
+//import FirebaseFirestore
+//import FirebaseStorage
+//import FirebaseFirestoreSwift
+/*
+ 
+ 
 class SongViewModel: ObservableObject {
     
     @Published var songs = [Song]()
@@ -54,3 +56,4 @@ class SongViewModel: ObservableObject {
         }
     }
 }
+ */

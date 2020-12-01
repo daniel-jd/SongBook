@@ -7,9 +7,9 @@
 //
 
 import Foundation
-import FirebaseFirestore
-import FirebaseStorage
-import FirebaseFirestoreSwift
+//import FirebaseFirestore
+//import FirebaseStorage
+//import FirebaseFirestoreSwift
 
 enum Key: String {
     case A = "A"; case A_flat = "Ab"; case A_sharp = "A#"
@@ -21,11 +21,13 @@ enum Key: String {
     case G = "G"; case G_flat = "Gb"; case G_sharp = "G#"
  }
 
-
-struct Song: Identifiable, Codable {
+/*
+ 
+ */
+struct Song: Codable { // Identifiable
 
 // Properties
-    @DocumentID var id: String? = UUID().uuidString
+//    @DocumentID var id: String? = UUID().uuidString
     var title: String?
     var artist: String?
 //    var capo: String?
@@ -65,37 +67,37 @@ extension Song {
     
     func fetchSongs(_ callback: @escaping songsCallback) {
         
-        let songsCollection = Firestore.firestore().collection("songs")
+//        let songsCollection = Firestore.firestore().collection("songs")
         
-        songsCollection.getDocuments { (querySnapshot, error) in
-            if let error = error {
-                // There was an error
-                print("Error while getDocuments: \(error)")
-            }
-            else {
-                // Successful getting documents
-                guard let snapshot = querySnapshot else { return }
-                
-                var songs = [Song]()
-                
-                // Parsing document to a struct
-                var i = 0
-                for document in snapshot.documents {
-                    let data = document.data()
-                    let title = data["title"] as? String ?? "Untitled"
-                    let artist = data["artist"] as? String ?? "Unknown"
-                    let key = data["key"] as? String ?? ""
-                    let tempo = data["tempo"] as? String ?? ""
-                    let lyrics = data["songBody"] as? String ?? ""
-                    let newSong = Song(title: title, artist: artist, key: key, tempo: tempo, lyrics: lyrics)
-                    songs.append(newSong)
-                    print("Song \(i) created \(songs[i].title ?? "Noname")")
-                    i += 1
-                }
-                
-                callback(songs)
-            }
-                
-        }
+//        songsCollection.getDocuments { (querySnapshot, error) in
+//            if let error = error {
+//                // There was an error
+//                print("Error while getDocuments: \(error)")
+//            }
+//            else {
+//                // Successful getting documents
+//                guard let snapshot = querySnapshot else { return }
+//
+//                var songs = [Song]()
+//
+//                // Parsing document to a struct
+//                var i = 0
+//                for document in snapshot.documents {
+//                    let data = document.data()
+//                    let title = data["title"] as? String ?? "Untitled"
+//                    let artist = data["artist"] as? String ?? "Unknown"
+//                    let key = data["key"] as? String ?? ""
+//                    let tempo = data["tempo"] as? String ?? ""
+//                    let lyrics = data["songBody"] as? String ?? ""
+//                    let newSong = Song(title: title, artist: artist, key: key, tempo: tempo, lyrics: lyrics)
+//                    songs.append(newSong)
+//                    print("Song \(i) created \(songs[i].title ?? "Noname")")
+//                    i += 1
+//                }
+//
+//                callback(songs)
+//            }
+//
+//        }
     }
 }
