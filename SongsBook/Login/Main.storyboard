@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2gg-3J-QTy">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="ipad9_7" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
@@ -14,14 +14,14 @@
             <objects>
                 <viewController id="6UW-Wc-ggG" customClass="SignInVC" customModule="SongsBook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Dm6-Lk-Lq2">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Rgu-nZ-7MT">
-                                <rect key="frame" x="40" y="632" width="334" height="190"/>
+                                <rect key="frame" x="40" y="794" width="688" height="190"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1hE-bn-qLy">
-                                        <rect key="frame" x="0.0" y="0.0" width="334" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="688" height="50"/>
                                         <color key="backgroundColor" red="0.57254901960000004" green="0.47843137250000001" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="etO-3g-b4h"/>
@@ -35,7 +35,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9SQ-KZ-aaz">
-                                        <rect key="frame" x="0.0" y="70" width="334" height="50"/>
+                                        <rect key="frame" x="0.0" y="70" width="688" height="50"/>
                                         <color key="backgroundColor" red="0.57254901960000004" green="0.47843137250000001" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                         <state key="normal" title="Login">
@@ -46,7 +46,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QGM-QH-H9J">
-                                        <rect key="frame" x="0.0" y="140" width="334" height="50"/>
+                                        <rect key="frame" x="0.0" y="140" width="688" height="50"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                         <state key="normal" title="Don't Sign In">
                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -86,34 +86,34 @@
             <objects>
                 <viewController id="LhP-af-hpk" customClass="SignUpVC" customModule="SongsBook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="e7e-zg-pW9">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="BXV-H8-Erx">
-                                <rect key="frame" x="40" y="84" width="334" height="370.5"/>
+                                <rect key="frame" x="40" y="40" width="688" height="370.5"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1A3-L9-B31">
-                                        <rect key="frame" x="0.0" y="0.0" width="334" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="688" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FYG-09-sAB">
-                                        <rect key="frame" x="0.0" y="70" width="334" height="50"/>
+                                        <rect key="frame" x="0.0" y="70" width="688" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aRx-CP-Bhc">
-                                        <rect key="frame" x="0.0" y="140" width="334" height="50"/>
+                                        <rect key="frame" x="0.0" y="140" width="688" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zLS-RY-y7J">
-                                        <rect key="frame" x="0.0" y="210" width="334" height="50"/>
+                                        <rect key="frame" x="0.0" y="210" width="688" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TEw-CG-HPb">
-                                        <rect key="frame" x="0.0" y="280" width="334" height="50"/>
+                                        <rect key="frame" x="0.0" y="280" width="688" height="50"/>
                                         <color key="backgroundColor" red="0.57254901960000004" green="0.47843137250000001" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="qHs-yX-LQD"/>
@@ -127,7 +127,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q98-5q-0xB">
-                                        <rect key="frame" x="0.0" y="350" width="334" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="350" width="688" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" systemColor="systemRedColor"/>
                                         <nil key="highlightedColor"/>
@@ -168,24 +168,24 @@
             <objects>
                 <viewController id="YTN-Ga-xUg" customClass="LoginVC" customModule="SongsBook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jqH-Kr-Q2x">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="dhT-LJ-ZP9">
-                                <rect key="frame" x="40" y="84" width="334" height="230.5"/>
+                                <rect key="frame" x="40" y="40" width="688" height="230.5"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yP3-vZ-M2I">
-                                        <rect key="frame" x="0.0" y="0.0" width="334" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="688" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pW2-M4-Scp">
-                                        <rect key="frame" x="0.0" y="70" width="334" height="50"/>
+                                        <rect key="frame" x="0.0" y="70" width="688" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N4p-XE-qxt">
-                                        <rect key="frame" x="0.0" y="140" width="334" height="50"/>
+                                        <rect key="frame" x="0.0" y="140" width="688" height="50"/>
                                         <color key="backgroundColor" red="0.57254901960000004" green="0.47843137250000001" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="Bkj-tl-aNb"/>
@@ -199,7 +199,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="297-Rv-hnw">
-                                        <rect key="frame" x="0.0" y="210" width="334" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="210" width="688" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" systemColor="systemRedColor"/>
                                         <nil key="highlightedColor"/>
