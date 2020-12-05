@@ -12,7 +12,7 @@ enum SideMenuItems: String, CaseIterable {
     
     case home = "Home"
     case songs = "Songs"
-    case playlist = "Playlist"
+    case setlist = "Setlist"
     
     var value: String { self.rawValue }
     var index: Int {
@@ -21,7 +21,7 @@ enum SideMenuItems: String, CaseIterable {
             return 0
         case .songs:
             return 1
-        case .playlist:
+        case .setlist:
             return 2
         }
     }
@@ -31,12 +31,12 @@ class LeftMenuViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
 
-    private let menuItems: [SideMenuItems] = [.home, .songs, .playlist]
+    private let menuItems: [SideMenuItems] = [.home, .songs, .setlist]
     
     override func viewDidLoad() {
         super.viewDidLoad()
      
-        view.backgroundColor = .darkGray
+        //view.backgroundColor = .darkGray
     }
 }
     
@@ -52,20 +52,23 @@ extension LeftMenuViewController: UITableViewDelegate {
         
         switch selectedItem {
         case .home:
-//            let storyboard = UIStoryboard(name: Constants.Storyboard.SongDisplay, bundle: nil)
-//            guard let vc = storyboard.instantiateInitialViewController() else { return }
+            let storyboard = UIStoryboard(name: Constants.Storyboard.SongDisplay, bundle: nil)
+            guard let vc = storyboard.instantiateInitialViewController() else { return }
+            panel!.center(vc)
 //            LeftMenuConfig.shared.sideMenu?.show(vc, sender: nil)
             break
             
         case .songs:
-//            let storyboard = UIStoryboard(name: Constants.Storyboard.SongsList, bundle: nil)
-//            guard let vc = storyboard.instantiateInitialViewController() else { return }
-//            LeftMenuConfig.shared.sideMenu?.pushViewController(vc, animated: nil)
+            let storyboard = UIStoryboard(name: Constants.Storyboard.SongsList, bundle: nil)
+            guard let vc = storyboard.instantiateInitialViewController() else { return }
+            panel!.center(vc)
+           // LeftMenuConfig.shared.sideMenu?.pushViewController(vc, animated: nil)
             break
             
-        case .playlist:
-//            let storyboard = UIStoryboard(name: Constants.Storyboard.Playlist, bundle: nil)
-//            guard let vc = storyboard.instantiateInitialViewController() else { return }
+        case .setlist:
+            let storyboard = UIStoryboard(name: Constants.Storyboard.Setlist, bundle: nil)
+            guard let vc = storyboard.instantiateInitialViewController() else { return }
+            panel!.center(vc)
 //            LeftMenuConfig.shared.sideMenu?.show(vc, sender: nil)
             break
             

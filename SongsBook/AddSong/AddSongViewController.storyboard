@@ -12,7 +12,7 @@
         <!--Add song-->
         <scene sceneID="Lek-Iq-xAk">
             <objects>
-                <viewController storyboardIdentifier="AddSongVC" title="Add song" id="eya-KU-pxj" customClass="AddSongVC" customModule="SongsBook" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddSongViewController" title="Add song" id="eya-KU-pxj" customClass="AddSongViewController" customModule="SongsBook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QGV-y8-BXz">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

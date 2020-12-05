@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Songs ListVC-->
+        <!--Songs List View Controller-->
         <scene sceneID="epR-9g-bku">
             <objects>
-                <tableViewController storyboardIdentifier="SongsListVC" id="tX7-HH-GPO" customClass="SongsListVC" customModule="SongsBook" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="SongsListViewController" id="tX7-HH-GPO" customClass="SongsListViewController" customModule="SongsBook" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="VfL-RL-Uyb">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="974"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -57,14 +57,14 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="tempo:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rp2-Ln-fcl">
-                                            <rect key="frame" x="241" y="40" width="54" height="20.5"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tempo:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rp2-Ln-fcl">
+                                            <rect key="frame" x="611.5" y="40.5" width="54" height="20.5"/>
                                             <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="120" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ccS-Xu-OTL">
-                                            <rect key="frame" x="303" y="40" width="38" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="120" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ccS-Xu-OTL">
+                                            <rect key="frame" x="675.5" y="40" width="30" height="21"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -74,6 +74,7 @@
                                         <constraint firstItem="8uJ-xi-xzh" firstAttribute="leading" secondItem="fvf-GY-7td" secondAttribute="leadingMargin" id="7xn-U9-rD0"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="8uJ-xi-xzh" secondAttribute="bottom" constant="-1" id="D1S-Vy-Os3"/>
                                         <constraint firstItem="RT2-Zf-MTz" firstAttribute="trailing" secondItem="fvf-GY-7td" secondAttribute="trailingMargin" id="DBd-ry-XCE"/>
+                                        <constraint firstItem="ccS-Xu-OTL" firstAttribute="leading" secondItem="rp2-Ln-fcl" secondAttribute="trailing" constant="10" id="F2e-MH-P9y"/>
                                         <constraint firstItem="vq3-zm-TUj" firstAttribute="top" secondItem="fvf-GY-7td" secondAttribute="topMargin" id="ISP-Z3-I6I"/>
                                         <constraint firstItem="cnk-p1-epL" firstAttribute="leading" secondItem="vq3-zm-TUj" secondAttribute="trailing" constant="5" id="PH9-lF-ZRR"/>
                                         <constraint firstItem="cnk-p1-epL" firstAttribute="trailing" secondItem="fvf-GY-7td" secondAttribute="trailingMargin" id="TOa-JB-h6i"/>
@@ -81,10 +82,9 @@
                                         <constraint firstAttribute="bottomMargin" secondItem="RT2-Zf-MTz" secondAttribute="bottom" id="lok-id-8ve"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="ccS-Xu-OTL" secondAttribute="bottom" id="odj-Bt-gln"/>
                                         <constraint firstItem="JgE-zL-z2B" firstAttribute="top" secondItem="fvf-GY-7td" secondAttribute="topMargin" id="qJF-HK-YdY"/>
-                                        <constraint firstItem="RT2-Zf-MTz" firstAttribute="leading" secondItem="ccS-Xu-OTL" secondAttribute="trailing" constant="18.5" id="qgX-LC-B2a"/>
+                                        <constraint firstItem="RT2-Zf-MTz" firstAttribute="leading" secondItem="ccS-Xu-OTL" secondAttribute="trailing" constant="8" id="qgX-LC-B2a"/>
                                         <constraint firstItem="JgE-zL-z2B" firstAttribute="leading" secondItem="fvf-GY-7td" secondAttribute="leadingMargin" id="sVD-7h-DiP"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="rp2-Ln-fcl" secondAttribute="bottom" id="tQ7-Ny-Liw"/>
-                                        <constraint firstItem="ccS-Xu-OTL" firstAttribute="leading" secondItem="rp2-Ln-fcl" secondAttribute="trailing" constant="8" id="xFh-RF-D69"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -104,8 +104,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="jD3-Pt-vgK">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="line.horizontal.3" catalog="system" id="VGV-ge-e8h">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="line.horizontal.3" catalog="system" id="z5j-dR-O9X">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="didTapMenuButton:" destination="tX7-HH-GPO" id="rLa-L8-TPL"/>
+                            </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="0tk-Fd-DBl">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -139,7 +142,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jmD-Df-P6h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="707" y="-48"/>
+            <point key="canvasLocation" x="788" y="-49"/>
         </scene>
     </scenes>
     <resources>

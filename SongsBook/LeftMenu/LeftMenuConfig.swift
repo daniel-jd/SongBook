@@ -23,6 +23,7 @@ struct LeftMenuConfig {
         guard let panel = panel else { return }
         panel.configs.rightPanelWidth = 80
         panel.configs.bounceOnRightPanelOpen = false
+        panel.configs.colorForTapView = UIColor.black.withAlphaComponent(0.35)
 
         //  Should Pan from edge? Add these lines of code,
 

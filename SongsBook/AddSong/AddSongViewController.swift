@@ -13,7 +13,7 @@ protocol AddSongDelegate {
     func saveSongsListToUserDefaults()
 }
 
-class AddSongVC: UIViewController {
+class AddSongViewController: UIViewController {
     
     @IBOutlet weak var songTitleLabel: UILabel!
     @IBOutlet weak var songTitleTextField: UITextField!
@@ -27,6 +27,13 @@ class AddSongVC: UIViewController {
     
     var newSong: Song?
     var addSongDelegate: AddSongDelegate?
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+    }
+    
     
     func makeNewSong() {
         print("makeNewSong called")
@@ -50,8 +57,5 @@ class AddSongVC: UIViewController {
         navigationController?.popViewController(animated: true)
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
 
 }

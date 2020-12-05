@@ -25,14 +25,23 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             let window = UIWindow(windowScene: windowScene)
             let root = FAPanelController()
             
-            let mainStoryboard: UIStoryboard = UIStoryboard(name: "SongDisplay", bundle: nil)
-            let storyboard: UIStoryboard = UIStoryboard(name: "LeftMenuViewController", bundle: nil)
-            let leftMenuVC = storyboard.instantiateViewController(withIdentifier: "LeftMenuViewController") as! LeftMenuViewController
-            let centerVC = mainStoryboard.instantiateViewController(withIdentifier: "SongDisplayVC") as! SongDisplayVC
-            let centerNavVC = UINavigationController(rootViewController: centerVC)
+            let mainStoryboard: UIStoryboard = UIStoryboard(name: Constants.Storyboard.SongDisplay, bundle: nil)
+            let storyboard: UIStoryboard = UIStoryboard(name: Constants.Storyboard.LeftMenu, bundle: nil)
+            //let leftMenuVC = storyboard.instantiateViewController(withIdentifier: Constants.ViewController.LeftMenu) as! LeftMenuViewController
+            guard let leftMenuVC = storyboard.instantiateInitialViewController() else { return }
+            //let centerVC = mainStoryboard.instantiateViewController(withIdentifier: Constants.ViewController.SongDisplay) as! SongDisplayViewController
+            //let centerNavVC = UINavigationController(rootViewController: centerVC)
+            
+            // Делаю так чтобы навигейшн из сториборда тянулся
+            guard let centerNavVC = mainStoryboard.instantiateInitialViewController() else { return }
             
             root.center(centerNavVC).left(leftMenuVC)
             window.rootViewController = root
+            // Делает так что меню наезжает на основной экран поверх
+            root.leftPanelPosition = .front
+            // Степень затемнения экрана при открывании бокового меню
+            root.configs.shadowOppacity = 0.2 //.shadowOpacity = 0.5
+            root.configs.colorForTapView = UIColor.black.withAlphaComponent(0.5)
             LeftMenuConfig.shared.confingMenu()
             self.window = window
             window.makeKeyAndVisible()

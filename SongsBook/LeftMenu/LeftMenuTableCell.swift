@@ -10,8 +10,6 @@ import UIKit
 
 class LeftMenuTableCell: UITableViewCell {
     
-    @IBOutlet weak var nameLabel: UILabel?
-    
     func configure(_ item: SideMenuItems) {
         
         backgroundColor = .darkGray

@@ -8,12 +8,15 @@
 
 import UIKit
 
-class PlaylistVC: UIViewController {
+class SetlistViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .yellow
+
     }
 
+    @IBAction func didTapMenuButton(_ sender: UIBarButtonItem) {
+        panel?.openLeft(animated: true)
+    }
 }

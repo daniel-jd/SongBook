@@ -11,11 +11,24 @@ import Foundation
 struct Constants {
     
     struct Storyboard {
-        static let Main = "Main"
-        static let LeftMenu = "MenuList"
-        static let SongsList = "SongsList"
-        static let AddSong = "AddSong"
-        static let SongDisplay = "SongDisplay"
-        static let Playlist = "Playlist"
+        
+        static let Login = "LoginViewController"
+        static let LeftMenu = "LeftMenuViewController"
+        static let SongsList = "SongsListViewController"
+        static let AddSong = "AddSongViewController"
+        static let SongDisplay = "SongDisplayViewController"
+        static let Setlist = "SetlistViewController"
+    }
+    
+    struct ViewController {
+        
+        static let Login = "LoginViewController"
+        static let SignIn = "SignInViewController"
+        static let SignUp = "LoginViewController"
+        static let LeftMenu = "LeftMenuViewController"
+        static let SongsList = "SongsListViewController"
+        static let AddSong = "AddSongViewController"
+        static let SongDisplay = "SongDisplayViewController"
+        static let Playlist = "PlaylistViewController"
     }
 }

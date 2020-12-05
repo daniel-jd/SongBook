@@ -7,9 +7,9 @@
 //
 
 import UIKit
-//import Firebase
+import Firebase
 
-class SongsListVC: UITableViewController, AddSongDelegate {
+class SongsListViewController: UITableViewController, AddSongDelegate {
     
     // WHAT ???
     func saveSongsListToUserDefaults() {
@@ -20,9 +20,13 @@ class SongsListVC: UITableViewController, AddSongDelegate {
     public var songsList = [Song]()
     //var numberOfSongs: Int?
     
+    @IBAction func didTapMenuButton(_ sender: UIBarButtonItem) {
+        panel?.openLeft(animated: true)
+    }
+    
     @IBAction func addSongButton(_ sender: UIBarButtonItem) {
         let storyboard = UIStoryboard(name: Constants.Storyboard.AddSong, bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "AddSongVC") as! AddSongVC
+        let vc = storyboard.instantiateViewController(withIdentifier: Constants.ViewController.AddSong) as! AddSongViewController
         vc.addSongDelegate = self
         navigationController?.pushViewController(vc, animated: true)
     }
@@ -99,13 +103,15 @@ class SongsListVC: UITableViewController, AddSongDelegate {
         tableView.deselectRow(at: indexPath, animated: true)
         // Programmatic way of transition to another screen
         let storyboard = UIStoryboard(name: Constants.Storyboard.SongDisplay, bundle: nil)
-        let vc = storyboard.instantiateViewController(identifier: "SongDisplayVC") as! SongDisplayVC
+        let vc = storyboard.instantiateViewController(identifier: Constants.ViewController.SongDisplay) as! SongDisplayViewController
+        
         // TODO: Probably this could be substitute with a delegate or another function
         vc.songToDisplay.title = songsList[indexPath.row].title
         vc.songToDisplay.artist = songsList[indexPath.row].artist
         vc.songToDisplay.key = songsList[indexPath.row].key
         vc.songToDisplay.tempo = songsList[indexPath.row].tempo
         vc.songToDisplay.songBody = songsList[indexPath.row].songBody
+        
         navigationController?.pushViewController(vc, animated: true)
     }
     
