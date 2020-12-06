@@ -38,6 +38,8 @@ class LeftMenuViewController: UIViewController {
      
         //view.backgroundColor = .darkGray
     }
+    
+    deinit { print("🔥 deinit \(Constants.ViewController.LeftMenu)") }
 }
     
 

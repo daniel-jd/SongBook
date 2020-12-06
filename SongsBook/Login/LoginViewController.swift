@@ -23,6 +23,8 @@ class LoginVC: UIViewController {
         setUpElements()
     }
     
+    deinit { print("🔥 deinit \(Constants.ViewController.Login)") }
+    
     func setUpElements() {
         
         // Hide the error label

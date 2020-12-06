@@ -21,6 +21,8 @@ class SignInVC: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    deinit { print("🔥 deinit \(Constants.ViewController.SignIn)") }
+    
     @IBAction func dontSignInTapped(_ sender: Any) {
         // Switch to SongBook Storyboard
         let storyboard = UIStoryboard(name: Constants.Storyboard.SongsList, bundle: nil)

@@ -130,7 +130,6 @@
 		A50E18A12540ACEC00FE6CE6 /* ChordPro */ = {
 			isa = PBXGroup;
 			children = (
-				A5EE99A1253628FD009F0374 /* Song.swift */,
 				A50E18A32540ACEC00FE6CE6 /* Measure.swift */,
 				A50E18A42540ACEC00FE6CE6 /* Part.swift */,
 				A50E18A52540ACEC00FE6CE6 /* Section.swift */,
@@ -152,6 +151,7 @@
 		A5499D99254753CA002D0595 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				A5EE99A1253628FD009F0374 /* Song.swift */,
 				A5499D97254753BF002D0595 /* SongViewModel.swift */,
 			);
 			path = ViewModels;
@@ -456,6 +456,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
@@ -510,6 +511,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 2;
 				VALIDATE_PRODUCT = YES;
 			};

@@ -11,14 +11,27 @@ import Firebase
 
 class SongsListViewController: UITableViewController, AddSongDelegate {
     
-    // WHAT ???
-    func saveSongsListToUserDefaults() {
-        print("saveSongsListToUserDefaults() called")
-    }
-    
-        
     public var songsList = [Song]()
     //var numberOfSongs: Int?
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        setTableView()
+   
+        print("🍄 viewDidLoad called. songsList count: \(songsList.count)")
+    }
+    
+    deinit { print("🔥 deinit \(Constants.ViewController.SongsList)") }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        loadSongsFromDatabase()
+
+    }
+    
     
     @IBAction func didTapMenuButton(_ sender: UIBarButtonItem) {
         panel?.openLeft(animated: true)
@@ -29,24 +42,6 @@ class SongsListViewController: UITableViewController, AddSongDelegate {
         let vc = storyboard.instantiateViewController(withIdentifier: Constants.ViewController.AddSong) as! AddSongViewController
         vc.addSongDelegate = self
         navigationController?.pushViewController(vc, animated: true)
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        setTableView()
-        //tableView.register(UITableViewCell.self, forCellReuseIdentifier: "SongCell")
-//      checkForSavedSongsList()
-   
-        print("viewDidLoad. songsList count: \(songsList.count)")
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        loadSongsFromDatabase()
-        //SongViewModel().readFile()
-        //tableView.reloadData()
     }
 
     private func loadSongsFromDatabase() {
@@ -62,6 +57,11 @@ class SongsListViewController: UITableViewController, AddSongDelegate {
         tableView.beginUpdates()
         tableView.insertRows(at: [newIndexPath], with: .automatic)
         tableView.endUpdates()
+    }
+    
+    // TODO: - Save local songsList
+    func saveSongsListToUserDefaults() {
+        print("saveSongsListToUserDefaults() called")
     }
     
     private func setTableView() {

@@ -34,22 +34,30 @@ class AddSongViewController: UIViewController {
         
     }
     
+    deinit { print("🔥 deinit \(Constants.ViewController.AddSong)") }
     
     func makeNewSong() {
-        print("makeNewSong called")
+        print("🐣makeNewSong called")
         let title = songTitleTextField.text ?? ""
         let artist = authorTitleTextField.text ?? ""
-        let key = "A"
+        let key = "A" // FIX this!
         let tempo = tempoTextField.text ?? ""
-        let lyrics = lyricsTextField.text ?? ""
-        newSong = Song(title: title, artist: artist, key: key, tempo: tempo, lyrics: lyrics)
+        let songBody = lyricsTextField.text ?? ""
+        newSong = Song(title: title, artist: artist, key: key, tempo: tempo, songBody: songBody)
+    }
+    
+    func pushNewSongToDatabase() {
+        Song().addSongToDatabase(song: newSong!)
     }
     
     @IBAction func save(_ sender: UIBarButtonItem) {
+        //TODO: - Check if fields are filled correctly
+        //checkSongInput()
         makeNewSong()
+        pushNewSongToDatabase()
         guard let newSong = newSong else { return }
         addSongDelegate?.addNewSong(song: newSong)
-        addSongDelegate?.saveSongsListToUserDefaults()
+        //addSongDelegate?.saveSongsListToUserDefaults()
         navigationController?.popViewController(animated: true)
     }
     

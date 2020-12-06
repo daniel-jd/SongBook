@@ -29,7 +29,7 @@ class SongDisplayViewController: UIViewController {
         displaySong(song: songToDisplay)
     }
     
-    deinit { print("🏁 - \(classForCoder)") }
+    deinit { print("🔥 deinit \(Constants.ViewController.SongDisplay)") }
     
     
 //    @IBAction func didTapMenuButton(_ sender: UIBarButtonItem) {
@@ -48,12 +48,12 @@ class SongDisplayViewController: UIViewController {
     
     // Setup for correct song displaying style
     func displaySong(song: Song) {
-        title = "Amaing Grace" //song.title
-        songTitleLabel.text = "Amazing Grace"  //song.title
-        artistLabel.text = "by " + "Chris Tomlin"  //(song.artist ?? "Unknown")
-        keyDisplayLabel.text = "Em" //song.key
-        tempoValueLabel.text = "100" //song.tempo
-        lyricsTextView.text = readSongFromFile() //song.songBody
+        title = song.title
+        songTitleLabel.text = song.title
+        artistLabel.text = "by " + (song.artist ?? "Unknown")
+        keyDisplayLabel.text = song.key
+        tempoValueLabel.text = song.tempo
+        lyricsTextView.text = song.songBody
     }
     
     //TEST: -  Read Oceans.txt file in the Project and copy its data to a String

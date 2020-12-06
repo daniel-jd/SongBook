@@ -26,6 +26,8 @@ class SignUpVC: UIViewController {
         setUpElements()
     }
     
+    deinit { print("🔥 deinit \(Constants.ViewController.SignUp)") }
+    
     func setUpElements() {
         
         // Hide the error label 
