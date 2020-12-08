@@ -7,8 +7,8 @@
 //
 
 import UIKit
-//import FirebaseAuth
-//import FirebaseFirestore
+import FirebaseAuth
+import FirebaseFirestore
 
 class SignUpVC: UIViewController {
 
@@ -68,7 +68,7 @@ class SignUpVC: UIViewController {
         if error != nil {
             
             // Something wrong with the fields. Show error
-            showError(error! )
+            showError(error!)
         }
         else {
             
@@ -79,42 +79,33 @@ class SignUpVC: UIViewController {
             let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             
             // Create the user
-//            Auth.auth().createUser(withEmail: email, password: password) { (authResult, err) in
-//                
-//                // Check for errors
-//                if err != nil {
-//                    // There was an error
-//                    self.showError("Error creating new user")
-//                }
-//                else {
-//                    // User created successfully
-//                    let db = Firestore.firestore()
-//                    db.collection("users").addDocument(data: ["firstname":firstName, "lastname":lastName, "email":email, "password":password, "uid":authResult!.user.uid]) { (error) in
-//                        if error != nil {
-//                            // There was an error. Show error message
-//                            self.showError("Error saving user data")
-//                        }
-//                    }
-//                    
-//                    // Go to Home screen
-//                    self.transitionToHome()
-//                    
-//                }
-//            }
+            Auth.auth().createUser(withEmail: email, password: password) { (authResult, err) in
+                
+                // Check for errors
+                if err != nil {
+                    // There was an error
+                    self.showError("Error creating new user")
+                }
+                else {
+                    // User created successfully
+                    let db = Firestore.firestore()
+                    db.collection("users").addDocument(data: ["firstname":firstName, "lastname":lastName, "email":email, "password":password, "uid":authResult!.user.uid]) { (error) in
+                        if error != nil {
+                            // There was an error. Show error message
+                            self.showError("Error saving user data")
+                        }
+                    }
+                    
+                    // Show Home screen
+                    self.dismiss(animated: true, completion: nil)
+                }
+            }
         }
     }
     
     func showError(_ message: String) {
         errorLabel.text = message
         errorLabel.alpha = 1
-    }
-    
-    func transitionToHome() {
-        
-        // Switch to another Storyboard
-        let storyboard = UIStoryboard(name: Constants.Storyboard.SongDisplay, bundle: nil)
-        let navMenuVC = storyboard.instantiateInitialViewController()
-        view.window?.rootViewController = navMenuVC
     }
     
 }

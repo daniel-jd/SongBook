@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 enum SideMenuItems: String, CaseIterable {
     
     case home = "Home"
     case songs = "Songs"
     case setlist = "Setlist"
+    case signout = "Sign-out"
     
     var value: String { self.rawValue }
     var index: Int {
@@ -23,6 +25,8 @@ enum SideMenuItems: String, CaseIterable {
             return 1
         case .setlist:
             return 2
+        case .signout:
+            return 3
         }
     }
 }
@@ -31,7 +35,7 @@ class LeftMenuViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
 
-    private let menuItems: [SideMenuItems] = [.home, .songs, .setlist]
+    private let menuItems: [SideMenuItems] = [.home, .songs, .setlist, .signout]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -72,6 +76,19 @@ extension LeftMenuViewController: UITableViewDelegate {
             guard let vc = storyboard.instantiateInitialViewController() else { return }
             panel!.center(vc)
 //            LeftMenuConfig.shared.sideMenu?.show(vc, sender: nil)
+            break
+        
+        case .signout:
+            
+            do {
+                try Auth.auth().signOut()
+            } catch let signOutError as NSError {
+              print ("Error signing out: %@", signOutError)
+            }
+            
+            let storyboard = UIStoryboard(name: Constants.Storyboard.SongDisplay, bundle: nil)
+            guard let vc = storyboard.instantiateInitialViewController() else { return }
+            panel!.center(vc)
             break
             
         default:

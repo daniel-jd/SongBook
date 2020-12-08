@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class SongDisplayViewController: UIViewController {
     
@@ -22,9 +23,17 @@ class SongDisplayViewController: UIViewController {
     
     let myColor = UIColor(red: 156.0/255.0, green: 133.0/255.0, blue: 178.0/255.0, alpha: 1.0)
     
+    func viewWillAppear() {
+        super.viewWillAppear(true)
+        print("❤️ view will appear")
+        checkIfUserIsLogined()
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print("🐰 view did load")
+        checkIfUserIsLogined()
         //setupView()
         displaySong(song: songToDisplay)
     }
@@ -68,6 +77,24 @@ class SongDisplayViewController: UIViewController {
             return ""
         }
         return readString
+    }
+    
+    
+    func checkIfUserIsLogined() {
+        if Auth.auth().currentUser != nil {
+            print("☀️ User is logined")
+            //showMainScreen()
+        } else {
+            //User Not logged in
+            print("⚡️ User is NOT logined")
+            showLoginScreen()
+        }
+    }
+    
+    func showLoginScreen() {
+        let storyboard = UIStoryboard(name: Constants.Storyboard.Login, bundle: nil)
+        let vc = storyboard.instantiateInitialViewController()
+        present(vc!, animated: true, completion: nil)
     }
     
     

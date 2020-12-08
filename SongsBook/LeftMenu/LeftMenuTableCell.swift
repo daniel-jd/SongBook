@@ -12,7 +12,11 @@ class LeftMenuTableCell: UITableViewCell {
     
     func configure(_ item: SideMenuItems) {
         
-        backgroundColor = .darkGray
+       // backgroundColor = .darkGray
+        let backgroundView = UIView()
+        backgroundView.backgroundColor = UIColor.red
+        self.selectedBackgroundView = backgroundView
+        
         textLabel?.textColor = .white
         textLabel?.text = item.rawValue
     }

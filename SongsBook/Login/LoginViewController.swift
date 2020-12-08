@@ -7,7 +7,7 @@
 //
 
 import UIKit
-//import FirebaseAuth
+import FirebaseAuth
 
 class LoginVC: UIViewController {
 
@@ -40,21 +40,19 @@ class LoginVC: UIViewController {
             let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             
             // Login the user
-//            Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
-//                
-//                // Check for errors
-//                if error != nil {
-//                    // There was an error
-//                    self.errorLabel.text = error?.localizedDescription
-//                    self.errorLabel.alpha = 1
-//                }
-//                else {
-//                    // Switch to another Storyboard
-//                    let storyboard = UIStoryboard(name: Constants.Storyboard.SongsList, bundle: nil)
-//                    let navMenuVC = storyboard.instantiateInitialViewController()
-//                    self.view.window?.rootViewController = navMenuVC
-//                }
-//            }
+            Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
+                
+                // Check for errors
+                if error != nil {
+                    // There was an error
+                    self.errorLabel.text = error?.localizedDescription
+                    self.errorLabel.alpha = 1
+                }
+                else {
+                    // Get rid of Login screen
+                    self.dismiss(animated: true, completion: nil)
+                }
+            }
     }
     
 } // Class
