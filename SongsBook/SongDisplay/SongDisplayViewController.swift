@@ -20,6 +20,7 @@ class SongDisplayViewController: UIViewController {
     @IBOutlet weak var tempoValueLabel: UILabel!
     @IBOutlet weak var bpmLabel: UILabel!
     @IBOutlet weak var lyricsTextView: UITextView!
+    //@IBOutlet var songBodyLabel: UILabel!
     
     let myColor = UIColor(red: 156.0/255.0, green: 133.0/255.0, blue: 178.0/255.0, alpha: 1.0)
     
@@ -62,7 +63,9 @@ class SongDisplayViewController: UIViewController {
         artistLabel.text = "by " + (song.artist ?? "Unknown")
         keyDisplayLabel.text = song.key
         tempoValueLabel.text = song.tempo
-        lyricsTextView.text = song.songBody
+        var str = song.songBody!
+        str = str.replacingOccurrences(of: "\\n", with: "\n")
+        lyricsTextView.text = str
     }
     
     //TEST: -  Read Oceans.txt file in the Project and copy its data to a String

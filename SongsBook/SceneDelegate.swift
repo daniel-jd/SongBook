@@ -40,7 +40,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             // Делает так что меню наезжает на основной экран поверх
             root.leftPanelPosition = .front
             // Степень затемнения экрана при открывании бокового меню
-            root.configs.shadowOppacity = 0.2 //.shadowOpacity = 0.5
+            root.configs.shadowOppacity = 0.2
             root.configs.colorForTapView = UIColor.black.withAlphaComponent(0.5)
             LeftMenuConfig.shared.confingMenu()
             self.window = window
