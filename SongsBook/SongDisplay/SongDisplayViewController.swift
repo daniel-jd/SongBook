@@ -63,14 +63,19 @@ class SongDisplayViewController: UIViewController {
         artistLabel.text = "by " + (song.artist ?? "Unknown")
         keyDisplayLabel.text = song.key
         tempoValueLabel.text = song.tempo
-        var str = song.songBody!
-        str = str.replacingOccurrences(of: "\\n", with: "\n")
+        //print(song.songBody!)
+        let testSong = readSongFromFile()
+        //let str = str.replacingOccurrences(of: "\\n", with: "\n")
+        //print(testSong)
+        let songParsed = ChordPro.parse(testSong)
+        let str = ChordPro.formatSong(songParsed)
+        //print(songParsed.sections[0].lines[0].parts)
         lyricsTextView.text = str
     }
     
-    //TEST: -  Read Oceans.txt file in the Project and copy its data to a String
+    //MARK: -  Read Oceans.txt file in the Project and copy its data to a String
     func readSongFromFile() -> String {
-        let fileURL = Bundle.main.path(forResource: "Oceans", ofType: "txt")
+        let fileURL = Bundle.main.path(forResource: "bad-moon-rising", ofType: "sng")
         var readString = ""
         do {
             readString = try String(contentsOfFile: fileURL!, encoding: String.Encoding.utf8)
@@ -86,7 +91,6 @@ class SongDisplayViewController: UIViewController {
     func checkIfUserIsLogined() {
         if Auth.auth().currentUser != nil {
             print("☀️ User is logined")
-            //showMainScreen()
         } else {
             //User Not logged in
             print("⚡️ User is NOT logined")

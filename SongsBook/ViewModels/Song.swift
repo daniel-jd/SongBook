@@ -6,7 +6,7 @@
 //  Copyright © 2020 DanielYarmak. All rights reserved.
 //
 
-import Foundation
+
 import FirebaseFirestore
 import FirebaseStorage
 import FirebaseFirestoreSwift
@@ -25,17 +25,17 @@ enum Key: String {
 /*
  
  */
-struct Song: Codable { // Identifiable
+public class Song /*Codable*/ { // Identifiable
 
 // Properties
-//    @DocumentID var id: String? = UUID().uuidString
+//  @DocumentID var id: String? = UUID().uuidString
     var title: String?
     var artist: String?
 //    var capo: String?
     var key: String?
     var tempo: String?
-//    var custom = [String: String]()
-//    var sections = [Section]()
+    var custom = [String: String]()
+    var sections = [Section]()
     var songBody: String?
 //    var formatedLyrics: String?
     
@@ -46,7 +46,7 @@ struct Song: Codable { // Identifiable
         self.artist = "Unknown"
         self.key = "No"
         self.tempo = "00"
-        self.songBody = "Lyrics appear here"
+        self.songBody = "No lyrics"
     }
     
     init(title: String?, artist: String?, key: String?, tempo: String?, songBody: String?) {

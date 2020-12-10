@@ -17,7 +17,27 @@ public struct ChordPro {
     static let measuresRegex = try! NSRegularExpression(pattern: "([\\[[\\w#b\\/]+\\]\\s]+)[|]*", options: .caseInsensitive)
     static let chordsRegex = try! NSRegularExpression(pattern: "\\[([\\w#b\\/]+)\\]?", options: .caseInsensitive)
     static let commentRegex = try! NSRegularExpression(pattern: ">\\s*([^$]*)")
-
+    
+    
+//MARK: - PARSE & FORMAT
+    
+    static func formatSong(_ song: Song) -> String? {
+        var text = ""
+        for sections in song.sections {
+            for lines in sections.lines {
+                for measure in lines.measures {
+                    for chords in measure.chords {
+                        text.append(chords)
+                    }
+                }
+            }
+        }
+        
+        
+        return text
+    }
+    
+    
     static func parse(_ lines: String) -> Song {
         var song = Song()
         var currentSection: Section?
@@ -97,7 +117,7 @@ public struct ChordPro {
             }
         }
 
-       //song.sections.append(section)
+       song.sections.append(section)
 
         return section;
     }
@@ -109,7 +129,7 @@ public struct ChordPro {
 
         if currentSection == nil {
             currentSection = Section()
-            //song.sections.append(currentSection!)
+            song.sections.append(currentSection!)
         }
 
         let line = Line()
