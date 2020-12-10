@@ -14,24 +14,26 @@ class SongsListViewController: UITableViewController, AddSongDelegate {
     public var songsList = [Song]()
     //var numberOfSongs: Int?
     
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        setTableView()
-   
-        print("🍄 viewDidLoad called. songsList count: \(songsList.count)")
+    // This should change status bar to light color
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        .lightContent
     }
     
-    deinit { print("🔥 deinit \(Constants.ViewController.SongsList)") }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setTableView()
+   
+        print("🍄 viewDidLoad called")
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+        setNeedsStatusBarAppearanceUpdate() // DOSEN'T WORK!!!
         loadSongsFromDatabase()
-
     }
     
+    deinit { print("🔥 deinit \(Constants.ViewController.SongsList)") }
     
     @IBAction func didTapMenuButton(_ sender: UIBarButtonItem) {
         panel?.openLeft(animated: true)

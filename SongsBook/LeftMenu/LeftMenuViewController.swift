@@ -14,7 +14,7 @@ enum SideMenuItems: String, CaseIterable {
     case home = "Home"
     case songs = "Songs"
     case setlist = "Setlist"
-    case signout = "Sign-out"
+    case signout = "Sign Out"
     
     var value: String { self.rawValue }
     var index: Int {
