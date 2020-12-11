@@ -24,8 +24,8 @@ class SongDisplayViewController: UIViewController {
     
     let myColor = UIColor(red: 156.0/255.0, green: 133.0/255.0, blue: 178.0/255.0, alpha: 1.0)
     
-    func viewWillAppear() {
-        super.viewWillAppear(true)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         print("❤️ view will appear")
         checkIfUserIsLogined()
         
@@ -72,6 +72,7 @@ class SongDisplayViewController: UIViewController {
         //print(songParsed.sections[0].lines[0].parts)
         lyricsTextView.text = str
     }
+   
     
     //MARK: -  Read Oceans.txt file in the Project and copy its data to a String
     func readSongFromFile() -> String {
@@ -90,10 +91,10 @@ class SongDisplayViewController: UIViewController {
     
     func checkIfUserIsLogined() {
         if Auth.auth().currentUser != nil {
-            print("☀️ User is logined")
+            print("☀️ User is Logged-In")
         } else {
             //User Not logged in
-            print("⚡️ User is NOT logined")
+            print("⚡️ User is NOT Logged-In")
             showLoginScreen()
         }
     }

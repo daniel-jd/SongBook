@@ -22,17 +22,44 @@ public struct ChordPro {
 //MARK: - PARSE & FORMAT
     
     static func formatSong(_ song: Song) -> String? {
+        
+        let newLine = "\n"
+        let space = " "
         var text = ""
+        
+        
+        // Проходим по каждой секции: INTRO, VERSE, CHORUS, etc...
         for sections in song.sections {
-            for lines in sections.lines {
-                for measure in lines.measures {
-                    for chords in measure.chords {
-                        text.append(chords)
+            // Вставляем название секции (VERSE) и ставим 2 переноса строки
+            text.append(sections.name!.uppercased() + newLine + newLine)
+            
+            // Проходим по каждой отдельной строке
+            for line in sections.lines {
+                var chords = ""
+                var words = ""
+                for parts in line.parts {
+                    
+                    if !parts.isEmpty {
+                        chords.append(parts.chord! + space)
+                        words.append(parts.lyric!)
                     }
                 }
-            }
-        }
-        
+                text.append(chords)
+                text.append(newLine)
+                text.append(words)
+                //print("🧯 " + chords)
+                
+                for measure in line.measures {
+                    for chord in measure.chords {
+                        text.append(chord + space)
+                    }
+                }
+                
+                text.append(newLine)
+            } // end for line in...
+            
+            text.append(newLine)
+        } // end for sections in...
         
         return text
     }
@@ -106,6 +133,7 @@ public struct ChordPro {
         }
     }
     
+    
     fileprivate static func processSection(text: String, song: inout Song) -> Section {
         var key: String?
         let section = Section()
@@ -122,6 +150,7 @@ public struct ChordPro {
         return section;
     }
 
+    
     fileprivate static func processLyricsAndChords(text: String, song: inout Song, currentSection: inout Section?) {
         if text.isEmpty {
             return
