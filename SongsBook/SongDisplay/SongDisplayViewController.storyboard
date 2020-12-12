@@ -53,6 +53,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BD6-YQ-jis" userLabel="sView">
+                                <rect key="frame" x="20" y="82.5" width="728" height="891.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="kJB-qY-Ks5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -61,14 +65,18 @@
                             <constraint firstItem="tWb-N2-ssl" firstAttribute="top" secondItem="kJB-qY-Ks5" secondAttribute="top" constant="20" id="DlV-Tm-uXB"/>
                             <constraint firstItem="BFx-Cm-Amy" firstAttribute="top" secondItem="kJB-qY-Ks5" secondAttribute="top" constant="25" id="FOD-7a-O0V"/>
                             <constraint firstItem="kJB-qY-Ks5" firstAttribute="trailing" secondItem="yok-fb-jXl" secondAttribute="trailing" constant="20" id="LGN-TN-uv2"/>
+                            <constraint firstItem="BD6-YQ-jis" firstAttribute="top" secondItem="xlU-2L-0AQ" secondAttribute="bottom" constant="8" id="M6s-EN-GXi"/>
                             <constraint firstItem="aO0-BR-all" firstAttribute="top" secondItem="kJB-qY-Ks5" secondAttribute="top" constant="20" id="NwJ-DX-qNX"/>
                             <constraint firstItem="xlU-2L-0AQ" firstAttribute="top" secondItem="tWb-N2-ssl" secondAttribute="bottom" constant="7" id="c6L-Ke-u0e"/>
                             <constraint firstItem="NKr-vY-Mha" firstAttribute="top" secondItem="aO0-BR-all" secondAttribute="bottom" constant="7" id="e26-AA-5yz"/>
+                            <constraint firstItem="BD6-YQ-jis" firstAttribute="bottom" secondItem="kJB-qY-Ks5" secondAttribute="bottom" id="gdE-yE-Fyv"/>
                             <constraint firstItem="tWb-N2-ssl" firstAttribute="leading" secondItem="kJB-qY-Ks5" secondAttribute="leading" constant="20" id="igP-Ad-KhB"/>
+                            <constraint firstItem="kJB-qY-Ks5" firstAttribute="trailing" secondItem="BD6-YQ-jis" secondAttribute="trailing" constant="20" id="pwa-Px-5yn"/>
                             <constraint firstItem="xlU-2L-0AQ" firstAttribute="leading" secondItem="kJB-qY-Ks5" secondAttribute="leading" constant="20" id="q2z-PS-AZO"/>
                             <constraint firstItem="kJB-qY-Ks5" firstAttribute="trailing" secondItem="NKr-vY-Mha" secondAttribute="trailing" constant="56" id="qfY-8U-Rsg"/>
                             <constraint firstItem="kJB-qY-Ks5" firstAttribute="trailing" secondItem="aO0-BR-all" secondAttribute="trailing" constant="20" id="vGF-9Z-J7A"/>
                             <constraint firstItem="aO0-BR-all" firstAttribute="leading" secondItem="BFx-Cm-Amy" secondAttribute="trailing" constant="4" id="z94-va-20e"/>
+                            <constraint firstItem="BD6-YQ-jis" firstAttribute="leading" secondItem="kJB-qY-Ks5" secondAttribute="leading" constant="20" id="zf8-ja-FDl"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Song Title" id="gLh-Ll-OMn">
@@ -84,6 +92,7 @@
                         <outlet property="bpmLabel" destination="NKr-vY-Mha" id="bTE-7q-pGg"/>
                         <outlet property="keyDisplayLabel" destination="aO0-BR-all" id="nrB-vy-6kB"/>
                         <outlet property="keyLabel" destination="BFx-Cm-Amy" id="eDV-1G-ckz"/>
+                        <outlet property="sView" destination="BD6-YQ-jis" id="Kbs-53-geL"/>
                         <outlet property="songTitleLabel" destination="tWb-N2-ssl" id="9t3-eP-5EV"/>
                         <outlet property="tempoValueLabel" destination="yok-fb-jXl" id="nzY-Cz-acS"/>
                     </connections>

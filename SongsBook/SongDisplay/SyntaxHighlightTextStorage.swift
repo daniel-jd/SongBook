@@ -130,7 +130,7 @@ class SyntaxHighlightTextStorage: NSTextStorage {
     // 2. create the attributes
     let boldAttributes = createAttributesForFontStyle(.body, withTrait:.traitBold)
     let italicAttributes = createAttributesForFontStyle(.body, withTrait:.traitItalic)
-    let strikeThroughAttributes =  [NSAttributedString.Key.strikethroughStyle: 1]
+    //let strikeThroughAttributes =  [NSAttributedString.Key.strikethroughStyle: 1]
     let scriptAttributes = [NSAttributedString.Key.font: scriptFont]
     let redTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.red]
     
@@ -139,7 +139,6 @@ class SyntaxHighlightTextStorage: NSTextStorage {
       "(\\*\\w+(\\s\\w+)*\\*)": boldAttributes,
       "(_\\w+(\\s\\w+)*_)": italicAttributes,
       "([0-9]+\\.)\\s": boldAttributes,
-      "(-\\w+(\\s\\w+)*-)": strikeThroughAttributes,
       "(~\\w+(\\s\\w+)*~)": scriptAttributes,
       "\\s([A-Z]{2,})\\s": redTextAttributes
     ]

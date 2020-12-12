@@ -21,6 +21,7 @@ class SongDisplayViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var keyDisplayLabel: UILabel!
     @IBOutlet weak var tempoValueLabel: UILabel!
     @IBOutlet weak var bpmLabel: UILabel!
+    @IBOutlet weak var sView: UIView!
     
     let myColor = UIColor(red: 156.0/255.0, green: 133.0/255.0, blue: 178.0/255.0, alpha: 1.0)
     
@@ -44,6 +45,8 @@ class SongDisplayViewController: UIViewController, UITextViewDelegate {
         createTextView()
 
         textView.isScrollEnabled = true
+        textView.isEditable = false
+        textView.isSelectable = true
         navigationController?.navigationBar.barStyle = .black
         textView.adjustsFontForContentSizeCategory = true
         
@@ -95,10 +98,10 @@ class SongDisplayViewController: UIViewController, UITextViewDelegate {
       // 5
       textView.translatesAutoresizingMaskIntoConstraints = false
       NSLayoutConstraint.activate([
-        textView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-        textView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-        textView.topAnchor.constraint(equalTo: view.topAnchor),
-        textView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        textView.leadingAnchor.constraint(equalTo: sView.leadingAnchor),
+        textView.trailingAnchor.constraint(equalTo: sView.trailingAnchor),
+        textView.topAnchor.constraint(equalTo: sView.topAnchor),
+        textView.bottomAnchor.constraint(equalTo: sView.bottomAnchor)
       ])
     }
     
