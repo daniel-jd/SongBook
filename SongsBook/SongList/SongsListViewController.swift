@@ -67,6 +67,8 @@ class SongsListViewController: UITableViewController, AddSongDelegate {
     }
     
     private func setTableView() {
+        tableView.rowHeight = UITableView.automaticDimension
+        //tableView.estimatedRowHeight = 72.0
         tableView.rowHeight = 72
         title = "Songs"
     }
@@ -108,11 +110,11 @@ class SongsListViewController: UITableViewController, AddSongDelegate {
         let vc = storyboard.instantiateViewController(identifier: Constants.ViewController.SongDisplay) as! SongDisplayViewController
         
         // TODO: Probably this could be substitute with a delegate or another function
-        vc.songToDisplay.title = songsList[indexPath.row].title
-        vc.songToDisplay.artist = songsList[indexPath.row].artist
-        vc.songToDisplay.key = songsList[indexPath.row].key
-        vc.songToDisplay.tempo = songsList[indexPath.row].tempo
-        vc.songToDisplay.songBody = songsList[indexPath.row].songBody
+        vc.song.title = songsList[indexPath.row].title
+        vc.song.artist = songsList[indexPath.row].artist
+        vc.song.key = songsList[indexPath.row].key
+        vc.song.tempo = songsList[indexPath.row].tempo
+        vc.song.songBody = songsList[indexPath.row].songBody
         
         navigationController?.pushViewController(vc, animated: true)
     }

@@ -17,12 +17,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="974"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="979-0w-XKI">
-                                <rect key="frame" x="20" y="96.5" width="728" height="877.5"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tWb-N2-ssl">
                                 <rect key="frame" x="20" y="20" width="101" height="27"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
@@ -63,16 +57,11 @@
                         <viewLayoutGuide key="safeArea" id="kJB-qY-Ks5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="979-0w-XKI" firstAttribute="top" secondItem="xlU-2L-0AQ" secondAttribute="bottom" constant="22" id="0Ug-W3-sVB"/>
-                            <constraint firstItem="979-0w-XKI" firstAttribute="centerX" secondItem="gAk-Zl-TQo" secondAttribute="centerX" id="5hX-38-Lh4"/>
                             <constraint firstItem="yok-fb-jXl" firstAttribute="top" secondItem="BFx-Cm-Amy" secondAttribute="bottom" constant="8" id="7xU-nR-2V4"/>
-                            <constraint firstItem="979-0w-XKI" firstAttribute="leading" secondItem="kJB-qY-Ks5" secondAttribute="leading" constant="20" id="BpU-VF-S47"/>
                             <constraint firstItem="tWb-N2-ssl" firstAttribute="top" secondItem="kJB-qY-Ks5" secondAttribute="top" constant="20" id="DlV-Tm-uXB"/>
                             <constraint firstItem="BFx-Cm-Amy" firstAttribute="top" secondItem="kJB-qY-Ks5" secondAttribute="top" constant="25" id="FOD-7a-O0V"/>
-                            <constraint firstItem="kJB-qY-Ks5" firstAttribute="bottom" secondItem="979-0w-XKI" secondAttribute="bottom" id="KJw-zs-vYY"/>
                             <constraint firstItem="kJB-qY-Ks5" firstAttribute="trailing" secondItem="yok-fb-jXl" secondAttribute="trailing" constant="20" id="LGN-TN-uv2"/>
                             <constraint firstItem="aO0-BR-all" firstAttribute="top" secondItem="kJB-qY-Ks5" secondAttribute="top" constant="20" id="NwJ-DX-qNX"/>
-                            <constraint firstItem="kJB-qY-Ks5" firstAttribute="trailing" secondItem="979-0w-XKI" secondAttribute="trailing" constant="20" id="Tgj-2a-x5L"/>
                             <constraint firstItem="xlU-2L-0AQ" firstAttribute="top" secondItem="tWb-N2-ssl" secondAttribute="bottom" constant="7" id="c6L-Ke-u0e"/>
                             <constraint firstItem="NKr-vY-Mha" firstAttribute="top" secondItem="aO0-BR-all" secondAttribute="bottom" constant="7" id="e26-AA-5yz"/>
                             <constraint firstItem="tWb-N2-ssl" firstAttribute="leading" secondItem="kJB-qY-Ks5" secondAttribute="leading" constant="20" id="igP-Ad-KhB"/>
@@ -95,7 +84,6 @@
                         <outlet property="bpmLabel" destination="NKr-vY-Mha" id="bTE-7q-pGg"/>
                         <outlet property="keyDisplayLabel" destination="aO0-BR-all" id="nrB-vy-6kB"/>
                         <outlet property="keyLabel" destination="BFx-Cm-Amy" id="eDV-1G-ckz"/>
-                        <outlet property="lyricsTextView" destination="979-0w-XKI" id="OTN-lA-AmS"/>
                         <outlet property="songTitleLabel" destination="tWb-N2-ssl" id="9t3-eP-5EV"/>
                         <outlet property="tempoValueLabel" destination="yok-fb-jXl" id="nzY-Cz-acS"/>
                     </connections>

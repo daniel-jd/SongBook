@@ -9,13 +9,20 @@
 import Foundation
 
 public struct ChordPro {
+    
+    // Задаём регулярные выражения (reegex) для поиска ключевых "штук":
+    // Секций (Verse, Chorus, etc) - переделать!!!!!
     static let sectionRegex = try! NSRegularExpression(pattern: "#\\s*([^$]*)")
+    // Атрибутов - возможно это нужно убрать
     static let attributeRegex = try! NSRegularExpression(pattern: "@(\\w*)=([^%]*)")
     static let customAttributeRegex = try! NSRegularExpression(pattern: "!(\\w*)=([^%]*)")
+    // Для поиска аккордов и слов песни
     static let chordsAndLyricsRegex = try! NSRegularExpression(pattern: "(\\[[\\w#b/]+])?([^\\[]*)", options: .caseInsensitive)
-
+    // Для поиска тактов "| "
     static let measuresRegex = try! NSRegularExpression(pattern: "([\\[[\\w#b\\/]+\\]\\s]+)[|]*", options: .caseInsensitive)
+    // Только для поиска аккордов - возможно нужно изменить!
     static let chordsRegex = try! NSRegularExpression(pattern: "\\[([\\w#b\\/]+)\\]?", options: .caseInsensitive)
+    // Для поиска комментариев - нужно переделать!
     static let commentRegex = try! NSRegularExpression(pattern: ">\\s*([^$]*)")
     
     
@@ -69,7 +76,7 @@ public struct ChordPro {
         var song = Song()
         var currentSection: Section?
 
-        for text in lines.components(separatedBy: "\n") {
+        for text in lines.components(separatedBy: .newlines) {
             if (text.starts(with: "@")) {
                 processAttribute(text: text, song: &song)
             } else if (text.starts(with: "!")) {

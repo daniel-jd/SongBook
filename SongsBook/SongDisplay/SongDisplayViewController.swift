@@ -9,9 +9,11 @@
 import UIKit
 import FirebaseAuth
 
-class SongDisplayViewController: UIViewController {
+class SongDisplayViewController: UIViewController, UITextViewDelegate {
     
-    var songToDisplay = Song()
+    var song = Song()
+    var textView: UITextView!
+    var textStorage: SyntaxHighlightTextStorage!
     
     @IBOutlet weak var songTitleLabel: UILabel!
     @IBOutlet weak var artistLabel: UILabel!
@@ -19,10 +21,13 @@ class SongDisplayViewController: UIViewController {
     @IBOutlet weak var keyDisplayLabel: UILabel!
     @IBOutlet weak var tempoValueLabel: UILabel!
     @IBOutlet weak var bpmLabel: UILabel!
-    @IBOutlet weak var lyricsTextView: UITextView!
-    //@IBOutlet var songBodyLabel: UILabel!
     
     let myColor = UIColor(red: 156.0/255.0, green: 133.0/255.0, blue: 178.0/255.0, alpha: 1.0)
+    
+    // TODO: Нужно задать это ГЛОБАЛЬНО!
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+      return .lightContent
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -34,9 +39,21 @@ class SongDisplayViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("🐰 view did load")
+        
+        // Custom TextView
+        createTextView()
+
+        textView.isScrollEnabled = true
+        navigationController?.navigationBar.barStyle = .black
+        textView.adjustsFontForContentSizeCategory = true
+        
         checkIfUserIsLogined()
         //setupView()
-        displaySong(song: songToDisplay)
+        displaySong(song: song)
+    }
+    
+    override func viewDidLayoutSubviews() {
+      textStorage.update()
     }
     
     deinit { print("🔥 deinit \(Constants.ViewController.SongDisplay)") }
@@ -49,6 +66,42 @@ class SongDisplayViewController: UIViewController {
     @IBAction func didTapBackButton(_ sender: UIBarButtonItem) {
         navigationController?.popViewController(animated: true)
     }
+    
+    
+    func createTextView() {
+      // 1
+      let attrs = [NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .body)]
+      let attrString = NSAttributedString(string: song.songBody!, attributes: attrs)
+      textStorage = SyntaxHighlightTextStorage()
+      textStorage.append(attrString)
+      
+      let newTextViewRect = view.bounds
+      
+      // 2
+      let layoutManager = NSLayoutManager()
+      
+      // 3
+      let containerSize = CGSize(width: newTextViewRect.width, height: .greatestFiniteMagnitude)
+      let container = NSTextContainer(size: containerSize)
+      container.widthTracksTextView = true
+      layoutManager.addTextContainer(container)
+      textStorage.addLayoutManager(layoutManager)
+      
+      // 4
+      textView = UITextView(frame: newTextViewRect, textContainer: container)
+      textView.delegate = self
+      view.addSubview(textView)
+      
+      // 5
+      textView.translatesAutoresizingMaskIntoConstraints = false
+      NSLayoutConstraint.activate([
+        textView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+        textView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+        textView.topAnchor.constraint(equalTo: view.topAnchor),
+        textView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+      ])
+    }
+    
     
     // MARK: - Setup the appearence here
     
@@ -70,7 +123,8 @@ class SongDisplayViewController: UIViewController {
         let songParsed = ChordPro.parse(testSong)
         let str = ChordPro.formatSong(songParsed)
         //print(songParsed.sections[0].lines[0].parts)
-        lyricsTextView.text = str
+        //lyricsTextView.text = str
+        textView.text = str
     }
    
     

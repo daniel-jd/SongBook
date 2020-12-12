@@ -18,6 +18,7 @@
 		A50E18AB2540ACEC00FE6CE6 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50E18A52540ACEC00FE6CE6 /* Section.swift */; };
 		A50E18AC2540ACEC00FE6CE6 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50E18A62540ACEC00FE6CE6 /* Line.swift */; };
 		A50E18AD2540ACEC00FE6CE6 /* ChordPro.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50E18A72540ACEC00FE6CE6 /* ChordPro.swift */; };
+		A530E2E325850356001B4125 /* SyntaxHighlightTextStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A530E2E225850356001B4125 /* SyntaxHighlightTextStorage.swift */; };
 		A53EC0BA2536DC05004C3ECB /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53EC0B92536DC05004C3ECB /* SignInViewController.swift */; };
 		A53EC0BD2536E45C004C3ECB /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53EC0BC2536E45C004C3ECB /* Utilities.swift */; };
 		A53EC0BF2536F4AF004C3ECB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A53EC0BE2536F4AF004C3ECB /* GoogleService-Info.plist */; };
@@ -57,6 +58,7 @@
 		A50E18A52540ACEC00FE6CE6 /* Section.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		A50E18A62540ACEC00FE6CE6 /* Line.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
 		A50E18A72540ACEC00FE6CE6 /* ChordPro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChordPro.swift; sourceTree = "<group>"; };
+		A530E2E225850356001B4125 /* SyntaxHighlightTextStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SyntaxHighlightTextStorage.swift; sourceTree = "<group>"; };
 		A53EC0B92536DC05004C3ECB /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		A53EC0BC2536E45C004C3ECB /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		A53EC0BE2536F4AF004C3ECB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 		A501397D2559E7F1006D54DB /* SongDisplay */ = {
 			isa = PBXGroup;
 			children = (
+				A530E2E225850356001B4125 /* SyntaxHighlightTextStorage.swift */,
 				A5EE99AE25362A15009F0374 /* SongDisplayViewController.swift */,
 				A501397B2559E7E1006D54DB /* SongDisplayViewController.storyboard */,
 			);
@@ -374,6 +377,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A530E2E325850356001B4125 /* SyntaxHighlightTextStorage.swift in Sources */,
 				A5EE99A42536292B009F0374 /* Model.swift in Sources */,
 				A50E18A92540ACEC00FE6CE6 /* Measure.swift in Sources */,
 				A5EE99AA253629F6009F0374 /* SongsListViewController.swift in Sources */,
