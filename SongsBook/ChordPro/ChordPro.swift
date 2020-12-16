@@ -10,7 +10,7 @@ import Foundation
 
 public struct ChordPro {
     
-    // Задаём регулярные выражения (reegex) для поиска ключевых "штук":
+    // Задаём регулярные выражения (regex) для поиска ключевых "штук":
     // Секций (Verse, Chorus, etc) - переделать!!!!!
     static let sectionRegex = try! NSRegularExpression(pattern: "#\\s*([^$]*)")
     // Атрибутов - возможно это нужно убрать
@@ -34,27 +34,43 @@ public struct ChordPro {
         let space = " "
         var text = ""
         
-        
         // Проходим по каждой секции: INTRO, VERSE, CHORUS, etc...
+        var sectionsCounter = 0
         for sections in song.sections {
+            sectionsCounter += 1
+            print("⚡️ - SECTION \(sectionsCounter): \(sections.name!.uppercased())")
             // Вставляем название секции (VERSE) и ставим 2 переноса строки
             text.append(sections.name!.uppercased() + newLine + newLine)
             
             // Проходим по каждой отдельной строке
+            var linesCounter = 0
             for line in sections.lines {
+                linesCounter += 1
+                print("🐶 - LINE \(linesCounter)")
                 var chords = ""
                 var words = ""
+                //var spaces = ""
+                var partsCounter = 0
                 for parts in line.parts {
                     
                     if !parts.isEmpty {
-                        chords.append(parts.chord! + space)
+                        partsCounter += 1
+                        var spaces = ""
+                        print("🔥🐷 часть \(partsCounter): " + (parts.lyric ?? "oops!") + " знаков: \(parts.lyric!.count)")
+                        for i in 1..<(parts.lyric!.count + parts.chord!.count) {
+                            spaces.append(space)
+                            //print("🍄 \(i)")
+                        }
+                        chords.append(parts.chord! + spaces)
+                        print("💿 \(chords) : \(chords.count) знаков")
                         words.append(parts.lyric!)
                     }
                 }
                 text.append(chords)
                 text.append(newLine)
                 text.append(words)
-                //print("🧯 " + chords)
+                print("🟢 \(text)")
+                print("🧯 new line appended")
                 
                 for measure in line.measures {
                     for chord in measure.chords {

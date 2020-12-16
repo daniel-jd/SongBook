@@ -132,15 +132,16 @@ class SyntaxHighlightTextStorage: NSTextStorage {
     let italicAttributes = createAttributesForFontStyle(.body, withTrait:.traitItalic)
     //let strikeThroughAttributes =  [NSAttributedString.Key.strikethroughStyle: 1]
     let scriptAttributes = [NSAttributedString.Key.font: scriptFont]
+    //let chordsAttributes =
     let redTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.red]
     
     // 3. construct a dictionary of replacements based on regexes
     replacements = [
-      "(\\*\\w+(\\s\\w+)*\\*)": boldAttributes,
-      "(_\\w+(\\s\\w+)*_)": italicAttributes,
-      "([0-9]+\\.)\\s": boldAttributes,
-      "(~\\w+(\\s\\w+)*~)": scriptAttributes,
-      "\\s([A-Z]{2,})\\s": redTextAttributes
+      
+      "(_\\w+(\\s\\w+)*_)": italicAttributes, // Comments
+      "(\\b[ABCDEFG#mb\\/0-9]+)\\s": redTextAttributes, // Chords
+      "(~\\w+(\\s\\w+)*~)": scriptAttributes, // Scripts ???
+      "([A-Z]{2,}\\s[1-9]?)": boldAttributes // Sections, i.e. INTRO, VERSE, etc.
     ]
   }
   
