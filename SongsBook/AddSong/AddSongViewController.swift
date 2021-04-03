@@ -34,7 +34,7 @@ class AddSongViewController: UIViewController {
         
     }
     
-    deinit { print("🔥 deinit \(Constants.ViewController.AddSong)") }
+    deinit { print("🔥 deinit \(K.ViewController.AddSong)") }
     
     func makeNewSong() {
         print("🐣makeNewSong called")

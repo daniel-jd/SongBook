@@ -6,9 +6,7 @@
 //  Copyright © 2020 DanielYarmak. All rights reserved.
 //
 
-import Foundation
-
-struct Constants {
+struct K {
     
     struct Storyboard {
         

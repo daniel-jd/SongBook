@@ -47,7 +47,7 @@ class LeftMenuViewController: UIViewController {
         //view.backgroundColor = .darkGray
     }
     
-    deinit { print("🔥 deinit \(Constants.ViewController.LeftMenu)") }
+    deinit { print("🔥 deinit \(K.ViewController.LeftMenu)") }
 }
     
 
@@ -62,21 +62,21 @@ extension LeftMenuViewController: UITableViewDelegate {
         
         switch selectedItem {
         case .home:
-            let storyboard = UIStoryboard(name: Constants.Storyboard.SongDisplay, bundle: nil)
+            let storyboard = UIStoryboard(name: K.Storyboard.SongDisplay, bundle: nil)
             guard let vc = storyboard.instantiateInitialViewController() else { return }
             panel!.center(vc)
 //            LeftMenuConfig.shared.sideMenu?.show(vc, sender: nil)
             break
             
         case .songs:
-            let storyboard = UIStoryboard(name: Constants.Storyboard.SongsList, bundle: nil)
+            let storyboard = UIStoryboard(name: K.Storyboard.SongsList, bundle: nil)
             guard let vc = storyboard.instantiateInitialViewController() else { return }
             panel!.center(vc)
            // LeftMenuConfig.shared.sideMenu?.pushViewController(vc, animated: nil)
             break
             
         case .setlist:
-            let storyboard = UIStoryboard(name: Constants.Storyboard.Setlist, bundle: nil)
+            let storyboard = UIStoryboard(name: K.Storyboard.Setlist, bundle: nil)
             guard let vc = storyboard.instantiateInitialViewController() else { return }
             panel!.center(vc)
 //            LeftMenuConfig.shared.sideMenu?.show(vc, sender: nil)
@@ -90,7 +90,7 @@ extension LeftMenuViewController: UITableViewDelegate {
               print ("Error signing out: %@", signOutError)
             }
             
-            let storyboard = UIStoryboard(name: Constants.Storyboard.SongDisplay, bundle: nil)
+            let storyboard = UIStoryboard(name: K.Storyboard.SongDisplay, bundle: nil)
             guard let vc = storyboard.instantiateInitialViewController() else { return }
             panel!.center(vc)
             break

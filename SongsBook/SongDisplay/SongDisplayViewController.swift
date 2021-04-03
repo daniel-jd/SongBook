@@ -59,7 +59,7 @@ class SongDisplayViewController: UIViewController, UITextViewDelegate {
       textStorage.update()
     }
     
-    deinit { print("🔥 deinit \(Constants.ViewController.SongDisplay)") }
+    deinit { print("🔥 deinit \(K.ViewController.SongDisplay)") }
     
     
 //    @IBAction func didTapMenuButton(_ sender: UIBarButtonItem) {
@@ -157,7 +157,7 @@ class SongDisplayViewController: UIViewController, UITextViewDelegate {
     }
     
     func showLoginScreen() {
-        let storyboard = UIStoryboard(name: Constants.Storyboard.Login, bundle: nil)
+        let storyboard = UIStoryboard(name: K.Storyboard.Login, bundle: nil)
         if let vc = storyboard.instantiateInitialViewController() {
             present(vc, animated: true, completion: nil)
         }

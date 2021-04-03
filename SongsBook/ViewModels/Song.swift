@@ -12,30 +12,29 @@ import FirebaseStorage
 import FirebaseFirestoreSwift
 
 
-enum Key: String {
-    case A = "A"; case A_flat = "Ab"; case A_sharp = "A#"
-    case B = "B"; case B_flat = "Bb";
-    case C = "C"; case C_flat = "Cb"; case C_sharp = "C#"
-    case D = "D"; case D_flat = "Db"; case D_sharp = "D#"
-    case E = "E"; case E_flat = "Eb";
-    case F = "F"; case F_sharp = "F#"
-    case G = "G"; case G_flat = "Gb"; case G_sharp = "G#"
- }
-
-
+// TODO: Change it to a struct
 public class Song /*Codable*/ { // Identifiable
 
 // Properties
-//  @DocumentID var id: String? = UUID().uuidString
+    
     var title: String?
     var artist: String?
-//    var capo: String?
     var key: String?
     var tempo: String?
     var custom = [String: String]()
     var sections = [Section]()
     var songBody: String?
-//    var formatedLyrics: String?
+    
+    // Will use this later on
+    enum Key: String {
+        case A = "A"; case A_flat = "Ab"; case A_sharp = "A#"
+        case B = "B"; case B_flat = "Bb";
+        case C = "C"; case C_flat = "Cb"; case C_sharp = "C#"
+        case D = "D"; case D_flat = "Db"; case D_sharp = "D#"
+        case E = "E"; case E_flat = "Eb";
+        case F = "F"; case F_sharp = "F#"
+        case G = "G"; case G_flat = "Gb"; case G_sharp = "G#"
+     }
     
 // Initializers
     
@@ -105,13 +104,13 @@ extension Song {
         // Add a new document in collection "songs"
         let db = Firestore.firestore()
         let newDocName = song.title!
-        db.collection(Constants.DB.songs).document(newDocName).setData([
+        db.collection(K.DB.songs).document(newDocName).setData([
             // "title": "Song Title",  etc
-            Constants.DB.song_title:    song.title!,
-            Constants.DB.song_artist:   song.artist!,
-            Constants.DB.song_key:      song.key!,
-            Constants.DB.song_tempo:    song.tempo!,
-            Constants.DB.song_songBody: song.songBody!
+            K.DB.song_title:    song.title!,
+            K.DB.song_artist:   song.artist!,
+            K.DB.song_key:      song.key!,
+            K.DB.song_tempo:    song.tempo!,
+            K.DB.song_songBody: song.songBody!
             
         ]) { error in
             if let err = error {

@@ -23,7 +23,7 @@ class LoginViewController: UIViewController {
         setUpElements()
     }
     
-    deinit { print("🔥 deinit \(Constants.ViewController.Login)") }
+    deinit { print("🔥 deinit \(K.ViewController.Login)") }
     
     func setUpElements() {
         

@@ -22,7 +22,6 @@
 		A53EC0BA2536DC05004C3ECB /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53EC0B92536DC05004C3ECB /* SignInViewController.swift */; };
 		A53EC0BD2536E45C004C3ECB /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53EC0BC2536E45C004C3ECB /* Utilities.swift */; };
 		A53EC0BF2536F4AF004C3ECB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A53EC0BE2536F4AF004C3ECB /* GoogleService-Info.plist */; };
-		A5499D98254753BF002D0595 /* SongViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5499D97254753BF002D0595 /* SongViewModel.swift */; };
 		A55760352582B285000A17BE /* bad-moon-rising.sng in Resources */ = {isa = PBXBuildFile; fileRef = A55760342582B285000A17BE /* bad-moon-rising.sng */; };
 		A57E2858256C66360068E97E /* Oceans.txt in Resources */ = {isa = PBXBuildFile; fileRef = A57E2857256C66350068E97E /* Oceans.txt */; };
 		A57E285B256C665E0068E97E /* Indescribable.txt in Resources */ = {isa = PBXBuildFile; fileRef = A57E285A256C665E0068E97E /* Indescribable.txt */; };
@@ -62,7 +61,6 @@
 		A53EC0B92536DC05004C3ECB /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		A53EC0BC2536E45C004C3ECB /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		A53EC0BE2536F4AF004C3ECB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		A5499D97254753BF002D0595 /* SongViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongViewModel.swift; sourceTree = "<group>"; };
 		A55760342582B285000A17BE /* bad-moon-rising.sng */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "bad-moon-rising.sng"; sourceTree = "<group>"; };
 		A57E2857256C66350068E97E /* Oceans.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Oceans.txt; sourceTree = "<group>"; };
 		A57E285A256C665E0068E97E /* Indescribable.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Indescribable.txt; sourceTree = "<group>"; };
@@ -157,7 +155,6 @@
 			isa = PBXGroup;
 			children = (
 				A5EE99A1253628FD009F0374 /* Song.swift */,
-				A5499D97254753BF002D0595 /* SongViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -382,7 +379,6 @@
 				A50E18A92540ACEC00FE6CE6 /* Measure.swift in Sources */,
 				A5EE99AA253629F6009F0374 /* SongsListViewController.swift in Sources */,
 				A53EC0BD2536E45C004C3ECB /* Utilities.swift in Sources */,
-				A5499D98254753BF002D0595 /* SongViewModel.swift in Sources */,
 				A50E18AB2540ACEC00FE6CE6 /* Section.swift in Sources */,
 				A50E18AD2540ACEC00FE6CE6 /* ChordPro.swift in Sources */,
 				A5EE99A2253628FD009F0374 /* Song.swift in Sources */,
