@@ -72,22 +72,7 @@ class SongsListViewController: UITableViewController, AddSongDelegate {
         tableView.rowHeight = 72
         title = "Songs"
     }
-    
-//    func saveSongsListToUserDefaults() {
-//        let encoder = JSONEncoder()
-//        if let encodedSong = try? encoder.encode(songsList) {
-//            defaults.set(encodedSong, forKey: Keys.savedSong)
-//        }
-//    }
-//    
-//    func checkForSavedSongsList() {
-//        if let savedSongsList = defaults.object(forKey: Keys.savedSong) as? Data {
-//            let decoder = JSONDecoder()
-//            if let loadedSongsList = try? decoder.decode([Song].self, from: savedSongsList) {
-//                songsList.append(contentsOf: loadedSongsList)
-//            }
-//        }
-//    }
+
 
     // MARK: - Table view data source
 
@@ -129,7 +114,6 @@ class SongsListViewController: UITableViewController, AddSongDelegate {
             tableView.beginUpdates()
             tableView.deleteRows(at: [indexPath], with: .automatic)
             tableView.endUpdates()
-            //saveSongsListToUserDefaults()
         }
     }
         

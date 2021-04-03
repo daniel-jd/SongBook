@@ -57,7 +57,7 @@ public struct ChordPro {
                         partsCounter += 1
                         var spaces = ""
                         print("🔥🐷 часть \(partsCounter): " + (parts.lyric ?? "oops!") + " знаков: \(parts.lyric!.count)")
-                        for i in 1..<(parts.lyric!.count + parts.chord!.count) {
+                        for _ in 1..<(parts.lyric!.count + parts.chord!.count) {
                             spaces.append(space)
                             //print("🍄 \(i)")
                         }
@@ -159,7 +159,7 @@ public struct ChordPro {
     
     fileprivate static func processSection(text: String, song: inout Song) -> Section {
         var key: String?
-        let section = Section()
+        var section = Section()
 
         if let match = sectionRegex.firstMatch(in: text, options: [], range: NSRange(location: 0, length: text.utf16.count)) {
             if let keyRange = Range(match.range(at: 1), in: text) {
@@ -184,7 +184,7 @@ public struct ChordPro {
             song.sections.append(currentSection!)
         }
 
-        let line = Line()
+        var line = Line()
         
         if text.starts(with: "|-") {
             line.tablature = text
@@ -198,7 +198,7 @@ public struct ChordPro {
                     let measureText = text[measureRange].trimmingCharacters(in: .whitespacesAndNewlines)
                     let chordsMatches = chordsRegex.matches(in: measureText, range: NSRange(location: 0, length: measureText.utf16.count))
                     
-                    let measure = Measure()
+                    var measure = Measure()
                     measure.chords = chordsMatches.map {
                         if let chordsRange = Range($0.range(at: 1), in: measureText) {
                             return String(measureText[chordsRange].trimmingCharacters(in: .whitespacesAndNewlines))
@@ -222,7 +222,7 @@ public struct ChordPro {
             let matches = chordsAndLyricsRegex.matches(in: text, range: NSRange(location: 0, length: text.utf16.count))
 
             for match in matches {
-                let part = Part()
+                var part = Part()
 
                 if let keyRange = Range(match.range(at: 1), in: text) {
                     part.chord = text[keyRange]

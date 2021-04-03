@@ -14,6 +14,7 @@ class SongDisplayViewController: UIViewController, UITextViewDelegate {
     var song = Song()
     var textView: UITextView!
     var textStorage: SyntaxHighlightTextStorage!
+    let myColor = UIColor(red: 156.0/255.0, green: 133.0/255.0, blue: 178.0/255.0, alpha: 1.0)
     
     @IBOutlet weak var songTitleLabel: UILabel!
     @IBOutlet weak var artistLabel: UILabel!
@@ -23,11 +24,10 @@ class SongDisplayViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var bpmLabel: UILabel!
     @IBOutlet weak var sView: UIView!
     
-    let myColor = UIColor(red: 156.0/255.0, green: 133.0/255.0, blue: 178.0/255.0, alpha: 1.0)
     
     // TODO: Нужно задать это ГЛОБАЛЬНО!
     override var preferredStatusBarStyle: UIStatusBarStyle {
-      return .lightContent
+        return .lightContent
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -158,8 +158,9 @@ class SongDisplayViewController: UIViewController, UITextViewDelegate {
     
     func showLoginScreen() {
         let storyboard = UIStoryboard(name: Constants.Storyboard.Login, bundle: nil)
-        let vc = storyboard.instantiateInitialViewController()
-        present(vc!, animated: true, completion: nil)
+        if let vc = storyboard.instantiateInitialViewController() {
+            present(vc, animated: true, completion: nil)
+        }
     }
     
     

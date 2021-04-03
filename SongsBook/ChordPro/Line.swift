@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class Line {
+public struct Line {
     public var parts = [Part]()
     public var measures = [Measure]()
     public var tablature: String?

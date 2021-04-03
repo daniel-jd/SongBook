@@ -94,10 +94,6 @@ extension LeftMenuViewController: UITableViewDelegate {
             guard let vc = storyboard.instantiateInitialViewController() else { return }
             panel!.center(vc)
             break
-            
-        default:
-            print("🐣catch ME!!!")
-            break
         }
     }
 }

@@ -22,9 +22,7 @@ enum Key: String {
     case G = "G"; case G_flat = "Gb"; case G_sharp = "G#"
  }
 
-/*
- 
- */
+
 public class Song /*Codable*/ { // Identifiable
 
 // Properties
@@ -99,7 +97,6 @@ extension Song {
 
                 callback(songs)
             }
-
         }
     }
     
@@ -116,8 +113,8 @@ extension Song {
             Constants.DB.song_tempo:    song.tempo!,
             Constants.DB.song_songBody: song.songBody!
             
-        ]) { err in
-            if let err = err {
+        ]) { error in
+            if let err = error {
                 print("🍄 Error writing document: \(err)")
             } else {
                 print("☀️ Document successfully written!")

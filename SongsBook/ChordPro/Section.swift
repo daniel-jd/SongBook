@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class Section {
+public struct Section {
     public var name: String?
     public var lines = [Line]()
 }

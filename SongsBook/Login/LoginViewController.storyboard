@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2gg-3J-QTy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2gg-3J-QTy">
     <device id="ipad9_7" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Sign InVC-->
+        <!--Sign In View Controller-->
         <scene sceneID="Z0z-Y3-7HK">
             <objects>
-                <viewController id="6UW-Wc-ggG" customClass="SignInVC" customModule="SongsBook" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="6UW-Wc-ggG" customClass="SignInViewController" customModule="SongsBook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Dm6-Lk-Lq2">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -63,7 +63,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vsy-6R-Nbw"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="vsy-6R-Nbw" firstAttribute="bottom" secondItem="Rgu-nZ-7MT" secondAttribute="bottom" constant="40" id="C3O-Qc-ClQ"/>
                             <constraint firstItem="vsy-6R-Nbw" firstAttribute="trailing" secondItem="Rgu-nZ-7MT" secondAttribute="trailing" constant="200" id="WCN-Wq-GMa"/>
@@ -81,10 +81,10 @@
             </objects>
             <point key="canvasLocation" x="731.8840579710145" y="181.47321428571428"/>
         </scene>
-        <!--Sign UpVC-->
+        <!--Sign Up View Controller-->
         <scene sceneID="Mv4-8A-BrB">
             <objects>
-                <viewController id="LhP-af-hpk" customClass="SignUpVC" customModule="SongsBook" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="LhP-af-hpk" customClass="SignUpViewController" customModule="SongsBook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="e7e-zg-pW9">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -110,7 +110,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zLS-RY-y7J">
                                         <rect key="frame" x="0.0" y="210" width="368" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TEw-CG-HPb">
                                         <rect key="frame" x="0.0" y="280" width="368" height="50"/>
@@ -163,10 +163,10 @@
             </objects>
             <point key="canvasLocation" x="1478" y="-189"/>
         </scene>
-        <!--LoginVC-->
+        <!--Login View Controller-->
         <scene sceneID="aoL-G4-UeX">
             <objects>
-                <viewController id="YTN-Ga-xUg" customClass="LoginVC" customModule="SongsBook" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="YTN-Ga-xUg" customClass="LoginViewController" customModule="SongsBook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jqH-Kr-Q2x">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -182,7 +182,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pW2-M4-Scp">
                                         <rect key="frame" x="0.0" y="70" width="368" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N4p-XE-qxt">
                                         <rect key="frame" x="0.0" y="140" width="368" height="50"/>
@@ -247,7 +247,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AVf-Ee-YXb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-19" y="181"/>
+            <point key="canvasLocation" x="71" y="181"/>
         </scene>
     </scenes>
     <resources>

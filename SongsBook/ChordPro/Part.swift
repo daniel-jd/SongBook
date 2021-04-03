@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class Part {
+public struct Part {
     public var chord: String?
     public var lyric: String?
     
