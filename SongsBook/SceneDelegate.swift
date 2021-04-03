@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FAPanels
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -17,7 +18,34 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard let _ = (scene as? UIWindowScene) else { return }
+        
+         
+        if let windowScene = scene as? UIWindowScene {
+                    
+            let window = UIWindow(windowScene: windowScene)
+            let root = FAPanelController()
+            
+            let mainStoryboard: UIStoryboard = UIStoryboard(name: Constants.Storyboard.SongDisplay, bundle: nil)
+            let storyboard: UIStoryboard = UIStoryboard(name: Constants.Storyboard.LeftMenu, bundle: nil)
+            //let leftMenuVC = storyboard.instantiateViewController(withIdentifier: Constants.ViewController.LeftMenu) as! LeftMenuViewController
+            guard let leftMenuVC = storyboard.instantiateInitialViewController() else { return }
+            //let centerVC = mainStoryboard.instantiateViewController(withIdentifier: Constants.ViewController.SongDisplay) as! SongDisplayViewController
+            //let centerNavVC = UINavigationController(rootViewController: centerVC)
+            
+            // Делаю так чтобы навигейшн из сториборда тянулся
+            guard let centerNavVC = mainStoryboard.instantiateInitialViewController() else { return }
+            
+            root.center(centerNavVC).left(leftMenuVC)
+            window.rootViewController = root
+            // Делает так что меню наезжает на основной экран поверх
+            root.leftPanelPosition = .front
+            // Степень затемнения экрана при открывании бокового меню
+            root.configs.shadowOppacity = 0.2
+            root.configs.colorForTapView = UIColor.black.withAlphaComponent(0.5)
+            LeftMenuConfig.shared.confingMenu()
+            self.window = window
+            window.makeKeyAndVisible()
+        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
