@@ -29,6 +29,7 @@
 import UIKit
 
 class SyntaxHighlightTextStorage: NSTextStorage {
+    
   let backingStore = NSMutableAttributedString()
   private var replacements: [String: [NSAttributedString.Key: Any]] = [:]
 
@@ -138,10 +139,12 @@ class SyntaxHighlightTextStorage: NSTextStorage {
     // 3. construct a dictionary of replacements based on regexes
     replacements = [
       
-      "(_\\w+(\\s\\w+)*_)": italicAttributes, // Comments
-      "(\\b[ABCDEFG#mb\\/0-9]+)\\s": redTextAttributes, // Chords
-      "(~\\w+(\\s\\w+)*~)": scriptAttributes, // Scripts ???
-      "([A-Z]{2,}\\s[1-9]?)": boldAttributes // Sections, i.e. INTRO, VERSE, etc.
+        "(_\\w+(\\s\\w+)*_)": italicAttributes, // Comments
+        "([A-Z]{2,}\\s[1-9]?)": boldAttributes, // Sections, i.e. INTRO, VERSE, etc.
+        "(\\b[ABCDEFG#mb\\/0-9]+)\\s": redTextAttributes, // Chords
+        "(\\b[ABCDEFG#mbsus\\/0-9]+)\\s": boldAttributes,
+        "(~\\w+(\\s\\w+)*~)": scriptAttributes // Scripts ???
+
     ]
   }
   

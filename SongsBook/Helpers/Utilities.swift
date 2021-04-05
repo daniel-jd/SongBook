@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Utilities {
+struct Utilities {
 
     // Check if entered password is secure enough
         

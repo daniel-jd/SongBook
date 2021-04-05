@@ -21,7 +21,7 @@ class SignInViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    deinit { print("🔥 deinit \(Constants.ViewController.SignIn)") }
+    deinit { print("🔥 deinit \(K.ViewController.SignIn)") }
     
     @IBAction func dontSignInTapped(_ sender: Any) {
         // Remove Login Screen

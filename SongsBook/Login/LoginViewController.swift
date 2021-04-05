@@ -23,12 +23,18 @@ class LoginViewController: UIViewController {
         setUpElements()
     }
     
-    deinit { print("🔥 deinit \(Constants.ViewController.Login)") }
+    deinit { print("🔥 deinit \(K.ViewController.Login)") }
     
     func setUpElements() {
         
         // Hide the error label
         errorLabel.alpha = 0
+    }
+    
+    // TODO: Make "Forgot Password?" later on
+    @IBAction func skipForNowTapped(_ sender: UIButton) {
+        // Remove Login Screen
+        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func loginTapped(_ sender: Any) {

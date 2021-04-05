@@ -26,7 +26,7 @@ class SignUpViewController: UIViewController {
         setUpElements()
     }
     
-    deinit { print("🔥 deinit \(Constants.ViewController.SignUp)") }
+    deinit { print("🔥 deinit \(K.ViewController.SignUp)") }
     
     func setUpElements() {
         

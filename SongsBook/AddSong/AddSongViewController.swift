@@ -27,14 +27,14 @@ class AddSongViewController: UIViewController {
     
     var newSong: Song?
     var addSongDelegate: AddSongDelegate?
-    
+    let songManager = SongManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
     }
     
-    deinit { print("🔥 deinit \(Constants.ViewController.AddSong)") }
+    deinit { print("🔥 deinit \(K.ViewController.AddSong)") }
     
     func makeNewSong() {
         print("🐣makeNewSong called")
@@ -47,7 +47,7 @@ class AddSongViewController: UIViewController {
     }
     
     func pushNewSongToDatabase() {
-        Song().addSongToDatabase(song: newSong!)
+        songManager.addSongToDatabase(song: newSong!)
     }
     
     @IBAction func save(_ sender: UIBarButtonItem) {

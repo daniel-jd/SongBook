@@ -33,7 +33,7 @@ class SongDisplayViewController: UIViewController, UITextViewDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         print("❤️ view will appear")
-        checkIfUserIsLogined()
+        //checkIfUserIsLogined()
         
     }
     
@@ -59,7 +59,7 @@ class SongDisplayViewController: UIViewController, UITextViewDelegate {
       textStorage.update()
     }
     
-    deinit { print("🔥 deinit \(Constants.ViewController.SongDisplay)") }
+    deinit { print("🔥 deinit \(K.ViewController.SongDisplay)") }
     
     
 //    @IBAction func didTapMenuButton(_ sender: UIBarButtonItem) {
@@ -119,27 +119,33 @@ class SongDisplayViewController: UIViewController, UITextViewDelegate {
         artistLabel.text = "by " + (song.artist ?? "Unknown")
         keyDisplayLabel.text = song.key
         tempoValueLabel.text = song.tempo
-        //print(song.songBody!)
-        let testSong = readSongFromFile()
-        //let str = str.replacingOccurrences(of: "\\n", with: "\n")
-        //print(testSong)
-        let songParsed = ChordPro.parse(testSong)
-        let str = ChordPro.formatSong(songParsed)
-        //print(songParsed.sections[0].lines[0].parts)
-        //lyricsTextView.text = str
-        textView.text = str
+        if let string = song.songBody {
+            let str = string.replacingOccurrences(of: "\\n", with: "\n")
+            textView.text = str
+        }
+        
+        // TEST SECTION !
+//        let testSong = readSongFromFile()
+//        let str = str.replacingOccurrences(of: "\\n", with: "\n")
+//        let songParsed = ChordPro.parse(testSong)
+//        if let str = ChordPro.formatSong(songParsed) {
+//            print("☀️ \(str)")
+//            //textView.text = str
+//        } else {
+//            print("Oops!")
+//        }
     }
    
     
     //MARK: -  Read Oceans.txt file in the Project and copy its data to a String
+    
     func readSongFromFile() -> String {
-        let fileURL = Bundle.main.path(forResource: "bad-moon-rising", ofType: "sng")
+        let fileURL = Bundle.main.path(forResource: "Oceans", ofType: "txt")
         var readString = ""
         do {
             readString = try String(contentsOfFile: fileURL!, encoding: String.Encoding.utf8)
         } catch let error as NSError {
-            print("Can't read the file")
-            print(error)
+            print("🔥 Can't read the file: \(error)")
             return ""
         }
         return readString
@@ -157,8 +163,9 @@ class SongDisplayViewController: UIViewController, UITextViewDelegate {
     }
     
     func showLoginScreen() {
-        let storyboard = UIStoryboard(name: Constants.Storyboard.Login, bundle: nil)
+        let storyboard = UIStoryboard(name: K.Storyboard.Login, bundle: nil)
         if let vc = storyboard.instantiateInitialViewController() {
+            vc.modalPresentationStyle = .fullScreen
             present(vc, animated: true, completion: nil)
         }
     }

@@ -33,21 +33,22 @@ class SongsListViewController: UITableViewController, AddSongDelegate {
         loadSongsFromDatabase()
     }
     
-    deinit { print("🔥 deinit \(Constants.ViewController.SongsList)") }
+    deinit { print("🔥 deinit \(K.ViewController.SongsList)") }
     
     @IBAction func didTapMenuButton(_ sender: UIBarButtonItem) {
         panel?.openLeft(animated: true)
     }
     
     @IBAction func addSongButton(_ sender: UIBarButtonItem) {
-        let storyboard = UIStoryboard(name: Constants.Storyboard.AddSong, bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: Constants.ViewController.AddSong) as! AddSongViewController
+        let storyboard = UIStoryboard(name: K.Storyboard.AddSong, bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: K.ViewController.AddSong) as! AddSongViewController
         vc.addSongDelegate = self
         navigationController?.pushViewController(vc, animated: true)
     }
 
     private func loadSongsFromDatabase() {
-        Song().fetchSongs({ [weak self] songs in
+        let songManager = SongManager()
+        songManager.fetchSongs({ [weak self] songs in
             self?.songsList = songs
             self?.tableView.reloadData()
         })
@@ -82,7 +83,7 @@ class SongsListViewController: UITableViewController, AddSongDelegate {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // Say that we'll use our own custom cell from SongCell class
-        let cell = tableView.dequeueReusableCell(withIdentifier: "SongCell", for: indexPath) as! SongCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: K.Cell.SongCell, for: indexPath) as! SongCell
         let song = songsList[indexPath.row]
         cell.set(song: song)
         return cell
@@ -91,8 +92,8 @@ class SongsListViewController: UITableViewController, AddSongDelegate {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         // Programmatic way of transition to another screen
-        let storyboard = UIStoryboard(name: Constants.Storyboard.SongDisplay, bundle: nil)
-        let vc = storyboard.instantiateViewController(identifier: Constants.ViewController.SongDisplay) as! SongDisplayViewController
+        let storyboard = UIStoryboard(name: K.Storyboard.SongDisplay, bundle: nil)
+        let vc = storyboard.instantiateViewController(identifier: K.ViewController.SongDisplay) as! SongDisplayViewController
         
         // TODO: Probably this could be substitute with a delegate or another function
         vc.song.title = songsList[indexPath.row].title

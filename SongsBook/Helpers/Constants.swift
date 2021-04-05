@@ -6,9 +6,12 @@
 //  Copyright © 2020 DanielYarmak. All rights reserved.
 //
 
-import Foundation
-
-struct Constants {
+struct K {
+    
+    struct Cell {
+        static let LeftMenuCell = "LeftMenuTableCell"
+        static let SongCell = "SongCell"
+    }
     
     struct Storyboard {
         
