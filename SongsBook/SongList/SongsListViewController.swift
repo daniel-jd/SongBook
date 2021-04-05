@@ -47,7 +47,8 @@ class SongsListViewController: UITableViewController, AddSongDelegate {
     }
 
     private func loadSongsFromDatabase() {
-        Song().fetchSongs({ [weak self] songs in
+        let songManager = SongManager()
+        songManager.fetchSongs({ [weak self] songs in
             self?.songsList = songs
             self?.tableView.reloadData()
         })

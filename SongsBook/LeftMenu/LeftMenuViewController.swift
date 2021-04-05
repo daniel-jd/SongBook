@@ -43,8 +43,6 @@ class LeftMenuViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-     
-        //view.backgroundColor = .darkGray
     }
     
     deinit { print("🔥 deinit \(K.ViewController.LeftMenu)") }
@@ -65,21 +63,18 @@ extension LeftMenuViewController: UITableViewDelegate {
             let storyboard = UIStoryboard(name: K.Storyboard.SongDisplay, bundle: nil)
             guard let vc = storyboard.instantiateInitialViewController() else { return }
             panel!.center(vc)
-//            LeftMenuConfig.shared.sideMenu?.show(vc, sender: nil)
             break
             
         case .songs:
             let storyboard = UIStoryboard(name: K.Storyboard.SongsList, bundle: nil)
             guard let vc = storyboard.instantiateInitialViewController() else { return }
             panel!.center(vc)
-           // LeftMenuConfig.shared.sideMenu?.pushViewController(vc, animated: nil)
             break
             
         case .setlist:
             let storyboard = UIStoryboard(name: K.Storyboard.Setlist, bundle: nil)
             guard let vc = storyboard.instantiateInitialViewController() else { return }
             panel!.center(vc)
-//            LeftMenuConfig.shared.sideMenu?.show(vc, sender: nil)
             break
         
         case .signout:
@@ -98,12 +93,12 @@ extension LeftMenuViewController: UITableViewDelegate {
     }
 }
 
+
+// MARK: - Table view data source
+
 extension LeftMenuViewController: UITableViewDataSource {
-    
-    // MARK: - Table view data source
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
         return menuItems.count
     }
 
@@ -112,8 +107,7 @@ extension LeftMenuViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: K.Cell.LeftMenuCell, for: indexPath) as! LeftMenuTableCell
         let item = menuItems[indexPath.row]
         cell.configure(item)
+        
         return cell
     }
-    
-    
 }

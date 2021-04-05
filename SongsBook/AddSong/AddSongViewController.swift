@@ -27,7 +27,7 @@ class AddSongViewController: UIViewController {
     
     var newSong: Song?
     var addSongDelegate: AddSongDelegate?
-    
+    let songManager = SongManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,7 +47,7 @@ class AddSongViewController: UIViewController {
     }
     
     func pushNewSongToDatabase() {
-        Song().addSongToDatabase(song: newSong!)
+        songManager.addSongToDatabase(song: newSong!)
     }
     
     @IBAction func save(_ sender: UIBarButtonItem) {

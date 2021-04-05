@@ -80,7 +80,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Song Title" id="gLh-Ll-OMn">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="chevron.backward" catalog="system" id="ikU-Yy-Od8">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="chevron.left" catalog="system" id="ikU-Yy-Od8">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="didTapBackButton:" destination="U9w-0Y-zqA" id="W6G-Lo-nZx"/>
@@ -125,7 +125,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="chevron.backward" catalog="system" width="96" height="128"/>
+        <image name="chevron.left" catalog="system" width="96" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
