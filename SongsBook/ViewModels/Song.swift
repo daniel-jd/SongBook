@@ -71,7 +71,7 @@ extension Song {
         songsCollection.getDocuments { (querySnapshot, error) in
             if let error = error {
                 // There was an error
-                print("Error while getDocuments: \(error)")
+                print("⚠️⚠️ Error while getDocuments: \(error)")
             }
             else {
                 // Successful getting documents

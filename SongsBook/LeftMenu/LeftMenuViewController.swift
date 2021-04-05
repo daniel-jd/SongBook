@@ -109,7 +109,7 @@ extension LeftMenuViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "LeftMenuTableCell", for: indexPath) as! LeftMenuTableCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: K.Cell.LeftMenuCell, for: indexPath) as! LeftMenuTableCell
         let item = menuItems[indexPath.row]
         cell.configure(item)
         return cell

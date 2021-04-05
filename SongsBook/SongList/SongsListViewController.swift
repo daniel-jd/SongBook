@@ -82,7 +82,7 @@ class SongsListViewController: UITableViewController, AddSongDelegate {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // Say that we'll use our own custom cell from SongCell class
-        let cell = tableView.dequeueReusableCell(withIdentifier: "SongCell", for: indexPath) as! SongCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: K.Cell.SongCell, for: indexPath) as! SongCell
         let song = songsList[indexPath.row]
         cell.set(song: song)
         return cell

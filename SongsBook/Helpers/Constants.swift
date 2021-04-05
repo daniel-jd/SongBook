@@ -8,6 +8,11 @@
 
 struct K {
     
+    struct Cell {
+        static let LeftMenuCell = "LeftMenuTableCell"
+        static let SongCell = "SongCell"
+    }
+    
     struct Storyboard {
         
         static let Login = "LoginViewController"
