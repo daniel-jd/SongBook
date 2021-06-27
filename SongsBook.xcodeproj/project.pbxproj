@@ -25,6 +25,7 @@
 		A55760352582B285000A17BE /* bad-moon-rising.sng in Resources */ = {isa = PBXBuildFile; fileRef = A55760342582B285000A17BE /* bad-moon-rising.sng */; };
 		A558634D261B194100DC5E13 /* SongManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A558634C261B194100DC5E13 /* SongManager.swift */; };
 		A5586350261B1D7400DC5E13 /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A558634F261B1D7400DC5E13 /* LoginManager.swift */; };
+		A562CC6B261D8A38004C5D51 /* SongBookManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A562CC6A261D8A38004C5D51 /* SongBookManager.swift */; };
 		A57E2858256C66360068E97E /* Oceans.txt in Resources */ = {isa = PBXBuildFile; fileRef = A57E2857256C66350068E97E /* Oceans.txt */; };
 		A57E285B256C665E0068E97E /* Indescribable.txt in Resources */ = {isa = PBXBuildFile; fileRef = A57E285A256C665E0068E97E /* Indescribable.txt */; };
 		A5EE998E25362736009F0374 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EE998D25362736009F0374 /* AppDelegate.swift */; };
@@ -66,6 +67,7 @@
 		A55760342582B285000A17BE /* bad-moon-rising.sng */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "bad-moon-rising.sng"; sourceTree = "<group>"; };
 		A558634C261B194100DC5E13 /* SongManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongManager.swift; sourceTree = "<group>"; };
 		A558634F261B1D7400DC5E13 /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
+		A562CC6A261D8A38004C5D51 /* SongBookManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongBookManager.swift; sourceTree = "<group>"; };
 		A57E2857256C66350068E97E /* Oceans.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Oceans.txt; sourceTree = "<group>"; };
 		A57E285A256C665E0068E97E /* Indescribable.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Indescribable.txt; sourceTree = "<group>"; };
 		A5EE998A25362736009F0374 /* SongsBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SongsBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -158,8 +160,9 @@
 		A5499D99254753CA002D0595 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				A5EE99A1253628FD009F0374 /* Song.swift */,
+				A562CC6A261D8A38004C5D51 /* SongBookManager.swift */,
 				A558634C261B194100DC5E13 /* SongManager.swift */,
+				A5EE99A1253628FD009F0374 /* Song.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -393,6 +396,7 @@
 				3210A3FC2576BCD900A58AC2 /* LeftMenuConfig.swift in Sources */,
 				A5EE99C2253630BD009F0374 /* SignUpViewController.swift in Sources */,
 				A5F378312538B9330078CA84 /* Constants.swift in Sources */,
+				A562CC6B261D8A38004C5D51 /* SongBookManager.swift in Sources */,
 				A5EE99AB253629F6009F0374 /* SongCell.swift in Sources */,
 				A5EE99B025362A15009F0374 /* SongDisplayViewController.swift in Sources */,
 				A50E18AC2540ACEC00FE6CE6 /* Line.swift in Sources */,

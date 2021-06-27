@@ -6,7 +6,7 @@
 //  Copyright © 2021 DanielYarmak. All rights reserved.
 //
 
-import Foundation
+import UIKit
 import FirebaseFirestore
 import FirebaseStorage
 import FirebaseFirestoreSwift

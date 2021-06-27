@@ -9,12 +9,13 @@
 import UIKit
 import FirebaseAuth
 
+
 enum SideMenuItems: String, CaseIterable {
     
     case home = "Home"
     case songs = "Songs"
     case setlist = "Setlist"
-    case signout = "Sign Out"
+    case sign = "SignOut"
     
     var value: String { self.rawValue }
     var index: Int {
@@ -25,17 +26,23 @@ enum SideMenuItems: String, CaseIterable {
             return 1
         case .setlist:
             return 2
-        case .signout:
-            return 3
+        // TODO: Подумать!!!! как тут сделать
+        case .sign:
+            if LoginManager.userIsSignedIn {
+                return 3
+            } else {
+                return 3
+            }
         }
     }
 }
+
 
 class LeftMenuViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
 
-    private let menuItems: [SideMenuItems] = [.home, .songs, .setlist, .signout]
+    private let menuItems: [SideMenuItems] = [.home, .songs, .setlist, .sign]
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -61,33 +68,32 @@ extension LeftMenuViewController: UITableViewDelegate {
         switch selectedItem {
         case .home:
             let storyboard = UIStoryboard(name: K.Storyboard.SongDisplay, bundle: nil)
-            guard let vc = storyboard.instantiateInitialViewController() else { return }
-            panel!.center(vc)
+            guard let SongDisplayVC = storyboard.instantiateInitialViewController() else { return }
+            panel!.center(SongDisplayVC)
             break
             
         case .songs:
             let storyboard = UIStoryboard(name: K.Storyboard.SongsList, bundle: nil)
-            guard let vc = storyboard.instantiateInitialViewController() else { return }
-            panel!.center(vc)
+            guard let SongsListVC = storyboard.instantiateInitialViewController() else { return }
+            panel!.center(SongsListVC)
             break
             
         case .setlist:
             let storyboard = UIStoryboard(name: K.Storyboard.Setlist, bundle: nil)
-            guard let vc = storyboard.instantiateInitialViewController() else { return }
-            panel!.center(vc)
+            guard let SetlistVC = storyboard.instantiateInitialViewController() else { return }
+            panel!.center(SetlistVC)
             break
         
-        case .signout:
-            
+        case .sign:            
             do {
                 try Auth.auth().signOut()
+                LoginManager.userIsSignedIn = false
             } catch let signOutError as NSError {
               print ("Error signing out: %@", signOutError)
-            }
-            
+            }            
             let storyboard = UIStoryboard(name: K.Storyboard.SongDisplay, bundle: nil)
-            guard let vc = storyboard.instantiateInitialViewController() else { return }
-            panel!.center(vc)
+            guard let SongDisplayVC = storyboard.instantiateInitialViewController() else { return }
+            panel!.center(SongDisplayVC)
             break
         }
     }
@@ -110,4 +116,5 @@ extension LeftMenuViewController: UITableViewDataSource {
         
         return cell
     }
+    
 }

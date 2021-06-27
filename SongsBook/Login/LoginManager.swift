@@ -6,10 +6,25 @@
 //  Copyright © 2021 DanielYarmak. All rights reserved.
 //
 
-import Foundation
+import UIKit
+import FirebaseAuth
+import FirebaseFirestore
+
 
 struct LoginManager {
+
+    static var skipLoginForNow = false
+    static var userIsSignedIn = false
     
-    // TODO: Move all login logic HERE
+    
+    mutating func checkIfUserIsSignedIn() {
+        if Auth.auth().currentUser != nil {
+            print("☀️ User is Logged-In")
+            LoginManager.userIsSignedIn = true
+        } else {
+            print("⚡️ User is NOT Logged-In")
+            LoginManager.userIsSignedIn = false
+        }
+    }
     
 }

@@ -45,6 +45,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             LeftMenuConfig.shared.confingMenu()
             self.window = window
             window.makeKeyAndVisible()
+            var songBookManager = SongBookManager()
+            songBookManager.run()
         }
     }
 

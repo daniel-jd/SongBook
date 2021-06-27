@@ -33,7 +33,6 @@ class SongDisplayViewController: UIViewController, UITextViewDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         print("❤️ view will appear")
-        //checkIfUserIsLogined()
         
     }
     
@@ -50,7 +49,6 @@ class SongDisplayViewController: UIViewController, UITextViewDelegate {
         navigationController?.navigationBar.barStyle = .black
         textView.adjustsFontForContentSizeCategory = true
         
-        checkIfUserIsLogined()
         //setupView()
         displaySong(song: song)
     }
@@ -149,25 +147,6 @@ class SongDisplayViewController: UIViewController, UITextViewDelegate {
             return ""
         }
         return readString
-    }
-    
-    
-    func checkIfUserIsLogined() {
-        if Auth.auth().currentUser != nil {
-            print("☀️ User is Logged-In")
-        } else {
-            //User Not logged in
-            print("⚡️ User is NOT Logged-In")
-            showLoginScreen()
-        }
-    }
-    
-    func showLoginScreen() {
-        let storyboard = UIStoryboard(name: K.Storyboard.Login, bundle: nil)
-        if let vc = storyboard.instantiateInitialViewController() {
-            vc.modalPresentationStyle = .fullScreen
-            present(vc, animated: true, completion: nil)
-        }
     }
     
     

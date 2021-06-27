@@ -24,6 +24,7 @@ class SignInViewController: UIViewController {
     deinit { print("🔥 deinit \(K.ViewController.SignIn)") }
     
     @IBAction func dontSignInTapped(_ sender: Any) {
+        LoginManager.skipLoginForNow = true
         // Remove Login Screen
         dismiss(animated: true, completion: nil)
     }

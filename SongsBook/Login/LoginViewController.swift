@@ -16,6 +16,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var errorLabel: UILabel!
     
+    var loginManager = LoginManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +34,7 @@ class LoginViewController: UIViewController {
     
     // TODO: Make "Forgot Password?" later on
     @IBAction func skipForNowTapped(_ sender: UIButton) {
+        LoginManager.skipLoginForNow = true
         // Remove Login Screen
         dismiss(animated: true, completion: nil)
     }
